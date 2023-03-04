@@ -1,0 +1,248 @@
+html,body{
+  max-height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+/*  Navbar  */
+.navbar {
+  padding: 20px;
+  background-color: #000;
+}
+
+.dropdown-menu{
+  background-color: #000;
+}
+.dropdown-item:hover{
+  background-color: rgb(163, 161, 161);
+}
+video {
+  width: 100%;
+  height: auto;
+}
+/* ABOUT US */
+.sec-02 {
+  width: 100%;
+  height: 500px;
+  padding: 3rem;
+  background-image: linear-gradient(to bottom, #263d96, #04030a);
+  position: relative;
+  margin-top: -10px ;
+  display: block;
+  color: white;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.sec-02 .container-fluid {
+  padding: 3rem;
+  width: 70%;
+  align-items: center;
+  justify-content: center;
+  height: 1000px;
+  position: relative;
+  top: 30px;
+  margin: 20px;
+
+}
+
+
+/* cards css */
+.sec-03 .container-fluid{
+  width: 70%;
+  max-height: 100%;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.sec-03{
+  width: 100%;
+  height: 100%;
+}
+
+
+.prompt_01,.prompt_02,.prompt_03,.prompt_04,.prompt_05,.prompt_06,.prompt_07,.prompt_08{
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+
+}
+.prompt_02,.prompt_03,.prompt_04,.prompt_05,.prompt_06,.prompt_07,.prompt_08{
+  margin: 20px;
+
+}
+.liner_01,.liner_03,.liner_05,.liner_07{
+  position: relative;
+  top: 50px;
+  left: 70px;
+  width: 500px;
+  height: 200px;
+  color: white;
+  font-size: 20px;
+}
+.liner_02,.liner_04,.liner_06,.liner_08{
+  position: relative;
+  top: 50px;
+
+  width: 500px;
+  height: 200px;
+  color: white;
+  font-size: 20px;
+}
+.card_01{
+  background-image: url("images/ai_black.png");
+}
+.card_02{
+  background-image: url("images/web.jfif");
+
+}
+.card_03{
+  background-image: url("images/blockchain.jfif");
+}
+.card_04{
+  background-image: url("images/cyber.jfif");
+}
+.card_05{
+  background-image: url("images/cloudN.jfif");
+}
+.card_06{
+  background-image: url("images/data.jfif");
+}
+.card_07{
+  background-image: url("images/iot.jpg");
+}
+.card_08{
+  background-image: url("images/arvr.jfif");
+}
+
+.card_body {
+  position: relative;
+  width: 350px;
+  height: 420px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.card_body::before,
+.card_body::after {
+  position: absolute;
+  content: "";
+  width: 20%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+  padding: 15px;
+  background-color: #04030a;
+  opacity: 0.8;
+  transition: all 0.5s;
+}
+
+.card_body::before {
+  top: 0;
+  right: 0;
+  border-radius: 0 15px 0 100%;
+}
+
+.card_body::after {
+  bottom: 0;
+  left: 0;
+  border-radius: 0 100%  0 15px;
+}
+
+.card_body:hover::before,
+.card_body:hover:after {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  transition: all 0.3s ease-in;
+  content-visibility: none;
+}
+
+.card_body:hover:after {
+  content: "Machine learning is a branch of artificial intelligence that enables computers to learn from data and improve their performance without being explicitly programmed. It allows machines to analyze and interpret complex data sets, identify hidden patterns and relationships, and make predictions about future outcomes.";
+  font-size: 15px;
+}
+
+@media screen and (max-width: 768px) {
+
+  .prompt_01,.prompt_02,.prompt_03,.prompt_04,.prompt_05,.prompt_06,.prompt_07,.prompt_08{
+    flex-direction: column;
+  }
+  .prompt_02,.prompt_04,.prompt_06,.prompt_08{
+    flex-direction: column-reverse;
+  }
+  .liner_01,.liner_03,.liner_05,.liner_07{
+    font: 20px;
+    left: 0px;
+    width: 280px;
+
+  }
+  .liner_02,.liner_04,.liner_06,.liner_08{
+    font-size: 20px;
+    width: 280px;
+
+  }
+  .sec-02 .container-fluid{
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 505px) {
+
+  .card_body{
+    width: 280px;
+    height: 350px;
+  }
+  .text{
+    font-size: 14px;
+  }
+
+}
+@media screen and (max-width: 415px) {
+
+  .card_body{
+    width: 230px;
+    height: 300px;
+  }
+  .liner{
+    font-size: 14px;
+  }
+  .card_body:hover:after{
+    font-size: 11px;
+  }
+
+
+
+}
+@media screen and (max-width: 360px) {
+  .text{
+    font-size: 12px;
+  }
+
+  .liner{
+    font-size: 12px;
+  }
+  .card_body:hover:after{
+    font-size: 10px;
+  }
+}
