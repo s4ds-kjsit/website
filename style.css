@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 html,body{
     max-height: 100%;
     width: 100%;
@@ -6,40 +8,40 @@ html,body{
     margin: 0;
     padding: 0;
     background-color: black;
-}
-/*  Navbar  */
-.navbar {
-    padding: 20px;
+  }
+  /*  Navbar  */
+  .navbar {
+    padding: 5px;
     background-color: #000;
-}
-
-.dropdown-menu{
+  }
+  
+  .dropdown-menu{
     background-color: #000;
-}
-.dropdown-item:hover{
+  }
+  .dropdown-item:hover{
     background-color: rgb(163, 161, 161);
-}
-video {
+  }
+  video {
     width: 100%;
     height: auto;
-}
-/* ABOUT US */
-.sec-02 {
+  }
+  /* ABOUT US */
+  .sec-02 {
     width: 100%;
     height: 500px;
     padding: 3rem;
-    background-image: linear-gradient(to bottom, #263d96, #04030a);
+    background-image: linear-gradient(to bottom, #111324, #04030a);
     position: relative;
     margin-top: -10px ;
     display: block;
     color: white;
-}
-* {
+  }
+  * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
-.sec-02 .container-fluid {
+  }
+  .sec-02 .container-fluid {
     padding: 3rem;
     width: 70%;
     align-items: center;
@@ -48,37 +50,91 @@ video {
     position: relative;
     top: 30px;
     margin: 20px;
-
-}
-
-
-/* cards css */
-.sec-03 .container-fluid{
+  
+  }
+  
+  
+  /* cards css */
+  .sec-03 .container-fluid{
     width: 70%;
     max-height: 100%;
-
+  
     align-items: center;
     justify-content: center;
-}
-
-.sec-03{
+  }
+  
+  .sec-03{
     width: 100%;
     height: 100%;
+  }
+  /* Join Us button */
+.join_button {
+  font-family: inherit;
+  font-size: 17px;
+  background: green;
+  color: white;
+  padding: 0.3em 0.44em;
+  padding-left: 0.6em;
+  padding-right: 15px;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  text-decoration: none;
+  overflow: hidden;
+  transition: all 0.2s;
 }
 
+.join_button span {
+  display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
 
-.prompt_01,.prompt_02,.prompt_03,.prompt_04,.prompt_05,.prompt_06,.prompt_07,.prompt_08{
+.join_button svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.join_button:hover .svg-wrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+.join_button:hover svg {
+  transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+.join_button:hover span {
+  transform: translateX(5em);
+}
+
+.join_button:active {
+  transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+
+  to {
+    transform: translateY(-0.1em);
+  }
+}
+  
+  .prompt_01,.prompt_02,.prompt_03,.prompt_04,.prompt_05,.prompt_06,.prompt_07,.prompt_08{
     display: flex;
     flex-direction: row;
     text-align: center;
     align-items: center;
-
-}
-.prompt_02,.prompt_03,.prompt_04,.prompt_05,.prompt_06,.prompt_07,.prompt_08{
+  
+  }
+  .prompt_02,.prompt_03,.prompt_04,.prompt_05,.prompt_06,.prompt_07,.prompt_08{
     margin: 20px;
-
-}
-.liner_01,.liner_03,.liner_05,.liner_07{
+  
+  }
+  .liner_01,.liner_03,.liner_05,.liner_07{
     position: relative;
     top: 50px;
     left: 70px;
@@ -86,43 +142,43 @@ video {
     height: 200px;
     color: white;
     font-size: 20px;
-}
-.liner_02,.liner_04,.liner_06,.liner_08{
+  }
+  .liner_02,.liner_04,.liner_06,.liner_08{
     position: relative;
     top: 50px;
-
+  
     width: 500px;
     height: 200px;
     color: white;
     font-size: 20px;
-}
-.card_01{
+  }
+  .card_01{
     background-image: url("images/ai_black.png");
-}
-.card_02{
+  }
+  .card_02{
     background-image: url("images/web.jfif");
-
-}
-.card_03{
+  
+  }
+  .card_03{
     background-image: url("images/blockchain.jfif");
-}
-.card_04{
+  }
+  .card_04{
     background-image: url("images/cyber.jfif");
-}
-.card_05{
+  }
+  .card_05{
     background-image: url("images/cloudN.jfif");
-}
-.card_06{
+  }
+  .card_06{
     background-image: url("images/data.jfif");
-}
-.card_07{
+  }
+  .card_07{
     background-image: url("images/iot.jpg");
-}
-.card_08{
+  }
+  .card_08{
     background-image: url("images/arvr.jfif");
-}
-
-.card_body {
+  }
+  
+  .card_body {
     position: relative;
     width: 350px;
     height: 420px;
@@ -137,10 +193,10 @@ video {
     font-weight: bold;
     border-radius: 15px;
     cursor: pointer;
-}
-
-.card_body::before,
-.card_body::after {
+  }
+  
+  .card_body::before,
+  .card_body::after {
     position: absolute;
     content: "";
     width: 20%;
@@ -154,98 +210,224 @@ video {
     padding: 15px;
     background-color: #04030a;
     opacity: 0.8;
-    transition: all 0.5s;
-}
-
-.card_body::before {
+    transition: all 0.1s ease-in-out;
+  }
+  
+  .card_body::before {
     top: 0;
     right: 0;
     border-radius: 0 15px 0 100%;
-}
-
-.card_body::after {
+  }
+  
+  .card_body::after {
     bottom: 0;
     left: 0;
     border-radius: 0 100%  0 15px;
-}
-
-.card_body:hover::before,
-.card_body:hover:after {
+  }
+  
+  .card_body:hover::before,
+  .card_body:hover:after {
     width: 100%;
     height: 100%;
     border-radius: 15px;
-    transition: all 0.3s ease-in;
+    transition: all 0.1s ease-in-out;
     content-visibility: none;
-}
-
-.card_body:hover:after {
+  }
+  
+  .card_01:hover:after {
     content: "Machine learning is a branch of artificial intelligence that enables computers to learn from data and improve their performance without being explicitly programmed. It allows machines to analyze and interpret complex data sets, identify hidden patterns and relationships, and make predictions about future outcomes.";
     font-size: 15px;
-}
+  }
+  
+  .card_02:hover:after {
+    content: "Front End Development! This domain is all about creating captivating user experiences through innovative designs and user-friendly interfaces. With the increasing demand for seamless digital experiences, Front End Developers are in high demand. Join this community and let us help you master the art of building exceptional interfaces that users will love. Get ready to make a significant impact in the digital world!";
+    font-size: 15px;
+  }
+  
+  .card_03:hover:after {
+    content: "Imagine having a wall that  protects all your valuables and personal data from absolutely everything and everyone, except you. Sounds amazing right? A Blockchain uses exactly that, virtually. It is an immutable, tamper-proof Distributed Ledger system that can store any sort of data and make it virtually untouchable. Want to be a developer of this revolutionary technology? Join us!";
+    font-size: 15px;
+  }
+  
+  .card_04:hover:after {
+    content: "Welcome to the world of cybersecurity, where the stakes are high and the threats are constantly evolving. So, get ready to dive into the exciting world of cybersecurity, where every day presents new challenges and opportunities to protect and defend against cyber threats.";
+    font-size: 15px;
+  }
+  
+  .card_05:hover:after {
+    content: "Cloud-Native refers to the concept of building and running applications to take advantage of the distributed computing offered by the cloud delivery & on-prem model. Cloud native apps are designed and built to exploit the scale, elasticity, resiliency, and flexibility of your infrastructure. If these words sound fancy and exciting, you'll fit right in!";
+    font-size: 15px;
+  }
+  
+  .card_06:hover:after {
+    content: "Data science and data analytics are crucial for gaining a competitive edge in today's data-driven world. They have the power to increase efficiency, reduce costs, and drive revenue growth by extracting insights and solving complex problems. With advancements in machine learning and big data, they can transform industries and drive innovation and progress.";
+    font-size: 15px;
+  }
+  
+  .card_07:hover:after {
+    content: "Welcome to the world of IoT, where the devices we use every day are becoming smarter, more connected, and more intuitive than ever before. From voice assistants to smart thermostats and wearables, the Internet of Things is transforming our homes, our workplaces, and our lives. Get ready to explore a world where technology is seamlessly integrated into our daily routines, making our lives easier, more convenient, and more efficient than ever before.";
+    font-size: 15px;
+    }
+    
+    .card_08:hover:after {
+      content: "Welcome to the incredible world of AR and VR! These immersive technologies are revolutionizing the way we experience the world around us by blending the digital and physical worlds. With AR, we can enhance our perception of reality by overlaying digital information onto the real world, while VR allows us to fully immerse ourselves in virtual environments. From gaming and entertainment to education and healthcare, the applications of AR and VR are limitless. With the continuous advancements in technology, these technologies will undoubtedly shape the way we live, work, and play in the future.";
+      font-size: 15px;
+    }
 
-@media screen and (max-width: 768px) {
+    .kw-logo {
+      height: 32px;
+      width: 250px;
+      object-fit: cover;
+    }
+  
+  @media screen and (max-width: 768px) {
+  
     .prompt_01,.prompt_02,.prompt_03,.prompt_04,.prompt_05,.prompt_06,.prompt_07,.prompt_08{
-        flex-direction: column;
+      flex-direction: column;
     }
-
     .prompt_02,.prompt_04,.prompt_06,.prompt_08{
-        flex-direction: column-reverse;
+      flex-direction: column-reverse;
     }
-
     .liner_01,.liner_03,.liner_05,.liner_07{
-        font: 20px;
-        left: 0px;
-        width: 280px;
-
+      font: 20px;
+      left: 0px;
+      width: 280px;
+  
     }
-
     .liner_02,.liner_04,.liner_06,.liner_08{
-        font-size: 20px;
-        width: 280px;
-
+      font-size: 20px;
+      width: 280px;
+  
     }
-
     .sec-02 .container-fluid{
-        padding: 15px;
+      padding: 15px;
     }
-}
+    .join_button{
+      width: 120px;
+    }
+  }
+  
 
-@media screen and (max-width: 505px) {
+  
+  @media screen and (max-width: 505px) {
+  
     .card_body{
-        width: 280px;
-        height: 350px;
+      width: 280px;
+      height: 350px;
     }
-
     .text{
-        font-size: 14px;
+      font-size: 14px;
     }
-
-}
-@media screen and (max-width: 415px) {
+  
+  }
+  @media screen and (max-width: 415px) {
+  
     .card_body{
-        width: 230px;
-        height: 300px;
+      width: 230px;
+      height: 300px;
     }
-
     .liner{
-        font-size: 14px;
+      font-size: 14px;
     }
-
     .card_body:hover:after{
-        font-size: 11px;
+      font-size: 11px;
     }
-}
 
-@media screen and (max-width: 360px) {
+    .kw-logo {
+      height: 20px;
+      width: 120px;
+      object-fit: cover;
+    }
+  
+  
+  
+  }
+  @media screen and (max-width: 360px) {
     .text{
-        font-size: 12px;
+      font-size: 12px;
     }
-
+  
     .liner{
-        font-size: 12px;
+      font-size: 12px;
     }
-
     .card_body:hover:after{
-        font-size: 10px;
+      font-size: 10px;
     }
-}
+  }
+  
+  /* socials */
+  
+  .footer-link {
+    color: #fff;
+    padding: 13px;
+  }
+  
+  .footer-link:hover {
+    color: #666666;
+  }
+  
+  #footer-s {
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #icon {
+    font-size: 25px;
+    background: linear-gradient(to right, red, blue);
+    border-radius: 15px;
+  }
+
+  #nav-color {
+    background-color: #000;
+  }
+
+  #join {
+    background-color: green;
+    border: none;
+  }
+
+  /* #video-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  #video-div > video {
+    height: 100%;
+  }
+
+  #img-div {
+    background-color: #21304d;
+    height: 175px;
+    width: 370px ;
+    position: relative;
+    bottom: 142px;
+    transform: rotate(-5deg);
+    border-radius: 20px;
+  }
+
+  #img-div > h1 {
+    transform: rotate(1deg);
+    font-size: 2rem;
+    position: relative;
+    top: 31px;
+    left: 35px;
+    color: white;
+  } */
+
+  #get-things {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+
+
+
+
+
+
+
+
