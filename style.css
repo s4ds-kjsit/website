@@ -177,7 +177,12 @@ html,body{
   .card_08{
     background-image: url("images/arvr.jfif");
   }
+
+  .click {
+    display: none;
+  }
   
+
   .card_body {
     position: relative;
     width: 350px;
@@ -305,6 +310,15 @@ html,body{
     .join_button{
       width: 120px;
     }
+
+    .click {
+      display: block;
+      position: relative;
+      bottom: 50px;
+      left: 190px;
+      transform: rotate(-25deg);
+      z-index: 10;
+    }
   }
   
 
@@ -317,6 +331,16 @@ html,body{
     }
     .text{
       font-size: 14px;
+    }
+
+    .navbar {
+      padding: 10px;
+    }
+
+    .kw-logo {
+      height: 40px;
+      width: 120px;
+      object-fit: cover;
     }
   
   }
@@ -423,6 +447,7 @@ html,body{
     margin-top: 100px;
     margin-bottom: 100px;
   }
+
 
 
 
