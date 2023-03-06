@@ -315,7 +315,7 @@ html,body{
       display: block;
       position: relative;
       bottom: 50px;
-      left: 190px;
+      left: 140px;
       transform: rotate(-25deg);
       z-index: 10;
     }
@@ -362,7 +362,7 @@ html,body{
       width: 120px;
       object-fit: cover;
     } */
-  
+    
   
   
   }
@@ -448,6 +448,16 @@ html,body{
     margin-bottom: 100px;
   }
 
+  /* #hamburger {
+    height: 30px;
+    width: 30px;
+    background: linear-gradient(to right, pink, blue)
+  } */
+
+  .navbar-toggler {
+    border-color: black;
+    background: linear-gradient(to right, pink, blue);
+  }
 
 
 
