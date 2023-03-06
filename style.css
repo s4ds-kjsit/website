@@ -455,8 +455,7 @@ html,body{
   } */
 
   .navbar-toggler {
-    border-color: black;
-    background: linear-gradient(to right, pink, blue);
+    background-color: white;
   }
 
 
