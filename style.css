@@ -337,11 +337,11 @@ html,body{
       padding: 10px;
     }
 
-    .kw-logo {
+    /* .kw-logo {
       height: 40px;
       width: 120px;
       object-fit: cover;
-    }
+    } */
   
   }
   @media screen and (max-width: 415px) {
@@ -357,11 +357,11 @@ html,body{
       font-size: 11px;
     }
 
-    .kw-logo {
+    /* .kw-logo {
       height: 20px;
       width: 120px;
       object-fit: cover;
-    }
+    } */
   
   
   
