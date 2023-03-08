@@ -14,7 +14,40 @@ html,body{
     padding: 5px;
     background-color: #000;
   }
-  
+  .form-control{
+    background-color: #13131a;
+    height: 30px;
+  }
+  .btn-outline-success{
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+  .join_button{
+    width:120px
+  }
+  button.navbar-toggler{
+    /* height:30px;
+    width: 40px;   */
+    display: flex;
+    font-size: smaller;
+    background-color: white;
+  }
+  span.navbar-toggler-icon{
+    /* height:30px;
+    width: 35px; */
+    /* height:100%;
+    width: 100%;  */
+    font-size: smaller;
+    /* background-color: white; */
+
+  }
+  ::-webkit-input-placeholder
+  {
+    color:white !important;
+  }
   .dropdown-menu{
     background-color: #000;
   }
@@ -50,19 +83,19 @@ html,body{
     position: relative;
     top: 30px;
     margin: 20px;
-  
+
   }
-  
-  
+
+
   /* cards css */
   .sec-03 .container-fluid{
     width: 70%;
     max-height: 100%;
-  
+
     align-items: center;
     justify-content: center;
   }
-  
+
   .sec-03{
     width: 100%;
     height: 100%;
@@ -122,17 +155,17 @@ html,body{
     transform: translateY(-0.1em);
   }
 }
-  
+
   .prompt_01,.prompt_02,.prompt_03,.prompt_04,.prompt_05,.prompt_06,.prompt_07,.prompt_08{
     display: flex;
     flex-direction: row;
     text-align: center;
     align-items: center;
-  
+
   }
   .prompt_02,.prompt_03,.prompt_04,.prompt_05,.prompt_06,.prompt_07,.prompt_08{
     margin: 20px;
-  
+
   }
   .liner_01,.liner_03,.liner_05,.liner_07{
     position: relative;
@@ -146,7 +179,7 @@ html,body{
   .liner_02,.liner_04,.liner_06,.liner_08{
     position: relative;
     top: 50px;
-  
+
     width: 500px;
     height: 200px;
     color: white;
@@ -157,7 +190,7 @@ html,body{
   }
   .card_02{
     background-image: url("images/web.jfif");
-  
+
   }
   .card_03{
     background-image: url("images/blockchain.jfif");
@@ -181,7 +214,7 @@ html,body{
   .click {
     display: none;
   }
-  
+
 
   .card_body {
     position: relative;
@@ -199,7 +232,7 @@ html,body{
     border-radius: 15px;
     cursor: pointer;
   }
-  
+
   .card_body::before,
   .card_body::after {
     position: absolute;
@@ -217,19 +250,19 @@ html,body{
     opacity: 0.8;
     transition: all 0.1s ease-in-out;
   }
-  
+
   .card_body::before {
     top: 0;
     right: 0;
     border-radius: 0 15px 0 100%;
   }
-  
+
   .card_body::after {
     bottom: 0;
     left: 0;
     border-radius: 0 100%  0 15px;
   }
-  
+
   .card_body:hover::before,
   .card_body:hover:after {
     width: 100%;
@@ -238,42 +271,42 @@ html,body{
     transition: all 0.1s ease-in-out;
     content-visibility: none;
   }
-  
+
   .card_01:hover:after {
     content: "Machine learning is a branch of artificial intelligence that enables computers to learn from data and improve their performance without being explicitly programmed. It allows machines to analyze and interpret complex data sets, identify hidden patterns and relationships, and make predictions about future outcomes.";
     font-size: 15px;
   }
-  
+
   .card_02:hover:after {
     content: "Front End Development! This domain is all about creating captivating user experiences through innovative designs and user-friendly interfaces. With the increasing demand for seamless digital experiences, Front End Developers are in high demand. Join this community and let us help you master the art of building exceptional interfaces that users will love. Get ready to make a significant impact in the digital world!";
     font-size: 15px;
   }
-  
+
   .card_03:hover:after {
     content: "Imagine having a wall that  protects all your valuables and personal data from absolutely everything and everyone, except you. Sounds amazing right? A Blockchain uses exactly that, virtually. It is an immutable, tamper-proof Distributed Ledger system that can store any sort of data and make it virtually untouchable. Want to be a developer of this revolutionary technology? Join us!";
     font-size: 15px;
   }
-  
+
   .card_04:hover:after {
     content: "Welcome to the world of cybersecurity, where the stakes are high and the threats are constantly evolving. So, get ready to dive into the exciting world of cybersecurity, where every day presents new challenges and opportunities to protect and defend against cyber threats.";
     font-size: 15px;
   }
-  
+
   .card_05:hover:after {
     content: "Cloud-Native refers to the concept of building and running applications to take advantage of the distributed computing offered by the cloud delivery & on-prem model. Cloud native apps are designed and built to exploit the scale, elasticity, resiliency, and flexibility of your infrastructure. If these words sound fancy and exciting, you'll fit right in!";
     font-size: 15px;
   }
-  
+
   .card_06:hover:after {
     content: "Data science and data analytics are crucial for gaining a competitive edge in today's data-driven world. They have the power to increase efficiency, reduce costs, and drive revenue growth by extracting insights and solving complex problems. With advancements in machine learning and big data, they can transform industries and drive innovation and progress.";
     font-size: 15px;
   }
-  
+
   .card_07:hover:after {
     content: "Welcome to the world of IoT, where the devices we use every day are becoming smarter, more connected, and more intuitive than ever before. From voice assistants to smart thermostats and wearables, the Internet of Things is transforming our homes, our workplaces, and our lives. Get ready to explore a world where technology is seamlessly integrated into our daily routines, making our lives easier, more convenient, and more efficient than ever before.";
     font-size: 15px;
     }
-    
+
     .card_08:hover:after {
       content: "Welcome to the incredible world of AR and VR! These immersive technologies are revolutionizing the way we experience the world around us by blending the digital and physical worlds. With AR, we can enhance our perception of reality by overlaying digital information onto the real world, while VR allows us to fully immerse ourselves in virtual environments. From gaming and entertainment to education and healthcare, the applications of AR and VR are limitless. With the continuous advancements in technology, these technologies will undoubtedly shape the way we live, work, and play in the future.";
       font-size: 15px;
@@ -284,9 +317,9 @@ html,body{
       width: 250px;
       object-fit: cover;
     }
-  
+
   @media screen and (max-width: 768px) {
-  
+
     .prompt_01,.prompt_02,.prompt_03,.prompt_04,.prompt_05,.prompt_06,.prompt_07,.prompt_08{
       flex-direction: column;
     }
@@ -297,12 +330,12 @@ html,body{
       font: 20px;
       left: 0px;
       width: 280px;
-  
+
     }
     .liner_02,.liner_04,.liner_06,.liner_08{
       font-size: 20px;
       width: 280px;
-  
+
     }
     .sec-02 .container-fluid{
       padding: 15px;
@@ -320,11 +353,11 @@ html,body{
       z-index: 10;
     }
   }
-  
 
-  
+
+
   @media screen and (max-width: 505px) {
-  
+
     .card_body{
       width: 280px;
       height: 350px;
@@ -342,10 +375,10 @@ html,body{
       width: 120px;
       object-fit: cover;
     } */
-  
+
   }
   @media screen and (max-width: 415px) {
-  
+
     .card_body{
       width: 230px;
       height: 300px;
@@ -362,15 +395,15 @@ html,body{
       width: 120px;
       object-fit: cover;
     } */
-    
-  
-  
+
+
+
   }
   @media screen and (max-width: 360px) {
     .text{
       font-size: 12px;
     }
-  
+
     .liner{
       font-size: 12px;
     }
@@ -378,18 +411,18 @@ html,body{
       font-size: 10px;
     }
   }
-  
+
   /* socials */
-  
+
   .footer-link {
     color: #fff;
     padding: 13px;
   }
-  
+
   .footer-link:hover {
     color: #666666;
   }
-  
+
   #footer-s {
     height: 80px;
     display: flex;
@@ -397,7 +430,7 @@ html,body{
     justify-content: center;
     align-items: center;
   }
-  
+
   #icon {
     font-size: 25px;
     background: linear-gradient(to right, red, blue);
@@ -453,11 +486,6 @@ html,body{
     width: 30px;
     background: linear-gradient(to right, pink, blue)
   } */
-
-  .navbar-toggler {
-    background-color: white;
-  }
-
 
 
 
