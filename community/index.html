@@ -64,31 +64,59 @@
                 const searchTerm = document.getElementById("search-input").value.toLowerCase();
                 let sectionName = "";
 
-                // determine which section to redirect to based on the search term
-                if (searchTerm.includes("ai")) {
-                  sectionName = "ai";
-                } else if (searchTerm.includes("ml")) {
-                  sectionName = "ai";
-                } else if (searchTerm.includes("web3")) {
-                  sectionName = "blockchain";
-                } else if (searchTerm.includes("blockchain")) {
-                  sectionName = "blockchain";
-                } else if (searchTerm.includes("web dev")) {
-                  sectionName = "frontend";
-                } else if (searchTerm.includes("app dev")) {
-                  sectionName = "frontend";
-                } else if (searchTerm.includes("iot")) {
-                  sectionName = "iot";
-                } else if (searchTerm.includes("arvr")) {
-                  sectionName = "arvr";
-                } else if (searchTerm.includes("metaverse")) {
-                  sectionName = "arvr";
-                } else if (searchTerm.includes("cybersec")) {
-                  sectionName = "cybersec";
-                } else if (searchTerm.includes("cloud")) {
-                  sectionName = "cloud";
-                } else if (searchTerm.includes("data science")) {
-                  sectionName = "ds";
+                const keys = {
+                  ai: [
+                    "ai",
+                    "ml",
+                    "machine",
+                    "machine learning",
+                    "artificial",
+                    "artificial intelligence"
+                  ],
+                  blockchain: [
+                    "web3",
+                    "blockchain"
+                  ],
+                  frontend: [
+                    "frontend",
+                    "web",
+                    "app",
+                    "ui",
+                    "ui/ux"
+                  ],
+                  iot: [
+                    "iot",
+                    "internet",
+                    "internet of things"
+                  ],
+                  arvr: [
+                    "meta",
+                    "metaverse",
+                    "ar/vr",
+                    "ar"
+                  ],
+                  cybersec: [
+                    "cyber",
+                    "cyber security",
+                    "cybersecurity"
+                  ],
+                  cloud: [
+                    "cloud",
+                    "cloud native",
+                    "cloudnative"
+                  ],
+                  ds: [
+                    "data",
+                    "data science"
+                  ]
+                }
+
+                for (const [k, v] of Object.entries(keys)) {
+                  if (v.indexOf(searchTerm) >= 0) {
+                    sectionName = k;
+                    console.log(sectionName);
+                    break;
+                  }
                 }
 
                 // replace "example.com" with the appropriate URL for your site
