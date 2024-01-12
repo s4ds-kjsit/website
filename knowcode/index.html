@@ -1,0 +1,727 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="KnowCode" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://s4ds.kjsieit.in/static/logo.png"
+    />
+    <meta property="og:url" content="https://s4ds.kjsieit.in/knowcode" />
+    <meta property="og:description" content="KnowCode - S4DS Hackathon" />
+    <meta property="og:site_name" content="KnowCode" />
+    <meta
+      name="twitter:card"
+      content="https://s4ds.kjsieit.in/static/logo.png"
+    />
+    <meta name="twitter:image:alt" content="KnowCode - S4DS Hackathon" />
+    <title>KnowCode - S4DS</title>
+
+    <!-- favicons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/static/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/static/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/static/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/static/favicon/site.webmanifest" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu+Mono&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- tailwind css -->
+    <link href="/static/dist/css/tailwind.css" rel="stylesheet" />
+  </head>
+  <body class="font-sans">
+    <!-- nav -->
+    <header class="hidden lg:block">
+      <nav class="navbar bg-neutral text-neutral-content font-bold">
+        <div class="flex-1">
+          <ul class="menu menu-horizontal px-1">
+            <li><a href="#theme">Theme</a></li>
+            <li><a href="#domains">Domains</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#prizes">Prizes</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#guidelines">Guidelines</a></li>
+            <li><a href="#sponsors">Sponsors</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="flex-none">
+          <a class="btn btn-ghost text-xl">KnowCode</a>
+        </div>
+      </nav>
+    </header>
+    <header class="lg:hidden">
+      <div class="drawer">
+        <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+        <div class="drawer-content">
+          <nav class="navbar bg-neutral text-neutral-content">
+            <div class="flex-1">
+              <label for="my-drawer" class="drawer-button">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h7"
+                  />
+                </svg>
+              </label>
+            </div>
+            <div class="flex-none">
+              <a class="btn btn-ghost text-xl">KnowCode</a>
+            </div>
+          </nav>
+        </div>
+        <div class="drawer-side">
+          <label
+            for="my-drawer"
+            aria-label="close sidebar"
+            class="drawer-overlay"
+          ></label>
+          <ul
+            class="menu p-4 w-60 min-h-full bg-neutral text-neutral-content font-bold"
+          >
+            <li><a href="#theme">Theme</a></li>
+            <li><a href="#domains">Domains</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#prizes">Prizes</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#guidelines">Guidelines</a></li>
+            <li><a href="#sponsors">Sponsors</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <!-- hero -->
+    <section class="hero bg-hero-jigsaw min-h-screen">
+      <div
+        class="hero-overlay bg-opacity-95 flex justify-center sm:justify-end items-center bg-white"
+      >
+        <div class="w-11/12 sm:w-1/2 sm:mx-5">
+          <h1 class="mb-5 text-3xl font-bold">KnowCode - S4DS</h1>
+          <p class="text-justify mb-5">
+            Sip, Code, Repeat: Know-code Brews Brilliance | A
+            <strong>36-hour</strong> Grand Hackathon
+          </p>
+          <div class="flex flex-col md:flex-row justify-start md:items-center">
+            <a
+              href="https://www.linkedin.com/company/101387046/admin/feed/posts/?feedType=following"
+              class="btn btn-neutral rounded-md mb-3 md:mr-3 md:mb-0 w-fit"
+              target="_blank"
+            >
+              Join Linkedin
+            </a>
+            <div
+              class="apply-button w-fit"
+              data-hackathon-slug="knowcode"
+              data-button-theme="light"
+              style="height: 44px; width: 312px"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- theme -->
+    <section id="theme" class="my-20">
+      <h2 class="text-3xl text-center font-bold mb-10">Theme</h2>
+      <div
+        class="min-h-96 mx-5 rounded-box flex justify-center items-center text-5xl text-center font-bold border-4 border-black hover:bg-[black] hover:text-white"
+      >
+        Finance
+      </div>
+    </section>
+
+    <!-- domains -->
+    <section id="domains" class="my-20">
+      <h2 class="text-3xl text-center font-bold mb-10">Domains</h2>
+      <ul class="flex flex-wrap justify-evenly items-center">
+        <li
+          class="w-60 h-60 m-3 shadow-xl rounded-box bg-primary text-primary-content flex flex-col justify-evenly items-center font-bold text-xl"
+        >
+          <span>AI-ML & Data Science</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-brain"
+            width="36"
+            height="36"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M15.5 13a3.5 3.5 0 0 0 -3.5 3.5v1a3.5 3.5 0 0 0 7 0v-1.8"
+            />
+            <path d="M8.5 13a3.5 3.5 0 0 1 3.5 3.5v1a3.5 3.5 0 0 1 -7 0v-1.8" />
+            <path d="M17.5 16a3.5 3.5 0 0 0 0 -7h-.5" />
+            <path d="M19 9.3v-2.8a3.5 3.5 0 0 0 -7 0" />
+            <path d="M6.5 16a3.5 3.5 0 0 1 0 -7h.5" />
+            <path d="M5 9.3v-2.8a3.5 3.5 0 0 1 7 0v10" />
+          </svg>
+        </li>
+        <li
+          class="w-60 h-60 m-3 shadow-xl rounded-box bg-[#fa5252] text-secondary-content flex flex-col justify-evenly items-center font-bold text-xl"
+        >
+          <span> App & Web Dev </span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-app-window"
+            width="36"
+            height="36"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"
+            />
+            <path d="M6 8h.01" />
+            <path d="M9 8h.01" />
+          </svg>
+        </li>
+        <li
+          class="w-60 h-60 m-3 shadow-xl rounded-box bg-[#38d9a9] text-black flex flex-col justify-evenly items-center font-bold text-xl"
+        >
+          <span>Blockchain & Web3</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-hexagon"
+            width="36"
+            height="36"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M19.875 6.27a2.225 2.225 0 0 1 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z"
+            />
+          </svg>
+        </li>
+        <li
+          class="w-60 h-60 m-3 shadow-xl rounded-box bg-[#ffd43b] text-black flex flex-col justify-evenly items-center font-bold text-xl"
+        >
+          Cybersecurity
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-shield-lock-filled"
+            width="36"
+            height="36"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M11.998 2l.118 .007l.059 .008l.061 .013l.111 .034a.993 .993 0 0 1 .217 .112l.104 .082l.255 .218a11 11 0 0 0 7.189 2.537l.342 -.01a1 1 0 0 1 1.005 .717a13 13 0 0 1 -9.208 16.25a1 1 0 0 1 -.502 0a13 13 0 0 1 -9.209 -16.25a1 1 0 0 1 1.005 -.717a11 11 0 0 0 7.531 -2.527l.263 -.225l.096 -.075a.993 .993 0 0 1 .217 -.112l.112 -.034a.97 .97 0 0 1 .119 -.021l.115 -.007zm.002 7a2 2 0 0 0 -1.995 1.85l-.005 .15l.005 .15a2 2 0 0 0 .995 1.581v1.769l.007 .117a1 1 0 0 0 1.993 -.117l.001 -1.768a2 2 0 0 0 -1.001 -3.732z"
+              stroke-width="0"
+              fill="currentColor"
+            />
+          </svg>
+        </li>
+        <li
+          class="w-60 h-60 m-3 shadow-xl rounded-box bg-[#a9e34b] text-black flex flex-col justify-evenly items-center font-bold text-xl"
+        >
+          IoT
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-cpu-2"
+            width="36"
+            height="36"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M5 5m0 1a1 1 0 0 1 1 -1h12a1 1 0 0 1 1 1v12a1 1 0 0 1 -1 1h-12a1 1 0 0 1 -1 -1z"
+            />
+            <path d="M8 10v-2h2m6 6v2h-2m-4 0h-2v-2m8 -4v-2h-2" />
+            <path d="M3 10h2" />
+            <path d="M3 14h2" />
+            <path d="M10 3v2" />
+            <path d="M14 3v2" />
+            <path d="M21 10h-2" />
+            <path d="M21 14h-2" />
+            <path d="M14 21v-2" />
+            <path d="M10 21v-2" />
+          </svg>
+        </li>
+      </ul>
+    </section>
+
+    <!-- about -->
+    <section id="about" class="my-20">
+      <h2 class="text-3xl text-center font-bold mb-10">About</h2>
+      <div class="flex flex-col lg:flex-row justify-evenly items-center mx-10">
+        <img
+          src="/static/about-us.png"
+          alt="Innovators"
+          class="lg:w-1/3 shadow-md rounded-box mb-5 lg:mr-20 lg:mb-0"
+        />
+        <p class="lg:w-2/3 text-justify md:text-lg">
+          Embark on a Techno-spheric voyage at "Know-Code", the flagship 36-hour
+          hackathon hosted by S4DS at K J Somaiya Institute of Technology
+          (Sion). Ignite your creativity in this domain-flexible coding
+          marathon, where innovation knows no bounds. Unleash your coding
+          prowess, collaborate with brilliant minds, and transform ideas into
+          reality. Know-Code isn't just any event; it's a journey into the
+          future of technology, a realm where every line of code is rewarded for
+          shaping tomorrow's possibilities.
+        </p>
+      </div>
+    </section>
+
+    <!-- prize pool -->
+    <section id="prizes" class="my-20">
+      <h2 class="text-3xl text-center font-bold mb-10">Prize Pool</h2>
+      <ul class="flex flex-wrap justify-evenly items-center">
+        <li
+          class="w-80 h-60 m-3 shadow-xl rounded-box bg-[#96f2d7] text-black flex flex-col justify-evenly items-center"
+        >
+          <span class="text-xl">Winner</span>
+          <span class="font-bold">25,000 INR</span>
+        </li>
+        <li
+          class="w-80 h-60 m-3 shadow-xl rounded-box bg-[#96f2d7] text-black flex flex-col justify-evenly items-center"
+        >
+          <span class="text-xl">1st Runner Up</span>
+          <span class="font-bold">15,000 INR</span>
+        </li>
+        <li
+          class="w-80 h-60 m-3 shadow-xl rounded-box bg-[#96f2d7] text-black flex flex-col justify-evenly items-center"
+        >
+          <span class="text-xl">2nd Runner Up</span>
+          <span class="font-bold">10,000 INR</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- countdown -->
+    <section id="countdown" class="my-20">
+      <h2 class="text-3xl text-center font-bold mb-10">Count Down Begins</h2>
+      <div class="flex justify-center items-center">
+        <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
+          <div class="flex flex-col">
+            <span class="countdown font-mono text-5xl">
+              <span id="days" style="--value: 60"></span>
+            </span>
+            days
+          </div>
+          <div class="flex flex-col">
+            <span class="countdown font-mono text-5xl">
+              <span id="hours" style="--value: 00"></span>
+            </span>
+            hours
+          </div>
+          <div class="flex flex-col">
+            <span class="countdown font-mono text-5xl">
+              <span id="min" style="--value: 00"></span>
+            </span>
+            min
+          </div>
+          <div class="flex flex-col">
+            <span class="countdown font-mono text-5xl">
+              <span id="sec" style="--value: 00"></span>
+            </span>
+            sec
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- schedule -->
+    <section id="schedule" class="my-20">
+      <h2 class="text-3xl text-center font-bold mb-10">Schedule</h2>
+      <ul class="timeline timeline-vertical">
+        <li>
+          <div class="timeline-start">26th Jan, 2PM</div>
+          <div class="timeline-middle">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              class="w-5 h-5"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </div>
+          <div class="timeline-end timeline-box">Reporting</div>
+          <hr class="bg-primary" />
+        </li>
+        <li>
+          <hr class="bg-primary" />
+          <div class="timeline-start">26th Jan, 2-4PM</div>
+          <div class="timeline-middle">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              class="w-5 h-5"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </div>
+          <div class="timeline-end timeline-box">
+            Allocation of rooms and workstation
+          </div>
+          <hr class="bg-primary" />
+        </li>
+        <li>
+          <hr class="bg-primary" />
+          <div class="timeline-start">26th Jan, 4PM</div>
+          <div class="timeline-middle">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              class="w-5 h-5"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </div>
+          <div class="timeline-end timeline-box">Coding starts</div>
+          <hr class="bg-primary" />
+        </li>
+        <li>
+          <hr class="bg-primary" />
+          <div class="timeline-start">27th Jan, 8AM</div>
+          <div class="timeline-middle">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              class="w-5 h-5"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </div>
+          <div class="timeline-end timeline-box">Round 1 stops</div>
+          <hr class="bg-primary" />
+        </li>
+        <li>
+          <hr class="bg-primary" />
+          <div class="timeline-start">27th Jan, 8-10AM</div>
+          <div class="timeline-middle">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              class="w-5 h-5"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </div>
+          <div class="timeline-end timeline-box">
+            Round 1 evaluation & breakfast break
+          </div>
+          <hr class="bg-primary" />
+        </li>
+        <li>
+          <hr class="bg-primary" />
+          <div class="timeline-start">27th Jan, 10AM</div>
+          <div class="timeline-middle">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              class="w-5 h-5"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </div>
+          <div class="timeline-end timeline-box">Coding resumes</div>
+          <hr class="bg-primary" />
+        </li>
+        <li>
+          <hr class="bg-primary" />
+          <div class="timeline-start">28th Jan, 6AM</div>
+          <div class="timeline-middle">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              class="w-5 h-5"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </div>
+          <div class="timeline-end timeline-box">
+            Coding stops | Push your code
+          </div>
+          <hr class="bg-primary" />
+        </li>
+        <li>
+          <hr class="bg-primary" />
+          <div class="timeline-start">28th Jan, 8:30/9AM</div>
+          <div class="timeline-middle">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              class="w-5 h-5"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </div>
+          <div class="timeline-end timeline-box">Closing ceremony</div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- guidelines -->
+    <section id="schedule" class="my-20">
+      <h2 class="text-3xl text-center font-bold mb-10">Guidelines</h2>
+      <ul class="ml-6 md:w-1/2 md:mx-auto list-disc md:text-lg">
+        <li>
+          Participants are required to remain within the college premises during
+          the Hackathon, seeking permission from volunteers if there's a need to
+          leave.
+        </li>
+        <li>
+          The decisions made by the judging panel are final and binding.
+          Participants are expected to respect and abide by the outcomes.
+        </li>
+        <li>
+          Any form of misbehavior, whether directed towards team members,
+          volunteers, judges, or evaluators, will not be tolerated. Participants
+          are encouraged to maintain a positive and collaborative environment.
+        </li>
+        <li>
+          Participants are responsible for bringing their own laptops, chargers,
+          and any other necessary devices required for the implementation of
+          their projects.
+        </li>
+        <li>
+          Projects must span at least two specified domains. It is essential to
+          integrate diverse aspects into the project to showcase a comprehensive
+          skill set.
+        </li>
+        <li>
+          Projects should be designed with real-life applications in mind,
+          addressing practical issues and providing tangible solutions.
+        </li>
+        <li>
+          Hackathon prioritizes research, avoids code memorization, and
+          encourages internet use for inclusive collaboration, fostering
+          innovation in a supportive environment.
+        </li>
+      </ul>
+    </section>
+
+    <!-- sponsors -->
+    <section id="sponsors" class="my-20">
+      <h2 class="text-3xl text-center font-bold mb-10">Our Sponsors</h2>
+      <div class="mx-10 mb-10">
+        <h3 class="text-xl text-center font-bold mb-10">Co-Title:</h3>
+        <ul class="flex justify-evenly items-center flex-wrap">
+          <li class="md:w-1/3 w-2/3 m-2">
+            <img
+              class="block w-full"
+              src="/static/sponsors/devfolio.png"
+              alt="DEVFOLIO LOGO”"
+            />
+          </li>
+          <li class="md:w-1/3 w-2/3 m-2">
+            <img
+              class="block w-full"
+              src="/static/sponsors/polygon.png"
+              alt="POLYGON LOGO"
+            />
+          </li>
+        </ul>
+      </div>
+      <div class="mx-10">
+        <h3 class="text-xl text-center font-bold mb-10">Co-Powered By:</h3>
+        <ul class="flex justify-evenly items-center flex-wrap">
+          <li class="md:w-1/3 w-2/3 m-2">
+            <img
+              class="block w-full"
+              src="/static/sponsors/replit.png"
+              alt="REPLIT LOGO"
+            />
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- contact -->
+    <footer
+      id="contact"
+      class="footer mt-20 p-10 bg-neutral text-neutral-content"
+    >
+      <aside>
+        <p>S4DS - KJSIT<br />Copyright © 2023 - All right reserved</p>
+      </aside>
+      <nav>
+        <header class="footer-title">Get in touch</header>
+        <div class="grid grid-flow-col gap-4">
+          <a
+            href="https://www.linkedin.com/company/101387046/admin/feed/posts/?feedType=following"
+            target="_blank"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-brand-linkedin"
+              width="36"
+              height="36"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"
+              />
+              <path d="M8 11l0 5" />
+              <path d="M8 8l0 .01" />
+              <path d="M12 16l0 -5" />
+              <path d="M16 16v-3a2 2 0 0 0 -4 0" /></svg
+          ></a>
+          <a
+            href="https://www.instagram.com/kjsit.s4ds?igsh=ODA1NTc5OTg5Nw=="
+            target="_blank"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-brand-instagram"
+              width="36"
+              height="36"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"
+              />
+              <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+              <path d="M16.5 7.5l0 .01" /></svg
+          ></a>
+          <a href="mailto:s4ds.kjsieit@somaiya.edu">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-mail"
+              width="36"
+              height="36"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"
+              />
+              <path d="M3 7l9 6l9 -6" />
+            </svg>
+          </a>
+        </div>
+      </nav>
+    </footer>
+
+    <script src="/static/dist/js/moment.min.js"></script>
+    <script>
+      setInterval(() => {
+        const then = moment("2024-01-26T16:00:00");
+        const now = moment();
+        const diff = then.diff(now);
+        const duration = moment.duration(diff);
+        const days = duration.get("days");
+        const hours = duration.get("hours");
+        const min = duration.get("minutes");
+        const sec = duration.get("seconds");
+
+        document.getElementById("days").style = `--value: ${days};`;
+        document.getElementById("hours").style = `--value: ${hours};`;
+        document.getElementById("min").style = `--value: ${min};`;
+        document.getElementById("sec").style = `--value: ${sec};`;
+      }, 1000);
+    </script>
+    <script defer async src="https://apply.devfolio.co/v2/sdk.js"></script>
+  </body>
+</html>
