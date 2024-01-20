@@ -7,14 +7,14 @@
     <meta property="og:type" content="website" />
     <meta
       property="og:image"
-      content="https://s4ds.kjsieit.in/static/logo.png"
+      content="https://knowcode.netlify.app/static/logo.png"
     />
-    <meta property="og:url" content="https://s4ds.kjsieit.in/knowcode" />
+    <meta property="og:url" content="https://knowcode.netlify.app" />
     <meta property="og:description" content="KnowCode - S4DS Hackathon" />
     <meta property="og:site_name" content="KnowCode" />
     <meta
       name="twitter:card"
-      content="https://s4ds.kjsieit.in/static/logo.png"
+      content="https://knowcode.netlify.app/static/logo.png"
     />
     <meta name="twitter:image:alt" content="KnowCode - S4DS Hackathon" />
     <title>KnowCode - S4DS</title>
@@ -23,21 +23,21 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="/static/favicon/apple-touch-icon.png"
+      href="/static/knowcode/apple-touch-icon.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="/static/favicon/favicon-32x32.png"
+      href="/static/knowcode/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="/static/favicon/favicon-16x16.png"
+      href="/static/knowcode/favicon-16x16.png"
     />
-    <link rel="manifest" href="/static/favicon/site.webmanifest" />
+    <link rel="manifest" href="/static/knowcode/site.webmanifest" />
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -123,10 +123,14 @@
 
     <!-- hero -->
     <section class="hero bg-hero-jigsaw min-h-screen">
+      <div class="hero-overlay bg-opacity-95 bg-white"></div>
       <div
-        class="hero-overlay bg-opacity-95 flex justify-center sm:justify-end items-center bg-white"
+        class="hero-content flex-col lg:flex-row justify-between items-center"
       >
-        <div class="w-11/12 sm:w-1/2 sm:mx-5">
+        <aside class="w-full">
+          <img class="w-full" src="/static/logo.png" alt="KnowCode Logo" />
+        </aside>
+        <main class="w-full">
           <h1 class="mb-5 text-3xl font-bold">KnowCode - S4DS</h1>
           <p class="text-justify mb-5">
             Sip, Code, Repeat: Know-code Brews Brilliance | A
@@ -140,6 +144,13 @@
             >
               Join Linkedin
             </a>
+            <a
+              href="https://forms.gle/HhBXYP3SR7vj5xoi6"
+              class="btn btn-primary rounded-md mb-3 md:mr-3 md:mb-0 w-fit"
+              target="_blank"
+            >
+              Fill out abstract form
+            </a>
             <div
               class="apply-button w-fit"
               data-hackathon-slug="knowcode"
@@ -147,7 +158,7 @@
               style="height: 44px; width: 312px"
             ></div>
           </div>
-        </div>
+        </main>
       </div>
     </section>
 
@@ -155,9 +166,9 @@
     <section id="theme" class="my-20">
       <h2 class="text-3xl text-center font-bold mb-10">Theme</h2>
       <div
-        class="min-h-96 mx-5 rounded-box flex justify-center items-center text-5xl text-center font-bold border-4 border-black hover:bg-[black] hover:text-white"
+        class="min-h-96 mx-5 rounded-box flex justify-center items-center text-5xl text-center font-bold border-4 border-[#fa5252] hover:bg-[#fa5252] hover:text-secondary-content"
       >
-        Finance
+        Health Tech
       </div>
     </section>
 
@@ -166,9 +177,9 @@
       <h2 class="text-3xl text-center font-bold mb-10">Domains</h2>
       <ul class="flex flex-wrap justify-evenly items-center">
         <li
-          class="w-60 h-60 m-3 shadow-xl rounded-box bg-primary text-primary-content flex flex-col justify-evenly items-center font-bold text-xl"
+          class="w-60 h-60 m-9 shadow-xl rounded-box bg-[#ffa94d] text-secondary-content flex flex-col justify-evenly items-center font-bold text-xl"
         >
-          <span>AI-ML & Data Science</span>
+          <span>AI-ML</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="icon icon-tabler icon-tabler-brain"
@@ -193,14 +204,62 @@
           </svg>
         </li>
         <li
-          class="w-60 h-60 m-3 shadow-xl rounded-box bg-[#fa5252] text-secondary-content flex flex-col justify-evenly items-center font-bold text-xl"
+          class="w-60 h-60 m-9 shadow-xl rounded-box bg-[#fa5252] text-secondary-content flex flex-col justify-evenly items-center font-bold text-xl"
         >
-          <span> App & Web Dev </span>
+          <span>Data Science</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="icon icon-tabler icon-tabler-app-window"
-            width="36"
-            height="36"
+            class="icon icon-tabler icon-tabler-chart-histogram"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M3 3v18h18" />
+            <path d="M20 18v3" />
+            <path d="M16 16v5" />
+            <path d="M12 13v8" />
+            <path d="M8 16v5" />
+            <path d="M3 11c6 0 5 -5 9 -5s3 5 9 5" />
+          </svg>
+        </li>
+        <li
+          class="w-60 h-60 m-9 shadow-xl rounded-box bg-[#94d82d] text-primary-content flex flex-col justify-evenly items-center font-bold text-xl"
+        >
+          <span>Front-end</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-layout-dashboard"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M4 4h6v8h-6z" />
+            <path d="M4 16h6v4h-6z" />
+            <path d="M14 12h6v8h-6z" />
+            <path d="M14 4h6v4h-6z" />
+          </svg>
+        </li>
+        <li
+          class="w-60 h-60 m-9 shadow-xl rounded-box bg-primary text-primary-content flex flex-col justify-evenly items-center font-bold text-xl"
+        >
+          <span>Cloud-Native</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-cloud"
+            width="24"
+            height="24"
             viewBox="0 0 24 24"
             stroke-width="2"
             stroke="currentColor"
@@ -210,14 +269,36 @@
           >
             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
             <path
-              d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"
+              d="M6.657 18c-2.572 0 -4.657 -2.007 -4.657 -4.483c0 -2.475 2.085 -4.482 4.657 -4.482c.393 -1.762 1.794 -3.2 3.675 -3.773c1.88 -.572 3.956 -.193 5.444 1c1.488 1.19 2.162 3.007 1.77 4.769h.99c1.913 0 3.464 1.56 3.464 3.486c0 1.927 -1.551 3.487 -3.465 3.487h-11.878"
             />
-            <path d="M6 8h.01" />
-            <path d="M9 8h.01" />
           </svg>
         </li>
         <li
-          class="w-60 h-60 m-3 shadow-xl rounded-box bg-[#38d9a9] text-black flex flex-col justify-evenly items-center font-bold text-xl"
+          class="w-60 h-60 m-9 shadow-xl rounded-box bg-[#f06595] text-secondary-content flex flex-col justify-evenly items-center font-bold text-xl"
+        >
+          <span>AR-VR</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-cardboards"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M3 8v8.5a2.5 2.5 0 0 0 2.5 2.5h1.06a3 3 0 0 0 2.34 -1.13l1.54 -1.92a2 2 0 0 1 3.12 0l1.54 1.92a3 3 0 0 0 2.34 1.13h1.06a2.5 2.5 0 0 0 2.5 -2.5v-8.5a2 2 0 0 0 -2 -2h-14a2 2 0 0 0 -2 2z"
+            />
+            <path d="M8 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+            <path d="M16 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+          </svg>
+        </li>
+        <li
+          class="w-60 h-60 m-9 shadow-xl rounded-box bg-[#38d9a9] text-black flex flex-col justify-evenly items-center font-bold text-xl"
         >
           <span>Blockchain & Web3</span>
           <svg
@@ -239,7 +320,7 @@
           </svg>
         </li>
         <li
-          class="w-60 h-60 m-3 shadow-xl rounded-box bg-[#ffd43b] text-black flex flex-col justify-evenly items-center font-bold text-xl"
+          class="w-60 h-60 m-9 shadow-xl rounded-box bg-[#ffd43b] text-black flex flex-col justify-evenly items-center font-bold text-xl"
         >
           Cybersecurity
           <svg
@@ -263,7 +344,7 @@
           </svg>
         </li>
         <li
-          class="w-60 h-60 m-3 shadow-xl rounded-box bg-[#a9e34b] text-black flex flex-col justify-evenly items-center font-bold text-xl"
+          class="w-60 h-60 m-9 shadow-xl rounded-box bg-[#a9e34b] text-black flex flex-col justify-evenly items-center font-bold text-xl"
         >
           IoT
           <svg
@@ -301,6 +382,7 @@
       <h2 class="text-3xl text-center font-bold mb-10">About</h2>
       <div class="flex flex-col lg:flex-row justify-evenly items-center mx-10">
         <img
+          loading="lazy"
           src="/static/about-us.png"
           alt="Innovators"
           class="lg:w-1/3 shadow-md rounded-box mb-5 lg:mr-20 lg:mb-0"
@@ -548,9 +630,20 @@
     </section>
 
     <!-- guidelines -->
-    <section id="schedule" class="my-20">
+    <section id="guidelines" class="my-20">
       <h2 class="text-3xl text-center font-bold mb-10">Guidelines</h2>
       <ul class="ml-6 md:w-1/2 md:mx-auto list-disc md:text-lg">
+        <li>
+          After registering on Devfolio, it is mandatory to fill up the
+          <a
+            class="link link-hover text-blue-700"
+            href="https://forms.gle/HhBXYP3SR7vj5xoi6"
+            target="_blank"
+          >
+            abstract
+          </a>
+          form. Failing to do so will mark your registration as null and void.
+        </li>
         <li>
           Participants are required to remain within the college premises during
           the Hackathon, seeking permission from volunteers if there's a need to
@@ -579,6 +672,7 @@
           Projects should be designed with real-life applications in mind,
           addressing practical issues and providing tangible solutions.
         </li>
+        <li>Inter-college participation is allowed.</li>
         <li>
           Hackathon prioritizes research, avoids code memorization, and
           encourages internet use for inclusive collaboration, fostering
@@ -595,6 +689,7 @@
         <ul class="flex justify-evenly items-center flex-wrap">
           <li class="md:w-1/3 w-2/3 m-2">
             <img
+              loading="lazy"
               class="block w-full"
               src="/static/sponsors/devfolio.png"
               alt="DEVFOLIO LOGO”"
@@ -602,6 +697,7 @@
           </li>
           <li class="md:w-1/3 w-2/3 m-2">
             <img
+              loading="lazy"
               class="block w-full"
               src="/static/sponsors/polygon.png"
               alt="POLYGON LOGO"
@@ -614,6 +710,7 @@
         <ul class="flex justify-evenly items-center flex-wrap">
           <li class="md:w-1/3 w-2/3 m-2">
             <img
+              loading="lazy"
               class="block w-full"
               src="/static/sponsors/replit.png"
               alt="REPLIT LOGO"
@@ -629,7 +726,7 @@
       class="footer mt-20 p-10 bg-neutral text-neutral-content"
     >
       <aside>
-        <p>S4DS - KJSIT<br />Copyright © 2023 - All right reserved</p>
+        <p>S4DS - KJSIT<br />Copyright © 2024 - All right reserved</p>
       </aside>
       <nav>
         <header class="footer-title">Get in touch</header>
@@ -700,6 +797,10 @@
               <path d="M3 7l9 6l9 -6" />
             </svg>
           </a>
+        </div>
+        <div class="mt-4 grid grid-flow-col gap-4">
+          <a href="tel:+91 9619884942" target="_blank">+91 9619884942</a>
+          <a href="tel:+91 8657213795" target="_blank">+91 8657213795</a>
         </div>
       </nav>
     </footer>
