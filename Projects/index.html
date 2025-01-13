@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="S4DS - KJSIT" />
+    <meta property="og:description" content="Society For Data Science" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://s4ds.kjsieit.in/logo.png" />
+    <meta property="og:url" content="https://s4ds.kjsieit.in">
+    <meta property="og:site_name" content="S4DS - KJSIT">
+    <meta name="twitter:card" content="https://s4ds.kjsieit.in/logo.png">
+    <meta name="twitter:image:alt" content="Society For Data Science">
+    <title>Projects | S4DS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Roboto:ital,wght@0,100;0,300;0,500;1,100;1,300;1,400&family=Sacramento&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles2.css">
+    <style>
+        .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .project-card {
+            position: relative;
+            background: #1b1b1b;
+            color: #fff;
+            margin: 10px;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 300px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        .project-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+        }
+        .project-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .project-card .card-content {
+            padding: 15px;
+        }
+        .project-card .card-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            font-family: orbitron;
+        }
+        .project-card .card-content p {
+            font-size: 1rem;
+            margin: 5px 0;
+            overflow: hidden;
+            max-height: 3rem;
+            transition: max-height 0.3s ease;
+        }
+        .project-card:hover .card-content p {
+            max-height: 10rem;
+        }
+    </style>
+</head>
+<body>
+    <section class="header" id="home">
+        <nav>
+            <div class="logo">
+                <a href="https://s4ds.kjsieit.in"><img class="image2" src="Images/back/oglogo.jpeg" style="height:50px; width:50px; border-radius: 50%; margin-top: 20px;"></a>
+                <a href="https://s4ds.kjsieit.in"><img src="Images/back/logo.png"></a>
+                <div class="logo-text">KJSIT- Society For DataScience</div>
+            </div>
+            <div class="wrapper">
+                <input type="radio" name="slider" id="menu-btn">
+                <input type="radio" name="slider" id="close-btn">
+                <ul class="nav-links">
+                    <label for="close-btn" class="btn close-btn"><i class="fas fa-times" style="color:#ffffff"></i></label>
+                    <li><a href="https://s4ds.kjsieit.in">Home</a></li>
+                    <li><a href="https://s4ds.kjsieit.in/community/" style="background:linear-gradient(50deg, #a82dff, #7d3ae9 30%, #585bf6 46%, #2d7ecf 51%, #2da2e6 78%, #02faf2);border-radius: 18px;">Knowhow</a></li>
+                </ul>
+                <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+            </div>
+        </nav>
+    </section>
+    <header class="header">
+        <nav>
+            
+        </nav>
+        <div class="body-text1">
+            <h1 id="typewriter"></h1>
+        </div>
+    </header>
+    <div class="spacer"></div>
+    <main>
+        <div class="projects-container" id="projects-container">
+            <!-- Project cards will be dynamically added here -->
+        </div>
+    </main>
+    <script>
+        // Typewriter effect implementation
+        const sentence = "Showcasing Brilliance - The Projects That Define Us!";
+        const speed = 100; // Typing speed in milliseconds
+        let index = 0;
+    
+        function typeWriter() {
+            if (index < sentence.length) {
+                document.getElementById("typewriter").innerHTML += sentence.charAt(index);
+                index++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+    
+        // Start the typewriter effect when the page loads
+        window.onload = typeWriter;
+    </script>
+    <script src="scripts.js"></script>
+    <footer>
+        <div class="bottom-details">
+            <div class="bottom_text">
+                <span class="copyright_text">Copyright © 2023 S4DS
+                    <!--<small>developed by: <a href="developers.html" style="text-decoration: underline;">KJSIT - AI&DS TEAM</a></small>-->
+                </span>
+
+                <div style="align-items:center;"><a href="developers.html" style="text-decoration: none">KJSIT - S4DS TEAM</a></small></div>
+
+                <span class="policy_terms" style="margin-top: 10px;">
+                    <a target="_blank" href="https://twitter.com/knowhow_comm"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a target="_blank" href="https://www.instagram.com/knowhow_kjsit/"><i class="fa-brands fa-instagram"></i></a>
+                    <a target="_blank" href="mailto:community.s4ds@somaiya.edu"><i class="fa-solid fa-envelope"></i></a>
+                    <a target="_blank" href="https://chat.whatsapp.com/DFGAlgy8z3TLAWIUNoltVZ"><i class="fa-brands fa-whatsapp"></i></a>
+                </span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
