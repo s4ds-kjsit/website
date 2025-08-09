@@ -1,326 +1,1866 @@
 <!DOCTYPE html>
+<html lang="en" class="__className_5afde0">
+  <!-- Mirrored from csclub.org.au/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 15:08:07 GMT -->
+  <!-- Added by HTTrack -->
+  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+  <!-- /Added by HTTrack -->
 
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="S4DS - KJSIT" />
-    <meta property="og:description" content="Society For Data Science" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://s4ds.kjsieit.in/logo.png" />
-    <meta property="og:url" content="https://s4ds.kjsieit.in">
-    <meta property="og:site_name" content="S4DS - KJSIT">
-    <meta name="twitter:card" content="https://s4ds.kjsieit.in/logo.png">
-    <meta name="twitter:image:alt" content="Society For Data Science">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="preload"
+      as="image"
+      href="images/hero/hero1.jpg"
+      fetchPriority="high"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="images/hero/hero2.jpg"
+      fetchPriority="high"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="images/hero/hero3.jpg"
+      fetchPriority="high"
+    />
+    <link
+      rel="stylesheet"
+      href="_next/static/css/e54f9cb16e55aae3.css"
+      data-precedence="next"
+    />
+    <link
+      rel="preload"
+      as="script"
+      fetchPriority="low"
+      href="_next/static/chunks/webpack-a2a2af71d243c741.js"
+    />
+    <script
+      src="_next/static/chunks/5485aafe-c1e71bf3d5d34f21.js"
+      async=""
+    ></script>
+    <script src="_next/static/chunks/95-af92e7efc12fbd04.js" async=""></script>
+    <script
+      src="_next/static/chunks/main-app-9b0fc99478d22147.js"
+      async=""
+    ></script>
+    <script
+      src="_next/static/chunks/94fe57b7-b9e7845dc341b25f.js"
+      async=""
+    ></script>
+    <script src="_next/static/chunks/353-058a4ae4e893b08c.js" async=""></script>
+    <script src="_next/static/chunks/670-eedb89bf1d5e80e8.js" async=""></script>
+    <script src="_next/static/chunks/217-ce87a271318dfdbd.js" async=""></script>
+    <script src="_next/static/chunks/300-1faac93e753d74ab.js" async=""></script>
+    <script src="_next/static/chunks/683-64d76d8b0c9bc6e5.js" async=""></script>
+    <script src="_next/static/chunks/260-26075c39dee2e3c0.js" async=""></script>
+    <script
+      src="_next/static/chunks/app/layout-c3241c275c23b1ab.js"
+      async=""
+    ></script>
+    <script
+      src="_next/static/chunks/app/(home)/page-eceab9ca4f0d65ab.js"
+      async=""
+    ></script>
+    <link rel="preload" href="../umami.csclub.org.au/script.js" as="script" />
+    <meta name="theme-color" content="#252020" />
+    <title>S4DS KJSIT</title>
+    <meta
+      name="description"
+      content="The S4DS KJSIT is a student-run club for those with an interest in data science or computing in general. Made with love by Reese"
+    />
+    <link rel="icon" href="images/s4ds-white.png" />
+    <meta name="next-size-adjust" />
+    <script
+      src="_next/static/chunks/polyfills-42372ed130431b0a.js"
+      nomodule=""
+    ></script>
+  </head>
 
-    <title>HOME | S4DS</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Roboto:ital,wght@0,100;0,300;0,500;1,100;1,300;1,400&family=Sacramento&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
-    <script src="https://kit.fontawesome.com/44ff14a987.js" crossorigin="anonymous"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
-
-
-</head>
-<body>
-
-    <!-- Loader -->
-    <div class="loader">
-        <div class="loader-spinner"></div>
-    </div>
-
-
-    <div class="arrow">
-        <a href="#home" title="Back to Top"><span class="fas fa-angle-up"></span></a>
-    </div>
-    <section class="header" id="home">
-        <nav>
-            <div class="logo">
-                <a href="index.html"><img class="image2" src="images/back/oglogo.jpeg" style="height:50px; width:50px; border-radius: 50%; margin-top: 20px;"></a>
-                <a href="index.html"><img src="images/back/logo.png"></a>
-                <div class="logo-text">KJSIT- Society For DataScience</div>
-            </div>
-            <div class="wrapper">
-                <input type="radio" name="slider" id="menu-btn">
-                <input type="radio" name="slider" id="close-btn">
-                <ul class="nav-links">
-                    <label for="close-btn" class="btn close-btn"><i class="fas fa-times" style="color:#ffffff"></i></label>
-                    <li><a href="#1">About</a></li>
-                    <li><a href="#5">Membership</a></li>
-                    <li><a href="https://s4ds.kjsieit.in/Projects/">Projects</a></li>
-                    <li>
-                        <a class="desktop-item">Teams</a>
-                        <input type="checkbox" id="showDrop">
-                        <label for="showDrop" class="mobile-item">Teams</label>
-                        <ul class="drop-menu">
-                            <li><a href="year2023.html">2023</a></li>
-                            <li><a href="year2024.html">2024</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="https://s4ds.kjsieit.in/community/" style="background:linear-gradient(50deg, #a82dff, #7d3ae9 30%, #585bf6 46%, #2d7ecf 51%, #2da2e6 78%, #02faf2);border-radius: 18px;">Knowhow</a></li>
-                </ul>
-                <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
-            </div>
-        </nav>
-    </section>
-    <div class="body-text" style="display: inline-flex;">
-        <h1>KJSIT's &nbsp;&nbsp;<br class="break"><span></span></h1>
-    </div>
-    <!--<div class="heading-image">
-        <img src="images/back/s4dslogo.png" style="height:240px;width:240px;display: inline-flex;">
-    </div>-->
-
-    </div>
-
-
-    <section class="text-box" id="1">
-        <div class="text-box-content">
-            <h1>ABOUT US</h1><hr>
-            <p>Founded in 2017, the Society for Datascience has been growing quickly.
-                Data Science is the discipline of extracting insights and analytics from data. It is broadly used to describe Machine Learning, Artificial Intelligence, and Data Analytics. Job postings in this discipline have increased multi-fold in the last 5 years and Data Scientists in India are in short supply.
-                More than 2.7 zetta-bytes of data exist in today's digital universe, and that is projected to grow to 180 zetta-bytes in 2025
-               </p>
-            <h1>VISION</h1><hr>
-            <ul>
-                <li>Empowering people in the field of Data Science through spread of knowledge and wisdom in an intelligent environment to improve life, business and government and prepare tomorrow’s data science researchers to address grand challenge problems.</li>
-                <li>Society for Data Science’s core purpose is to foster Data Science innovation and excellence for the benefit of humanity. </li>
-                <li>S4DS has its mission to connect academia, industry and society in a diverse Data Science and AI ecosystem  where collaboration, innovation and engagement are key to the network.</li>
-                <li>Innovation is key to S4DS being a nationally and internationally recognised leader in Data Science and AI. Those in our network should have the drive to apply and innovate Data Science and AI in research, business and society to the benefit of all involved. </li>
-            </ul>
-            <h1>MISSION</h1><hr>
-            <ul style="font-size: larger;">
-                <li>Enriching the Knowledge</li>
-                <li>Enhancing the Academic Ability</li>
-                <li>Adopting the unique multidisciplinary approach</li>
-                <li>Ensuring the Responsibility</li>
-            </ul>
-        </div>
-
-    </section>
-    <section class="text-box" id="2">
-        <div class="text-box-content text-box-content2">
-            <h1>What are we aiming on?</h1><hr>
-            <div class="highlight-box">
-                Projects
-            </div>
-            <div class="highlight-box">
-                Skills
-            </div>
-            <div class="highlight-box">
-                Collaboration
-            </div>
-
-        </div>
-    </section>
-    <section class="text-box"id="3">
-        <div class="text-box-content text-box-content2">
-            <h1>Faculty Coordinators</h1><hr>
-            <div class="card dashcard5">
-                <div class="maincontainteam">
-                <div class="subcontain">
-                    <a style="text-decoration:none;color:#000" href="#">
-                    <div class="card newscard2" style="flex-direction:row;border-radius: 18px;padding:3%;">
-                        <img src="images/member/mn.jpg" class="card-img-top" alt="..">
-
-                        <div class="card-body">
-                        <h5 class="card-title">Dr. Milind Nemade</h5>
-                        <p class="card-text">Counsellor</p>
-                        </div>
-                        </div></a>
-                        </div>
-
-                        <div class="subcontain" >
-                        <a style="text-decoration:none;color:#000" href="#">
-                        <div class="card newscard2" style="flex-direction:row;border-radius: 18px;padding:3%;">
-                        <img src="images/member/sj.jpg" class="card-img-top" alt="..">
-
-                        <div class="card-body">
-                        <h5 class="card-title">Prof. Sheetal Jagtap</h5>
-                        <p class="card-text">Faculty Coordinator</p>
-                        </div>
-                        </div></a>
-                        </div>
-
-
-                        <div class="subcontain" >
-                        <a style="text-decoration:none;color:#000" href="#">
-                        <div class="card newscard2" style="flex-direction:row;border-radius: 18px;padding:3%;">
-                        <img src="images/member/ss.jpg" class="card-img-top" alt="..">
-
-                        <div class="card-body">
-                        <h5 class="card-title">Prof. Sejal Shah</h5>
-                        <p class="card-text">Faculty Coordinator</p>
-                        </div>
-                        </div></a>
-                    </div>
+  <body id="root" class="overflow-x-hidden bg-grey text-white">
+    <header class="hidden lg-xl:block fixed z-[9999] w-full">
+      <div
+        class="absolute -z-20 h-40 w-full transition-all duration-500 undefined"
+      ></div>
+      <div class="mx-auto mt-8 w-responsive">
+        <div
+          class="flex items-center justify-between gap-8 border-4 border-black bg-white px-8 py-4 text-grey"
+        >
+          <div class="flex flex-shrink items-center">
+            <a class="grow flex flex-row items-center" href="index.html">
+              <img
+                alt="Computer Science Club Logo"
+                loading="lazy"
+                width="100"
+                height="100"
+                decoding="async"
+                data-nimg="1"
+                class="h-full w-[3rem] md:w-[2rem] lg:w-[2.5rem]"
+                style="color: transparent"
+                src="images/s4ds-white.png"
+              />
+              <h1
+                class="text-grey ml-2 text-3xl font-bold md:text-xl lg:text-2xl"
+              >
+                S4DS KJSIT
+              </h1>
+            </a>
+          </div>
+          <div class="flex items-center md:gap-4">
+            
+            <a class="block hover:underline" href="/Projects">Projects</a>
+            <a class="block hover:underline" href="teams.html">Teams</a>
+            
+            
+            
+            <a class="block hover:underline" href="#knowcode-community">Knowhow</a>
+            
+            <!-- <a class="block hover:underline" href="events.html">Events</a>
+          <a class="block hover:underline" href="sponsors.html">Sponsors</a>
+          <a class="block hover:underline" href="open-source.html">Open Source</a>
+          <a class="block hover:underline" href="contact.html">Contact</a> -->
+            <div
+              class="flex gap-4 md:flex-col md:justify-center lg:flex-row lg:items-center"
+            >
+              <div class="flex items-center">
+                <div class="relative h-auto w-full">
+                  <div
+                    style="margin-bottom: -4px; margin-right: -4px"
+                    class="absolute bottom-0 right-0 h-full w-full bg-black"
+                  ></div>
+                  <!-- <div class="relative z-10 flex h-full w-full items-center justify-center">
+                  <button class="undefined undefined text-lg md:text-base bg-orange hover:enabled:bg-yellow whitespace-nowrap border-2 border-black px-16 text-lg flex items-center justify-center py-4 font-bold transition-colors duration-300 disabled:cursor-wait disabled:grayscale md:px-2 md:py-1 md:text-base lg:px-6 lg:py-2">Sign In</button>
+                </div> -->
                 </div>
+              </div>
+              <div class="flex items-center">
+                <div class="relative h-auto w-full">
+                  <div
+                    style="margin-bottom: -4px; margin-right: -4px"
+                    class="absolute bottom-0 right-0 h-full w-full bg-black"
+                  ></div>
+                  <!-- <div class="relative z-10 flex h-full w-full items-center justify-center">
+                  <a href="join.html" class="undefined undefined text-lg md:text-base bg-purple hover:bg-yellow whitespace-nowrap border-2 border-black px-16 text-lg flex items-center justify-center py-4 font-bold transition-colors duration-300 disabled:cursor-wait disabled:grayscale md:px-2 md:py-1 md:text-base lg:px-6 lg:py-2">Join Us</a>
+                </div> -->
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-    </section>
-    <section class="text-box" id="4">
-        <div class="text-box-content text-box-content2">
-            <h1>The Board</h1><hr>
-            <div class="card dashcard5">
-                <div class="maincontainteam">
-                        <div class="subcontain">
-                            <a style="text-decoration:none;color:#000" href="#">
-                                <div class="card newscard2" style="flex-direction:row;border-radius: 18px;padding:3%;">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Bhavormi Somaiya</h5>
-                                        <p class="card-text">President</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
+        <div
+          class="relative -right-[0.5rem] -top-[7.5rem] -z-10 h-[8rem] w-responsive border-4 border-black bg-white lg:-top-[6rem] lg:h-[6.5rem] md-lg:-top-[4.75rem] md-lg:h-[5.25rem]"
+        ></div>
+      </div>
+    </header>
 
-                        <div class="subcontain">
-                        <a style="text-decoration:none;color:#000" href="#">
-                        <div class="card newscard2" style="flex-direction:row;border-radius: 18px;padding:3%;">
+    <div class="lg-xl:hidden fixed z-[9999] w-full transition-all">
+      <div class="absolute -z-20 h-40 w-full transition-all duration-500"></div>
+      <div class="mx-auto mt-8 transition-all w-responsive">
+        <div class="flex">
+          <a class="grow flex flex-row items-center" href="index.html">
+            <img
+              alt="Computer Science Club Logo"
+              loading="lazy"
+              width="100"
+              height="100"
+              decoding="async"
+              data-nimg="1"
+              class="h-full w-[3rem] md:w-[2rem] lg:w-[2.5rem]"
+              style="color: transparent"
+              src="images/s4ds-white.png"
+            />
+            <h1
+              class="text-white ml-2 text-3xl font-bold md:text-xl lg:text-2xl"
+            >
+              S4DS KJSIT
+            </h1>
+          </a>
+          <div class="flex items-center">
+            <div class="relative h-auto w-auto">
+              <div
+                style="margin-bottom: -4px; margin-right: -4px"
+                class="absolute bottom-0 right-0 h-full w-full bg-black"
+              ></div>
+              <div
+                class="relative z-10 flex h-full w-full items-center justify-center"
+              >
+                <button
+                  class="bg-white relative flex h-16 w-16 items-center justify-center border-4 border-black text-4xl text-black transition-all duration-300"
+                >
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 512 512"
+                    aria-label="Menu"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M64 384h384v-42.666H64V384zm0-106.666h384v-42.667H64v42.667zM64 128v42.665h384V128H64z"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-
-                        <div class="card-body">
-                        <h5 class="card-title">Himey Sankhe</h5>
-                        <p class="card-text">Vice President</p>
-                        </div>
-                        </div></a>
-                        </div>
-
-                        <div class="subcontain">
-                        <a style="text-decoration:none;color:#000" href="#">
-                        <div class="card newscard2" style="flex-direction:row;border-radius: 18px;padding:3%;">
-
-
-                        <div class="card-body">
-                        <h5 class="card-title">Kushal Dhoble</h5>
-                        <p class="card-text">Secretary</p>
-                        </div>
-                        </div></a>
-                        </div>
-
-                        <div class="subcontain">
-                        <a style="text-decoration:none;color:#000" href="#">
-                        <div class="card newscard2" style="flex-direction:row;border-radius: 18px;padding:3%;">
-
-
-                        <div class="card-body">
-                        <h5 class="card-title">Rishikesh Giridhar</h5>
-                        <p class="card-text">Technical Lead</p>
-                        </div>
-                        </div></a>
-                        </div>
-
-
-                        <div class="subcontain">
-                        <a style="text-decoration:none;color:#000" href="#">
-                        <div class="card newscard2" style="flex-direction:row;border-radius: 18px;padding:3%;">
-
-
-                        <div class="card-body">
-                        <h5 class="card-title">Namitha Prakash</h5>
-                        <p class="card-text">Public Relations Officer</p>
-                        </div>
-                        </div></a>
-                        </div>
-
-
-                        <div class="subcontain">
-                        <a style="text-decoration:none;color:#000" href="#">
-                        <div class="card newscard2" style="flex-direction:row;border-radius: 18px;padding:3%;">
-                        <div class="card-body">
-                        <h5 class="card-title">Devang Mestry</h5>
-                        <p class="card-text">Chief Executive Officer</p>
-                        </div>
-                        </div></a>
-                        </div>
-
-                        <div class="subcontain">
-                        <a style="text-decoration:none;color:#000" href="#">
-                        <div class="card newscard2" style="flex-direction:row;border-radius: 18px;padding:3%;">
-
-
-                        <div class="card-body">
-                        <h5 class="card-title">Eshaan Mital</h5>
-                        <p class="card-text">Treasurer</p>
-                        </div>
-                        </div></a>
-                        </div>
-
+    <div class="mx-auto min-h-screen w-responsive pb-6 pt-32 md:pt-40">
+      <main class="relative">
+        <section class="mb-8 flex font-black">
+          <div class="grid grid-cols-1 lg:grid-cols-2">
+            <div>
+              <img
+                alt="Square Grid"
+                loading="lazy"
+                width="500"
+                height="500"
+                decoding="async"
+                data-nimg="1"
+                class="absolute -z-10 ml-8 mt-8 w-[60vw] max-w-[800px] md:w-[70vw] lg:w-[50vw]"
+                style="color: transparent"
+                src="images/square-grid.svg"
+              />
+              <div class="relative z-10">
+                <h1 class="text-5xl lg:text-7xl 2xl:text-8xl">SOCIETY</h1>
+                <div class="h-2"></div>
+                <h1 class="text-5xl lg:text-7xl 2xl:text-8xl">FOR</h1>
+                <div class="h-2"></div>
+                <div class="flex items-center">
+                  <div class="relative h-auto w-auto">
+                    <div
+                      style="margin-bottom: -8px; margin-right: -8px"
+                      class="absolute bottom-0 right-0 h-full w-full border-yellow border-2"
+                    ></div>
+                    <div
+                      class="relative z-10 flex h-full w-full items-center justify-center"
+                    >
+                      <div class="w-fit p-3 bg-yellow">
+                        <h1
+                          class="text-center text-5xl text-grey md:text-7xl font-black"
+                        >
+                          DATA SCIENCE
+                        </h1>
+                      </div>
                     </div>
+                  </div>
+                </div>
+                <div class="h-4 md:h-8"></div>
+                <div class="flex items-center">
+                  <div class="relative h-auto w-auto">
+                    <div
+                      style="margin-bottom: -8px; margin-right: -8px"
+                      class="absolute bottom-0 right-0 h-full w-full border-orange border-2"
+                    ></div>
+                    <div
+                      class="relative z-10 flex h-full w-full items-center justify-center"
+                    >
+                      <div class="w-fit bg-orange px-2 py-2">
+                        <h2 class="text-xl md:text-3xl">
+                          K J Somaiya Institute of Technology
+                        </h2>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-        </div>
-    </section>
+            <div
+              class="mt-12 w-full transition-all duration-500 md:w-auto lg:ml-10 lg:mt-0"
+            >
+              <div class="relative z-10 mr-2">
+                <div class="flex items-center">
+                  <div class="relative h-auto w-auto">
+                    <div
+                      style="margin-bottom: -8px; margin-right: -8px"
+                      class="absolute bottom-0 right-0 h-full w-full bg-purple"
+                    ></div>
+                    <div
+                      class="relative z-10 flex h-full w-full items-center justify-center"
+                    >
+                      <div class="relative h-full w-full bg-white">
+                        <img
+                          alt="Hero Image 1"
+                          fetchPriority="high"
+                          width="2132"
+                          height="1600"
+                          decoding="async"
+                          data-nimg="1"
+                          class="hidden"
+                          style="color: transparent"
+                          src="images/hero/hero1.jpg"
+                        />
+                        <img
+                          alt="Hero Image 2"
+                          fetchPriority="high"
+                          width="2132"
+                          height="1600"
+                          decoding="async"
+                          data-nimg="1"
+                          class="hidden"
+                          style="color: transparent"
+                          src="images/hero/hero2.jpg"
+                        />
+                        <img
+                          alt="Hero Image 3"
+                          fetchPriority="high"
+                          width="2132"
+                          height="1600"
+                          decoding="async"
+                          data-nimg="1"
+                          class="hidden"
+                          style="color: transparent"
+                          src="images/hero/hero3.jpg"
+                        />
+                        <div
+                          class="transition-opacity duration-500 ease-in-out opacity-100"
+                        >
+                          <img
+                            alt="Hero Image 1"
+                            loading="lazy"
+                            width="2132"
+                            height="1600"
+                            decoding="async"
+                            data-nimg="1"
+                            class="h-full w-full object-cover"
+                            style="color: transparent"
+                            src="images/hero/hero1.jpg"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-    <section class="text-box" id="5">
-        <div class="text-box-content">
-            <h1>Student Chapter Benefit</h1><hr>
-            <ul style="list-style: circle;">
-                <li>Organizing events at S4DS Student Chapter shall help members develop administrative, technical, managerial, and humanitarian skills.</li>
-                <li>Establish a center of excellence in many disruptive technologies.</li>
-                <li>Conduct Certification Programs on disruptive technologies.</li>
-                <li>Provide resources and promotional support for Workshops, Lectures, Seminars, Conferences, etc.</li>
-                <li>Organize Faculty Development Programs and Technical Training Programs.</li>
-                <li>Offer opportunities to organize activities for the development of entrepreneurial skills, leadership skills, soft skills, and other skill development activities.</li>
-                <li>Provide opportunities to host or become a partner in organizing the International Conference on Data Management, Analytics, and Innovation (ICDMAI), a flagship conference of S4DS.</li>
-                <li>Facilitate networking with the S4DS team and other Student Chapters, which may help in projects and placements.</li>
-                <li>Association with Technical Professional Bodies shall help in receiving recognition by Accreditation bodies.</li>
+        <section>
+          <div class="grid grid-cols-1 lg:grid-cols-2">
+            <div class="flex flex-col justify-around">
+              <div>
+                <div
+                  class="relative z-10 mt-12 flex flex-col text-2xl font-black lg:mt-12 lg:text-3xl"
+                >
+                  <h3>Student Chapter</h3>
+                  <div class="mt-2 w-fit bg-purple px-2">
+                    <h3 class="text-grey">Benefits</h3>
+                  </div>
+                </div>
+                <div
+                  class="relative z-10 mt-4 border-2 border-white bg-grey px-4 py-4 md:px-6 md:py-6"
+                >
+                  <p class="text-lg md:text-xl">
+                    Gain valuable skills beyond the classroom by organizing
+                    events, and participating in certification programs,
+                    training sessions, and workshops. Connect with the wider
+                    S4DS network, and benefit from national-level recognition.
+                  </p>
+                </div>
+              </div>
+              <div>
+                <div
+                  class="relative z-10 mt-4 flex flex-row items-center text-2xl font-black lg:text-3xl"
+                >
+                  <h3 class="">Membership Benefits</h3>
+                  <img
+                    alt="Yellow Star"
+                    loading="lazy"
+                    width="50"
+                    height="50"
+                    decoding="async"
+                    data-nimg="1"
+                    class="ml-4 h-10"
+                    style="color: transparent"
+                    src="images/yellow-star.svg"
+                  />
+                </div>
+                <div
+                  class="relative z-10 mt-4 border-2 border-white bg-grey px-4 py-4 md:px-6 md:py-6"
+                >
+                  <p class="text-lg md:text-xl">
+                    Exclusive perks include discounted access to workshops,
+                    certification programs, and ICDMAI. Members receive a free
+                    quarterly newsletter, reduced fees, and opportunities to
+                    connect with global mentors. Innovative ideas may receive
+                    funding and support. Members can also lead or collaborate on
+                    training events with S4DS, expanding their network and
+                    skills.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="relative z-10 mt-12 text-2xl font-black md:flex-row lg:ml-10 lg:mt-12 lg:text-3xl"
+            >
+              <div class="flex lg:justify-end">
+                <h3>Upcoming Events</h3>
+              </div>
+              <div class="mt-4 space-y-6">
+                <div class="flex items-center">
+                  <div class="relative h-auto w-full">
+                    <div
+                      style="margin-bottom: -8px; margin-right: -8px"
+                      class="absolute bottom-0 right-0 h-full w-full border-white border-2 rounded-xl"
+                    ></div>
+                    <div
+                      class="relative z-10 flex h-full w-full items-center justify-center"
+                    >
+                      <div
+                        class="flex w-full flex-col gap-6 rounded-xl bg-white p-4 text-black lg:flex-row"
+                      >
+                        <a href="events.html#SET-Societies-Atrium-Day-2025">
+                          <div class="grow space-y-2 md:space-y-4">
+                            <div class="flex gap-6">
+                              <div
+                                class="h-fit rounded-md border-[3px] border-black px-4 py-2 text-xl bg-orange"
+                              >
+                                <div>AUG</div>
+                                <div>23-24</div>
+                              </div>
+                              <div class="grow space-y-2 text-2xl">
+                                <h4
+                                  class="md:border-b-[3px] md:border-black md:pb-1"
+                                >
+                                  Development to Deployment
+                                </h4>
+                                <div class="flex gap-2 text-lg font-normal">
+                                  <span>
+                                    <svg
+                                      stroke="currentColor"
+                                      fill="none"
+                                      stroke-width="2"
+                                      viewBox="0 0 24 24"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      height="26"
+                                      width="26"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                      <circle cx="12" cy="12" r="10"></circle>
+                                      <polyline
+                                        points="12 6 12 12 16 14"
+                                      ></polyline>
+                                    </svg>
+                                  </span>
+                                  <span>9:00 AM - 5:00 PM</span>
+                                </div>
+                                <div class="flex gap-2 text-lg font-normal">
+                                  <span>
+                                    <svg
+                                      stroke="currentColor"
+                                      fill="none"
+                                      stroke-width="2"
+                                      viewBox="0 0 24 24"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      height="26"
+                                      width="26"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                      <circle cx="12" cy="12" r="10"></circle>
+                                      <path
+                                        d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"
+                                      ></path>
+                                      <path d="M12 17h.01"></path>
+                                    </svg>
+                                  </span>
+                                  <span>DevOps Workshop</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex items-center">
+                  <div class="relative h-auto w-full">
+                    <div
+                      style="margin-bottom: -8px; margin-right: -8px"
+                      class="absolute bottom-0 right-0 h-full w-full border-white border-2 rounded-xl"
+                    ></div>
+                    <div
+                      class="relative z-10 flex h-full w-full items-center justify-center"
+                    >
+                      <div
+                        class="flex w-full flex-col gap-6 rounded-xl bg-white p-4 text-black lg:flex-row"
+                      >
+                        <a href="events.html#2025-Meet-&amp;-Greet-2-2025">
+                          <div class="grow space-y-2 md:space-y-4">
+                            <div class="flex gap-6">
+                              <div
+                                class="h-fit rounded-md border-[3px] border-black px-4 py-2 text-xl bg-yellow"
+                              >
+                                <div>JAN</div>
+                                <div>28-30</div>
+                              </div>
+                              <div class="grow space-y-2 text-2xl">
+                                <h4
+                                  class="md:border-b-[3px] md:border-black md:pb-1"
+                                >
+                                  Knowcode 3.0
+                                </h4>
+                                <div class="flex gap-2 text-lg font-normal">
+                                  <span>
+                                    <svg
+                                      stroke="currentColor"
+                                      fill="none"
+                                      stroke-width="2"
+                                      viewBox="0 0 24 24"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      height="26"
+                                      width="26"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                      <circle cx="12" cy="12" r="10"></circle>
+                                      <polyline
+                                        points="12 6 12 12 16 14"
+                                      ></polyline>
+                                    </svg>
+                                  </span>
+                                  <span>Full Day</span>
+                                </div>
+                                <div class="flex gap-2 text-lg font-normal">
+                                  <span>
+                                    <svg
+                                      stroke="currentColor"
+                                      fill="none"
+                                      stroke-width="2"
+                                      viewBox="0 0 24 24"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      height="26"
+                                      width="26"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                      <circle cx="12" cy="12" r="10"></circle>
+                                      <path
+                                        d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"
+                                      ></path>
+                                      <path d="M12 17h.01"></path>
+                                    </svg>
+                                  </span>
+                                  <span>36-Hour National Level Hackathon </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex items-center">
+                  <div class="relative h-auto w-full">
+                    <div
+                      style="margin-bottom: -8px; margin-right: -8px"
+                      class="absolute bottom-0 right-0 h-full w-full border-white border-2 rounded-xl"
+                    ></div>
+                    <div
+                      class="relative z-10 flex h-full w-full items-center justify-center"
+                    >
+                      <div
+                        class="flex w-full flex-col gap-6 rounded-xl bg-white p-4 text-black lg:flex-row"
+                      >
+                        <a href="events.html#Clubsland--2025">
+                          <div class="grow space-y-2 md:space-y-4">
+                            <div class="flex gap-6">
+                              <div
+                                class="h-fit rounded-md border-[3px] border-black px-4 py-2 text-xl bg-purple"
+                              >
+                                <div>FEB</div>
+                                <div>12-13</div>
+                              </div>
+                              <div class="grow space-y-2 text-2xl">
+                                <h4
+                                  class="md:border-b-[3px] md:border-black md:pb-1"
+                                >
+                                  Flutter Workshop
+                                </h4>
+                                <div class="flex gap-2 text-lg font-normal">
+                                  <span>
+                                    <svg
+                                      stroke="currentColor"
+                                      fill="none"
+                                      stroke-width="2"
+                                      viewBox="0 0 24 24"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      height="26"
+                                      width="26"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                      <circle cx="12" cy="12" r="10"></circle>
+                                      <polyline
+                                        points="12 6 12 12 16 14"
+                                      ></polyline>
+                                    </svg>
+                                  </span>
+                                  <span>1:30 PM - 5:30 PM</span>
+                                </div>
+                                <div class="flex gap-2 text-lg font-normal">
+                                  <span>
+                                    <svg
+                                      stroke="currentColor"
+                                      fill="none"
+                                      stroke-width="2"
+                                      viewBox="0 0 24 24"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      height="26"
+                                      width="26"
+                                      xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                      <circle cx="12" cy="12" r="10"></circle>
+                                      <path
+                                        d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"
+                                      ></path>
+                                      <path d="M12 17h.01"></path>
+                                    </svg>
+                                  </span>
+                                  <span
+                                    >Hands On Flutter AppDev Workshop</span
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <hr class="mb-10 mt-16 h-0.5 bg-white" />
+
+        <section>
+          <img
+            alt="Square Grid"
+            loading="lazy"
+            width="500"
+            height="500"
+            decoding="async"
+            data-nimg="1"
+            class="absolute -z-10 mt-12 w-0 max-w-[800px] lg:ml-36 lg:w-[50vw]"
+            style="color: transparent"
+            src="images/square-grid.svg"
+          />
+          <div
+            class="mr-2 grid auto-rows-fr grid-cols-1 gap-8 text-xl lg:grid-cols-3"
+          >
+            <div class="flex items-center">
+              <div class="relative h-full w-full">
+                <div
+                  style="margin-bottom: -8px; margin-right: -8px"
+                  class="absolute bottom-0 right-0 h-full w-full bg-white"
+                ></div>
+                <div
+                  class="relative z-10 flex h-full w-full items-center justify-center"
+                >
+                  <div class="flex h-full flex-col">
+                    <div
+                      class="w-full border-4 border-black bg-purple px-4 py-4 md:px-6 md:py-6"
+                    >
+                      <h3 class="text-2xl font-black text-grey lg:text-3xl">
+                        About Us
+                      </h3>
+                    </div>
+                    <div
+                      class="-mt-2 h-full w-fit border-4 border-black bg-white px-4 py-4 md:px-6 md:py-6"
+                    >
+                      <div class="relative text-lg text-black md:text-xl">
+                        <p>
+                          S4DS at K. J. Somaiya Institute of Technology is a
+                          student-led community that explores Data Science, AI,
+                          and emerging tech. We focus on real-world projects,
+                          hands-on learning, and peer collaboration through
+                          events like our flagship hackathon,
+                          <span class="relative inline-block">
+                            Knowcode.
+                            <span
+                              class="absolute left-0 top-0 h-full w-full bg-purple opacity-30"
+                            ></span>
+                          </span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <div class="relative h-full w-full">
+                <div
+                  style="margin-bottom: -8px; margin-right: -8px"
+                  class="absolute bottom-0 right-0 h-full w-full bg-white"
+                ></div>
+                <div
+                  class="relative z-10 flex h-full w-full items-center justify-center"
+                >
+                  <div class="flex h-full flex-col">
+                    <div
+                      class="w-full border-4 border-black bg-yellow px-4 py-4 md:px-6 md:py-6"
+                    >
+                      <h3 class="text-2xl font-black text-grey lg:text-3xl">
+                        Vision
+                      </h3>
+                    </div>
+                    <div
+                      class="-mt-2 h-full w-fit border-4 border-black bg-white px-4 py-4 md:px-6 md:py-6"
+                    >
+                      <div class="relative text-lg text-black md:text-xl">
+                        <p>
+                          To build a future-ready tech community where students
+                          innovate with
+                          <span class="relative inline-block"
+                            >impact
+                            <span
+                              class="absolute left-0 top-0 h-full w-full bg-yellow opacity-30"
+                            ></span>
+                          </span>
+                          to solve real problems and drive change across
+                          society, industry, and government.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center">
+              <div class="relative h-full w-full">
+                <div
+                  style="margin-bottom: -8px; margin-right: -8px"
+                  class="absolute bottom-0 right-0 h-full w-full bg-white"
+                ></div>
+                <div
+                  class="relative z-10 flex h-full w-full items-center justify-center"
+                >
+                  <div class="flex h-full flex-col">
+                    <div
+                      class="w-full border-4 border-black bg-orange px-4 py-4 md:px-6 md:py-6"
+                    >
+                      <h3 class="text-2xl font-black text-grey lg:text-3xl">
+                        Mission
+                      </h3>
+                    </div>
+                    <div
+                      class="-mt-2 h-full w-fit border-4 border-black bg-white px-4 py-4 md:px-6 md:py-6"
+                    >
+                      <div class="relative text-lg text-black md:text-xl">
+                        <p>
+                          To empower students through practical learning,
+                          <span class="relative inline-block"
+                            >mentorship,
+                            <span
+                              class="absolute left-0 top-0 h-full w-full bg-orange opacity-30"
+                            ></span>
+                          </span>
+                          and innovation. We aim to connect minds, build
+                          meaningful projects, and share knowledge that creates
+                          lasting change.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div
+            class="relative z-10 mt-12 flex flex-row items-center text-2xl font-black md:text-4xl lg:mt-20 lg:text-5xl"
+          >
+            <img
+              alt="Yellow Triangle"
+              loading="lazy"
+              width="30"
+              height="30"
+              decoding="async"
+              data-nimg="1"
+              class="mb-12 mr-4"
+              style="color: transparent"
+              src="images/yellow-triangle.svg"
+            />
+            <div>
+              <!-- <h3>The</h3> -->
+              <div class="flex flex-col smr:flex-row">
+                <!-- <h3 class="mb-2 mr-2 md:mb-0">Industry's</h3> -->
+                <div class="flex items-center">
+                  <div class="relative h-auto w-auto">
+                    <div
+                      style="margin-bottom: -6px; margin-right: -6px"
+                      class="absolute bottom-0 right-0 h-full w-full border-orange border-2"
+                    ></div>
+                    <div
+                      class="relative z-10 flex h-full w-full items-center justify-center"
+                    >
+                      <div class="w-fit bg-orange px-2">
+                        <h2>Guiding Forces</h2>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="relative z-10 mt-16 space-y-4">
+            <div
+              class="flex flex-wrap justify-center gap-6 pb-2 smr:justify-start"
+            >
+              <div class="flex flex-col items-center">
+                <a class="block" target="_blank" rel="noopener noreferrer">
+                  <div class="flex items-center">
+                    <div class="relative h-auto w-auto">
+                      <div
+                        style="margin-bottom: -10px; margin-right: -10px"
+                        class="absolute bottom-0 right-0 h-full w-full border-white border-2"
+                      ></div>
+                      <div
+                        class="relative z-10 flex h-full w-full items-center justify-center"
+                      >
+                        <img
+                          alt="Dr. John Smith"
+                          loading="lazy"
+                          width="250"
+                          height="250"
+                          decoding="async"
+                          data-nimg="1"
+                          class="h-[150px] w-[150px] bg-white object-contain p-2 md:h-[250px] md:w-[250px]"
+                          style="color: transparent"
+                          src="images/mn.jpg"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="mt-4 flex items-center">
+                  <div class="relative h-auto w-auto">
+                    <div
+                      style="margin-bottom: -4px; margin-right: -4px"
+                      class="absolute bottom-0 right-0 h-full w-full border-yellow border-2"
+                    ></div>
+                    <div
+                      class="relative z-10 flex h-full w-full items-center justify-center"
+                    >
+                      <div class="w-fit bg-yellow px-3 py-2">
+                        <h3 class="text-xl font-black text-grey">Dr. Milind Nemade</h3>
+                        <p class="text-center text-sm font-black text-grey">Counsellor</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <a class="block" target="_blank" rel="noopener noreferrer">
+                  <div class="flex items-center">
+                    <div class="relative h-auto w-auto">
+                      <div
+                        style="margin-bottom: -10px; margin-right: -10px"
+                        class="absolute bottom-0 right-0 h-full w-full border-white border-2"
+                      ></div>
+                      <div
+                        class="relative z-10 flex h-full w-full items-center justify-center"
+                      >
+                        <img
+                          alt="Prof. Sarah Johnson"
+                          loading="lazy"
+                          width="250"
+                          height="250"
+                          decoding="async"
+                          data-nimg="1"
+                          class="h-[150px] w-[150px] bg-white object-contain p-2 md:h-[250px] md:w-[250px]"
+                          style="color: transparent"
+                          src="images/sj.jpg"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="mt-4 flex items-center">
+                  <div class="relative h-auto w-auto">
+                    <div
+                      style="margin-bottom: -4px; margin-right: -4px"
+                      class="absolute bottom-0 right-0 h-full w-full border-purple border-2"
+                    ></div>
+                    <div
+                      class="relative z-10 flex h-full w-full items-center justify-center"
+                    >
+                      <div class="w-fit bg-purple px-3 py-2">
+                        <h3 class="text-xl font-black text-white">Dr. Sheetal Jagtap</h3>
+                        <p class="text-center text-sm font-black text-white">Faculty Coordinator</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <a class="block" target="_blank" rel="noopener noreferrer">
+                  <div class="flex items-center">
+                    <div class="relative h-auto w-auto">
+                      <div
+                        style="margin-bottom: -10px; margin-right: -10px"
+                        class="absolute bottom-0 right-0 h-full w-full border-white border-2"
+                      ></div>
+                      <div
+                        class="relative z-10 flex h-full w-full items-center justify-center"
+                      >
+                        <img
+                          alt="Dr. Michael Chen"
+                          loading="lazy"
+                          width="250"
+                          height="250"
+                          decoding="async"
+                          data-nimg="1"
+                          class="h-[150px] w-[150px] bg-white object-contain p-2 md:h-[250px] md:w-[250px]"
+                          style="color: transparent"
+                          src="images/ss.jpg"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="mt-4 flex items-center">
+                  <div class="relative h-auto w-auto">
+                    <div
+                      style="margin-bottom: -4px; margin-right: -4px"
+                      class="absolute bottom-0 right-0 h-full w-full border-orange border-2"
+                    ></div>
+                    <div
+                      class="relative z-10 flex h-full w-full items-center justify-center"
+                    >
+                      <div class="w-fit bg-orange px-3 py-2">
+                        <h3 class="text-xl font-black text-white">Prof. Sejal Shah</h3>
+                        <p class="text-center text-sm font-black text-white">Faculty Coordinator</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <img
+            alt="Square Grid"
+            loading="lazy"
+            width="500"
+            height="500"
+            decoding="async"
+            data-nimg="1"
+            class="absolute -z-10 mt-12 w-0 max-w-[800px] lg:ml-36 lg:w-[50vw]"
+            style="color: transparent"
+            src="images/square-grid.svg"
+          />
+          <div
+            class="relative z-10 mt-12 flex flex-row items-center text-2xl font-black md:text-4xl lg:mt-20 lg:text-5xl"
+          >
+            <img
+              alt="Yellow Triangle"
+              loading="lazy"
+              width="30"
+              height="30"
+              decoding="async"
+              data-nimg="1"
+              class="mb-12 mr-4"
+              style="color: transparent"
+              src="images/yellow-triangle.svg"
+            />
+            <div>
+              <!-- <h3>The</h3> -->
+              <div class="flex flex-col smr:flex-row">
+                <!-- <h3 class="mb-2 mr-2 md:mb-0">Industry's</h3> -->
+                <div class="flex items-center">
+                  <div class="relative h-auto w-auto">
+                    <div
+                      style="margin-bottom: -6px; margin-right: -6px"
+                      class="absolute bottom-0 right-0 h-full w-full border-orange border-2"
+                    ></div>
+                    <div
+                      class="relative z-10 flex h-full w-full items-center justify-center"
+                    >
+                      <div class="w-fit bg-orange px-2">
+                        <h2>The Board</h2>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+               <h3 class="mb-2 mr-2 md:mb-0">Behind the Impact</h3>
+            </div>
+          </div>
+          <div class="relative z-10 mt-16 space-y-4">
+            <div
+              class="flex flex-wrap justify-center gap-6 pb-2 smr:justify-start"
+            >
+              <div class="flex flex-col items-center">
+                <a class="block" target="_blank" rel="noopener noreferrer">
+                  <div class="flex items-center">
+                    <div class="relative h-auto w-auto">
+                      <div
+                        style="margin-bottom: -10px; margin-right: -10px"
+                        class="absolute bottom-0 right-0 h-full w-full border-white border-2"
+                      ></div>
+                      <div
+                        class="relative z-10 flex h-full w-full items-center justify-center"
+                      >
+                        <img
+                          alt="Dr. John Smith"
+                          loading="lazy"
+                          width="250"
+                          height="250"
+                          decoding="async"
+                          data-nimg="1"
+                          class="h-[150px] w-[150px] bg-white object-contain p-2 md:h-[250px] md:w-[250px]"
+                          style="color: transparent"
+                          src="images/nirmitnew.png"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="mt-4 flex items-center">
+                  <div class="relative h-auto w-auto">
+                    <div
+                      style="margin-bottom: -4px; margin-right: -4px"
+                      class="absolute bottom-0 right-0 h-full w-full border-yellow border-2"
+                    ></div>
+                    <div
+                      class="relative z-10 flex h-full w-full items-center justify-center"
+                    >
+                      <div class="w-fit bg-yellow px-3 py-2">
+                        <h3 class="text-xl font-black text-grey">Nirmit Kasodariya</h3>
+                        <p class="text-center text-sm font-black text-grey">President</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <a class="block" target="_blank" rel="noopener noreferrer">
+                  <div class="flex items-center">
+                    <div class="relative h-auto w-auto">
+                      <div
+                        style="margin-bottom: -10px; margin-right: -10px"
+                        class="absolute bottom-0 right-0 h-full w-full border-white border-2"
+                      ></div>
+                      <div
+                        class="relative z-10 flex h-full w-full items-center justify-center"
+                      >
+                        <img
+                          alt="Prof. Sarah Johnson"
+                          loading="lazy"
+                          width="250"
+                          height="250"
+                          decoding="async"
+                          data-nimg="1"
+                          class="h-[150px] w-[150px] bg-white object-contain p-2 md:h-[250px] md:w-[250px]"
+                          style="color: transparent"
+                          src="images/hari.png"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="mt-4 flex items-center">
+                  <div class="relative h-auto w-auto">
+                    <div
+                      style="margin-bottom: -4px; margin-right: -4px"
+                      class="absolute bottom-0 right-0 h-full w-full border-purple border-2"
+                    ></div>
+                    <div
+                      class="relative z-10 flex h-full w-full items-center justify-center"
+                    >
+                      <div class="w-fit bg-purple px-3 py-2">
+                        <h3 class="text-xl font-black text-white">Haritakshi Trivedi</h3>
+                        <p class="text-center text-sm font-black text-white">Vice President</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <a class="block" target="_blank" rel="noopener noreferrer">
+                  <div class="flex items-center">
+                    <div class="relative h-auto w-auto">
+                      <div
+                        style="margin-bottom: -10px; margin-right: -10px"
+                        class="absolute bottom-0 right-0 h-full w-full border-white border-2"
+                      ></div>
+                      <div
+                        class="relative z-10 flex h-full w-full items-center justify-center"
+                      >
+                        <img
+                          alt="Dr. Michael Chen"
+                          loading="lazy"
+                          width="250"
+                          height="250"
+                          decoding="async"
+                          data-nimg="1"
+                          class="h-[150px] w-[150px] bg-white object-contain p-2 md:h-[250px] md:w-[250px]"
+                          style="color: transparent"
+                          src="images/rahul.png"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="mt-4 flex items-center">
+                  <div class="relative h-auto w-auto">
+                    <div
+                      style="margin-bottom: -4px; margin-right: -4px"
+                      class="absolute bottom-0 right-0 h-full w-full border-orange border-2"
+                    ></div>
+                    <div
+                      class="relative z-10 flex h-full w-full items-center justify-center"
+                    >
+                      <div class="w-fit bg-orange px-3 py-2">
+                        <h3 class="text-xl font-black text-white">Rahul Ganatra</h3>
+                        <p class="text-center text-sm font-black text-white">Secretary</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col items-center">
+                <a class="block" target="_blank" rel="noopener noreferrer">
+                  <div class="flex items-center">
+                    <div class="relative h-auto w-auto">
+                      <div
+                        style="margin-bottom: -10px; margin-right: -10px"
+                        class="absolute bottom-0 right-0 h-full w-full border-white border-2"
+                      ></div>
+                      <div
+                        class="relative z-10 flex h-full w-full items-center justify-center"
+                      >
+                        <img
+                          alt="Dr. John Smith"
+                          loading="lazy"
+                          width="250"
+                          height="250"
+                          decoding="async"
+                          data-nimg="1"
+                          class="h-[150px] w-[150px] bg-white object-contain p-2 md:h-[250px] md:w-[250px]"
+                          style="color: transparent"
+                          src="images/pranav.png"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="mt-4 flex items-center">
+                  <div class="relative h-auto w-auto">
+                    <div
+                      style="margin-bottom: -4px; margin-right: -4px"
+                      class="absolute bottom-0 right-0 h-full w-full border-yellow border-2"
+                    ></div>
+                    <div
+                      class="relative z-10 flex h-full w-full items-center justify-center"
+                    >
+                      <div class="w-fit bg-yellow px-3 py-2">
+                        <h3 class="text-xl font-black text-grey">Pranav Narkhede</h3>
+                        <p class="text-center text-sm font-black text-grey">Technical Lead</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <a class="block" target="_blank" rel="noopener noreferrer">
+                  <div class="flex items-center">
+                    <div class="relative h-auto w-auto">
+                      <div
+                        style="margin-bottom: -10px; margin-right: -10px"
+                        class="absolute bottom-0 right-0 h-full w-full border-white border-2"
+                      ></div>
+                      <div
+                        class="relative z-10 flex h-full w-full items-center justify-center"
+                      >
+                        <img
+                          alt="Prof. Sarah Johnson"
+                          loading="lazy"
+                          width="250"
+                          height="250"
+                          decoding="async"
+                          data-nimg="1"
+                          class="h-[150px] w-[150px] bg-white object-contain p-2 md:h-[250px] md:w-[250px]"
+                          style="color: transparent"
+                          src="images/anirudh.png"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="mt-4 flex items-center">
+                  <div class="relative h-auto w-auto">
+                    <div
+                      style="margin-bottom: -4px; margin-right: -4px"
+                      class="absolute bottom-0 right-0 h-full w-full border-purple border-2"
+                    ></div>
+                    <div
+                      class="relative z-10 flex h-full w-full items-center justify-center"
+                    >
+                      <div class="w-fit bg-purple px-3 py-2">
+                        <h3 class="text-xl font-black text-white">Anirudh Sengupta</h3>
+                        <p class="text-center text-sm font-black text-white">CEO</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <a class="block" target="_blank" rel="noopener noreferrer">
+                  <div class="flex items-center">
+                    <div class="relative h-auto w-auto">
+                      <div
+                        style="margin-bottom: -10px; margin-right: -10px"
+                        class="absolute bottom-0 right-0 h-full w-full border-white border-2"
+                      ></div>
+                      <div
+                        class="relative z-10 flex h-full w-full items-center justify-center"
+                      >
+                        <img
+                          alt="Dr. Michael Chen"
+                          loading="lazy"
+                          width="250"
+                          height="250"
+                          decoding="async"
+                          data-nimg="1"
+                          class="h-[150px] w-[150px] bg-white object-contain p-2 md:h-[250px] md:w-[250px]"
+                          style="color: transparent"
+                          src="images/bhargavi.png"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="mt-4 flex items-center">
+                  <div class="relative h-auto w-auto">
+                    <div
+                      style="margin-bottom: -4px; margin-right: -4px"
+                      class="absolute bottom-0 right-0 h-full w-full border-orange border-2"
+                    ></div>
+                    <div
+                      class="relative z-10 flex h-full w-full items-center justify-center"
+                    >
+                      <div class="w-fit bg-orange px-3 py-2">
+                        <h3 class="text-xl font-black text-white">Bhargavi Joshi</h3>
+                        <p class="text-center text-sm font-black text-white">PRO</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="flex flex-col items-center">
+                <a class="block" target="_blank" rel="noopener noreferrer">
+                  <div class="flex items-center">
+                    <div class="relative h-auto w-auto">
+                      <div
+                        style="margin-bottom: -10px; margin-right: -10px"
+                        class="absolute bottom-0 right-0 h-full w-full border-white border-2"
+                      ></div>
+                      <div
+                        class="relative z-10 flex h-full w-full items-center justify-center"
+                      >
+                        <img
+                          alt="Dr. John Smith"
+                          loading="lazy"
+                          width="250"
+                          height="250"
+                          decoding="async"
+                          data-nimg="1"
+                          class="h-[150px] w-[150px] bg-white object-contain p-2 md:h-[250px] md:w-[250px]"
+                          style="color: transparent"
+                          src="images/pratham.png"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="mt-4 flex items-center">
+                  <div class="relative h-auto w-auto">
+                    <div
+                      style="margin-bottom: -4px; margin-right: -4px"
+                      class="absolute bottom-0 right-0 h-full w-full border-yellow border-2"
+                    ></div>
+                    <div
+                      class="relative z-10 flex h-full w-full items-center justify-center"
+                    >
+                      <div class="w-fit bg-yellow px-3 py-2">
+                        <h3 class="text-xl font-black text-grey">Kshitij Thakkar</h3>
+                        <p class="text-center text-sm font-black text-grey">Digital Media Manager</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+              <div class="flex flex-col items-center">
+                <a class="block" target="_blank" rel="noopener noreferrer">
+                  <div class="flex items-center">
+                    <div class="relative h-auto w-auto">
+                      <div
+                        style="margin-bottom: -10px; margin-right: -10px"
+                        class="absolute bottom-0 right-0 h-full w-full border-white border-2"
+                      ></div>
+                      <div
+                        class="relative z-10 flex h-full w-full items-center justify-center"
+                      >
+                        <img
+                          alt="Dr. Michael Chen"
+                          loading="lazy"
+                          width="250"
+                          height="250"
+                          decoding="async"
+                          data-nimg="1"
+                          class="h-[150px] w-[150px] bg-white object-contain p-2 md:h-[250px] md:w-[250px]"
+                          style="color: transparent"
+                          src="images/pratham.png"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="mt-4 flex items-center">
+                  <div class="relative h-auto w-auto">
+                    <div
+                      style="margin-bottom: -4px; margin-right: -4px"
+                      class="absolute bottom-0 right-0 h-full w-full border-orange border-2"
+                    ></div>
+                    <div
+                      class="relative z-10 flex h-full w-full items-center justify-center"
+                    >
+                      <div class="w-fit bg-orange px-3 py-2">
+                        <h3 class="text-xl font-black text-white">Pratham Shah</h3>
+                        <p class="text-center text-sm font-black text-white">Treasurer</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Joint Positions -->
+            <div class="mt-8">
+              <h3 class="text-xl font-black text-white mb-6">Joint Positions</h3>
+              <div class="flex flex-wrap justify-center gap-6 pb-2 smr:justify-start">
+              <div class="flex flex-col items-center">
+                <a class="block" target="_blank" rel="noopener noreferrer">
+                  <div class="flex items-center">
+                    <div class="relative h-auto w-auto">
+                      <div
+                        style="margin-bottom: -10px; margin-right: -10px"
+                        class="absolute bottom-0 right-0 h-full w-full border-white border-2"
+                      ></div>
+                      <div
+                        class="relative z-10 flex h-full w-full items-center justify-center"
+                      >
+                        <img
+                          alt="Joint CEO"
+                          loading="lazy"
+                          width="250"
+                          height="250"
+                          decoding="async"
+                          data-nimg="1"
+                          class="h-[150px] w-[150px] bg-white object-contain p-2 md:h-[250px] md:w-[250px]"
+                          style="color: transparent"
+                          src="images/manav.png"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="mt-4 flex items-center">
+                  <div class="relative h-auto w-auto">
+                    <div
+                      style="margin-bottom: -4px; margin-right: -4px"
+                      class="absolute bottom-0 right-0 h-full w-full border-purple border-2"
+                    ></div>
+                    <div
+                      class="relative z-10 flex h-full w-full items-center justify-center"
+                    >
+                      <div class="w-fit bg-purple px-3 py-2">
+                        <h3 class="text-xl font-black text-white">Manav Gopinath</h3>
+                        <p class="text-center text-sm font-black text-white">Jt. CEO</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <a class="block" target="_blank" rel="noopener noreferrer">
+                  <div class="flex items-center">
+                    <div class="relative h-auto w-auto">
+                      <div
+                        style="margin-bottom: -10px; margin-right: -10px"
+                        class="absolute bottom-0 right-0 h-full w-full border-white border-2"
+                      ></div>
+                      <div
+                        class="relative z-10 flex h-full w-full items-center justify-center"
+                      >
+                        <img
+                          alt="Joint Secretary"
+                          loading="lazy"
+                          width="250"
+                          height="250"
+                          decoding="async"
+                          data-nimg="1"
+                          class="h-[150px] w-[150px] bg-white object-contain p-2 md:h-[250px] md:w-[250px]"
+                          style="color: transparent"
+                          src="images/hamza.png"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="mt-4 flex items-center">
+                  <div class="relative h-auto w-auto">
+                    <div
+                      style="margin-bottom: -4px; margin-right: -4px"
+                      class="absolute bottom-0 right-0 h-full w-full border-orange border-2"
+                    ></div>
+                    <div
+                      class="relative z-10 flex h-full w-full items-center justify-center"
+                    >
+                      <div class="w-fit bg-orange px-3 py-2">
+                        <h3 class="text-xl font-black text-white">Hamza Kapasi</h3>
+                        <p class="text-center text-sm font-black text-white">Jt. Secretary</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <a class="block" target="_blank" rel="noopener noreferrer">
+                  <div class="flex items-center">
+                    <div class="relative h-auto w-auto">
+                      <div
+                        style="margin-bottom: -10px; margin-right: -10px"
+                        class="absolute bottom-0 right-0 h-full w-full border-white border-2"
+                      ></div>
+                      <div
+                        class="relative z-10 flex h-full w-full items-center justify-center"
+                      >
+                        <img
+                          alt="Joint Technical Lead"
+                          loading="lazy"
+                          width="250"
+                          height="250"
+                          decoding="async"
+                          data-nimg="1"
+                          class="h-[150px] w-[150px] bg-white object-contain p-2 md:h-[250px] md:w-[250px]"
+                          style="color: transparent"
+                          src="images/rid.png"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="mt-4 flex items-center">
+                  <div class="relative h-auto w-auto">
+                    <div
+                      style="margin-bottom: -4px; margin-right: -4px"
+                      class="absolute bottom-0 right-0 h-full w-full border-yellow border-2"
+                    ></div>
+                    <div
+                      class="relative z-10 flex h-full w-full items-center justify-center"
+                    >
+                      <div class="w-fit bg-yellow px-3 py-2">
+                        <h3 class="text-xl font-black text-grey">Riddhesh Chaudhary</h3>
+                        <p class="text-center text-sm font-black text-grey">Jt. Technical Lead</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex flex-col items-center">
+                <a class="block" target="_blank" rel="noopener noreferrer">
+                  <div class="flex items-center">
+                    <div class="relative h-auto w-auto">
+                      <div
+                        style="margin-bottom: -10px; margin-right: -10px"
+                        class="absolute bottom-0 right-0 h-full w-full border-white border-2"
+                      ></div>
+                      <div
+                        class="relative z-10 flex h-full w-full items-center justify-center"
+                      >
+                        <img
+                          alt="Joint PRO"
+                          loading="lazy"
+                          width="250"
+                          height="250"
+                          decoding="async"
+                          data-nimg="1"
+                          class="h-[150px] w-[150px] bg-white object-contain p-2 md:h-[250px] md:w-[250px]"
+                          style="color: transparent"
+                          src="images/insiyah.png"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="mt-4 flex items-center">
+                  <div class="relative h-auto w-auto">
+                    <div
+                      style="margin-bottom: -4px; margin-right: -4px"
+                      class="absolute bottom-0 right-0 h-full w-full border-purple border-2"
+                    ></div>
+                    <div
+                      class="relative z-10 flex h-full w-full items-center justify-center"
+                    >
+                      <div class="w-fit bg-purple px-3 py-2">
+                        <h3 class="text-xl font-black text-white">Insiyah Bhatiya</h3>
+                        <p class="text-center text-sm font-black text-white">Joint PRO</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="flex flex-col items-center">
+                <a class="block" target="_blank" rel="noopener noreferrer">
+                  <div class="flex items-center">
+                    <div class="relative h-auto w-auto">
+                      <div
+                        style="margin-bottom: -10px; margin-right: -10px"
+                        class="absolute bottom-0 right-0 h-full w-full border-white border-2"
+                      ></div>
+                      <div
+                        class="relative z-10 flex h-full w-full items-center justify-center"
+                      >
+                        <img
+                          alt="Joint Treasurer"
+                          loading="lazy"
+                          width="250"
+                          height="250"
+                          decoding="async"
+                          data-nimg="1"
+                          class="h-[150px] w-[150px] bg-white object-contain p-2 md:h-[250px] md:w-[250px]"
+                          style="color: transparent"
+                          src="images/placeholder.png"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </a>
+                <div class="mt-4 flex items-center">
+                  <div class="relative h-auto w-auto">
+                    <div
+                      style="margin-bottom: -4px; margin-right: -4px"
+                      class="absolute bottom-0 right-0 h-full w-full border-orange border-2"
+                    ></div>
+                    <div
+                      class="relative z-10 flex h-full w-full items-center justify-center"
+                    >
+                      <div class="w-fit bg-orange px-3 py-2">
+                        <h3 class="text-xl font-black text-white">Om Kapadia</h3>
+                        <p class="text-center text-sm font-black text-white">Joint Treasurer</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+              <!-- break -->
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Knowcode Community Section -->
+        <section class="mt-16" id="knowcode-community">
+          <hr class="mb-16 mt-16 h-0.5 bg-white" />
+          
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <!-- Left side - Logo and Title -->
+            <div class="flex flex-col justify-center">
+              <div class="relative z-10">
+                <div class="flex items-center mb-8">
+                  <div class="relative h-auto w-auto">
+                    <div
+                      style="margin-bottom: -8px; margin-right: -8px"
+                      class="absolute bottom-0 right-0 h-full w-full border-purple border-2"
+                    ></div>
+                    <div class="relative z-10 flex h-full w-full items-center justify-center">
+                      <div class="w-fit bg-purple px-6 py-4">
+                        <h2 class="text-4xl font-black text-white lg:text-5xl">KNOWHOW</h2>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Add logo placeholder - you can replace this with actual logo later -->
+                <div class="mb-8">
+                  <div class="relative h-auto w-auto">
+                    <div
+                      style="margin-bottom: -8px; margin-right: -8px"
+                      class="absolute bottom-0 right-0 h-full w-full"
+                    ></div>
+                    <div class="relative z-10 flex h-full w-full items-center justify-center">
+                      <img
+                        alt="knowhow Logo"
+                        loading="lazy"
+                        width="650"
+                        height="650"
+                        decoding="async"
+                        data-nimg="1"
+                        class="w-72 h-72 object-contain"
+                        style="color: transparent"
+                        src="images/kh.png"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="relative z-10 border-2 border-white bg-grey px-6 py-6">
+                  <p class="text-lg md:text-xl text-white">
+                    Knowhow is a place where like minded people come together, discuss ideas and contribute to each other's growth by sharing their experiences and learning together as well as build a strong network together. Anybody with an acceptable amount of skills and/or dedication towards their field can be a part of it. Community will always be a free and open place with no or very little administrative hierarchy.
+                  </p>
+                </div>
+
+                <!-- WhatsApp Join Button -->
+                <div class="mt-8">
+                  <div class="flex items-center">
+                    <div class="relative h-auto w-auto">
+                      <div
+                        style="margin-bottom: -8px; margin-right: -8px"
+                        class="absolute bottom-0 right-0 h-full w-full bg-black"
+                      ></div>
+                      <div class="relative z-10 flex h-full w-full items-center justify-center">
+                        <a 
+                          href="https://chat.whatsapp.com/Dv8XX3HIVbp8s0uEbfZqlQ" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          class="transition-colors duration-300 border-4 border-black px-8 py-4 font-black text-white text-xl flex items-center gap-3"
+                          style="background-color: #1E8657;"
+                          onmouseover="this.style.backgroundColor='#128C7E'"
+                          onmouseout="this.style.backgroundColor='#1E8657'"
+                        >
+                          <svg 
+                            width="24" 
+                            height="24" 
+                            viewBox="0 0 24 24" 
+                            fill="currentColor"
+                            class="w-6 h-6"
+                          >
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.893 3.107"/>
+                          </svg>
+                          Join WhatsApp Community
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right side - Benefits and Domains -->
+            <div class="space-y-8">
+              <!-- Community Benefits -->
+              <div>
+                <div class="flex items-center mb-4">
+                  <div class="relative h-auto w-auto">
+                    <div
+                      style="margin-bottom: -4px; margin-right: -4px"
+                      class="absolute bottom-0 right-0 h-full w-full border-yellow border-2"
+                    ></div>
+                    <div class="relative z-10 flex h-full w-full items-center justify-center">
+                      <div class="w-fit bg-yellow px-4 py-2">
+                        <h3 class="text-2xl font-black text-grey">Ways in which community will benefit the committee:</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="space-y-4 text-white">
+                  <div class="border-2 border-white bg-grey px-4 py-4">
+                    <p class="text-lg">
+                      The community will act as a traction point and make the motto of our committee more prevalent and trustworthy.
+                    </p>
+                  </div>
+                  
+                  <div class="border-2 border-white bg-grey px-4 py-4">
+                    <p class="text-lg">
+                      The community will also act as a training ground for students to hone their skills, doing which they can willfully enter the committee to get involved in S4DS exclusive projects and receive other perks offered by the committee.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Domains -->
+              <div>
+                <div class="flex items-center mb-4">
+                  <div class="relative h-auto w-auto">
+                    <div
+                      style="margin-bottom: -4px; margin-right: -4px"
+                      class="absolute bottom-0 right-0 h-full w-full border-orange border-2"
+                    ></div>
+                    <div class="relative z-10 flex h-full w-full items-center justify-center">
+                      <div class="w-fit bg-orange px-4 py-2">
+                        <h3 class="text-2xl font-black text-white">Our Domains Include:</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="border-2 border-white bg-grey px-4 py-4">
+                  <p class="text-lg text-white">
+                    AI/ML, Data science and Analytics, Cloud-Native, Front-end (web + mobile + UI/UX), Web3 and Blockchain, AR/VR and Metaverse, IoT, Cybersecurity
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer class="bg-grey border-t-4 border-white mt-16">
+      <div class="mx-auto w-responsive py-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- About Section -->
+          <div class="space-y-4">
+            <div class="flex items-center">
+              <div class="relative h-auto w-auto">
+                <div
+                  style="margin-bottom: -4px; margin-right: -4px"
+                  class="absolute bottom-0 right-0 h-full w-full border-yellow border-2"
+                ></div>
+                <div class="relative z-10 flex h-full w-full items-center justify-center">
+                  <div class="w-fit bg-yellow px-3 py-2">
+                    <h3 class="text-xl font-black text-grey">About S4DS</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="text-white text-sm">
+              Society for Data Science at K.J. Somaiya Institute of Technology - 
+              Building the future through data science, AI, and innovation.
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="space-y-4">
+            <div class="flex items-center">
+              <div class="relative h-auto w-auto">
+                <div
+                  style="margin-bottom: -4px; margin-right: -4px"
+                  class="absolute bottom-0 right-0 h-full w-full border-purple border-2"
+                ></div>
+                <div class="relative z-10 flex h-full w-full items-center justify-center">
+                  <div class="w-fit bg-purple px-3 py-2">
+                    <h3 class="text-xl font-black text-white">Quick Links</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <ul class="space-y-2 text-white text-sm">
+              <li><a href="about.html" class="hover:text-yellow transition-colors">About Us</a></li>
+              <li><a href="events.html" class="hover:text-yellow transition-colors">Events</a></li>
+              <li><a href="#" class="hover:text-yellow transition-colors">Membership</a></li>
+              <li><a href="contact.html" class="hover:text-yellow transition-colors">Contact</a></li>
             </ul>
-            <h1>Membership Benefits</h1><hr>
-            <ul style="list-style: circle;">
-                <li>Discounted rates on workshops and Certification programs on disruptive technologies, conducted by experts.</li>
-                <li>Free access to a quarterly newsletter containing cutting-edge updates in this domain.</li>
-                <li>Discounted registration fee for the flagship International Conference on Data Management, Analytics, and Innovation (ICDMAI).</li>
-                <li>Access to a global list of mentors, especially for students to jointly undertake writing of papers, developing projects, and open-source packages.</li>
-                <li>Funding for quality student members' innovative ideas.</li>
-                <li>Opportunity to deliver/organize workshops/training in collaboration with the Society for Data Science (S4DS).</li>
-                <li>Opportunity for networking with the S4DS members.</li>
+          </div>
+
+          <!-- Events -->
+          <div class="space-y-4">
+            <div class="flex items-center">
+              <div class="relative h-auto w-auto">
+                <div
+                  style="margin-bottom: -4px; margin-right: -4px"
+                  class="absolute bottom-0 right-0 h-full w-full border-orange border-2"
+                ></div>
+                <div class="relative z-10 flex h-full w-full items-center justify-center">
+                  <div class="w-fit bg-orange px-3 py-2">
+                    <h3 class="text-xl font-black text-white">Upcoming</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <ul class="space-y-2 text-white text-sm">
+              <li>Development to Deployment</li>
+              <li>Knowcode 3.0 Hackathon</li>
+              <li>Tech Time Trace</li>
             </ul>
-        </div>
-    </section>
+          </div>
 
-
-    <section class="text-box3" id="6" style="background-color: #00000072; padding: auto;margin-top: 20px;margin-bottom: 0px;padding-bottom: 20px;">
-        <div class="text-box-content text-box-content3" style="display: inline-flex; align-items: center;color: #ffffff;">
-            <div class="head-logo" style="align-items: center;">
-                <img src="images/back/kh.png">
-                <a href="https://s4ds.kjsieit.in/community/" style="background:linear-gradient(50deg, #a82dff, #7d3ae9 30%, #585bf6 46%, #2d7ecf 51%, #2da2e6 78%, #02faf2);border-radius: 18px; text-decoration: none; margin-left: 40%; color:#ffffff; padding: 8px;">View</a>
+          <!-- Contact Info -->
+          <div class="space-y-4">
+            <div class="flex items-center">
+              <div class="relative h-auto w-auto">
+                <div
+                  style="margin-bottom: -4px; margin-right: -4px"
+                  class="absolute bottom-0 right-0 h-full w-full border-white border-2"
+                ></div>
+                <div class="relative z-10 flex h-full w-full items-center justify-center">
+                  <div class="w-fit bg-white px-3 py-2">
+                    <h3 class="text-xl font-black text-grey">Connect</h3>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="head-content">
-                <p>
-                    Knowhow is a place where like minded people come together, discuss ideas and contribute to each other' growth by sharing their experieces and learning resources as well as build a strong network together.
-                    Anybody with an acceptable amount of skills and/or dedication towards their field can be a part of it.
-                    Community will always be a free and open place with no or very little administrative hierarchy.
-                </p>
-                <h1 style="margin-left: 21px;">Ways in which community will benefit the committee :</h1><hr style="margin-left: 21px; width:85%">
-                <ul>
-                    <li>The community will act as a traction point and make the motto of our committee more prevalent and trustworthy.</li>
-                    <li>The community will also act as a training ground for students to hone their skills, doing which they can willfully enter the committee to get involved in S4DS exclusive projects and receive other perks offered by the committee.</li>
-                    <li style="text-align: left;">Our Domains include: AI/ML,Data science and Analytics,Cloud-Native,Front-end(web + mobile + UI/UX),Web3 and Blockchain,AR/VR and Metaverse,IoT,Cybersecurity,</li>
-                </ul>
-           </div>
-        </div>
-    </section>
-    <footer>
-        <div class="bottom-details">
-            <div class="bottom_text">
-                <span class="copyright_text">Copyright © 2023 S4DS
-                    <!--<small>developed by: <a href="developers.html" style="text-decoration: underline;">KJSIT - AI&DS TEAM</a></small>-->
-                </span>
-
-                <div style="align-items:center;"><a href="developers.html" style="text-decoration: none">KJSIT - S4DS TEAM</a></small></div>
-
-                <span class="policy_terms" style="margin-top: 10px;">
-                    <a target="_blank" href="https://twitter.com/knowhow_comm"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a target="_blank" href="https://www.instagram.com/knowhow_kjsit/"><i class="fa-brands fa-instagram"></i></a>
-                    <a target="_blank" href="mailto:community.s4ds@somaiya.edu"><i class="fa-solid fa-envelope"></i></a>
-                    <a target="_blank" href="https://chat.whatsapp.com/DFGAlgy8z3TLAWIUNoltVZ"><i class="fa-brands fa-whatsapp"></i></a>
-                </span>
+            <div class="space-y-2 text-white text-sm">
+              <p>K.J. Somaiya Institute of Technology</p>
+              <p>Mumbai, Maharashtra</p>
+              <div class="flex space-x-4 mt-4">
+                <a href="#" class="bg-yellow px-3 py-2 text-grey font-bold border-2 border-black hover:bg-white transition-colors">
+                  LinkedIn
+                </a>
+                <a href="#" class="bg-purple px-3 py-2 text-white font-bold border-2 border-black hover:bg-white hover:text-grey transition-colors">
+                  Instagram
+                </a>
+              </div>
             </div>
+          </div>
         </div>
+
+        <!-- Bottom Section -->
+        <div class="mt-12 pt-8 border-t-2 border-white">
+          <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <div class="flex items-center">
+              <div class="relative h-auto w-auto">
+                <div
+                  style="margin-bottom: -4px; margin-right: -4px"
+                  class="absolute bottom-0 right-0 h-full w-full border-yellow border-2"
+                ></div>
+                <div class="relative z-10 flex h-full w-full items-center justify-center">
+                  <div class="w-fit bg-yellow px-4 py-2">
+                    <p class="text-grey font-black">© 2025 S4DS KJSIT. All rights reserved.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center space-x-4">
+              <a href="#" class="text-white hover:text-yellow transition-colors text-sm">Privacy Policy</a>
+              <a href="#" class="text-white hover:text-yellow transition-colors text-sm">Terms of Service</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
-</body>
+  </body>
+
+  <!-- Mirrored from csclub.org.au/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 15:08:24 GMT -->
 </html>
