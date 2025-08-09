@@ -3,7 +3,7 @@ name: FTP Sync to s4ds.kjsieit.in
 on:
   push:
     branches:
-      - main
+      - main   # Trigger on push to the main branch (or adjust as necessary)
 
 jobs:
   ftp-deploy:
@@ -23,8 +23,8 @@ jobs:
         run: |
           lftp -f "
           set ftp:ssl-allow true
-          set ssl:verify-certificate false
+          set ssl:verify-certificate false   # Disable SSL verification if needed
           open ftp://$FTP_USERNAME:$FTP_PASSWORD@$FTP_SERVER
-          mirror --reverse --delete --verbose . /remote/directory
+          mirror --reverse --delete --verbose --only-newer --no-perms --allow-chown . /
           quit
           "
