@@ -77,6 +77,78 @@
       src="_next/static/chunks/polyfills-42372ed130431b0a.js"
       nomodule=""
     ></script>
+    
+    <!-- Custom Mobile Menu Styles -->
+    <style>
+      /* Full screen mobile menu styles */
+      #mobile-menu {
+        transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+      }
+      
+      /* Show menu when active */
+      #mobile-menu.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      
+      /* Prevent body scroll when menu is open */
+      body.menu-open {
+        overflow: hidden;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+      }
+      
+      /* Enhanced button hover effects */
+      #mobile-menu-button:hover {
+        transform: scale(1.05);
+        background-color: #f3f4f6;
+      }
+      
+      #mobile-menu-close:hover {
+        transform: scale(1.05);
+        background-color: #fecaca;
+      }
+      
+      /* Staggered animation for menu items */
+      #mobile-menu.active a,
+      #mobile-menu.active button {
+        animation: slideInUp 0.6s ease-out forwards;
+      }
+      
+      #mobile-menu.active a:nth-of-type(1) { animation-delay: 0.1s; }
+      #mobile-menu.active a:nth-of-type(2) { animation-delay: 0.2s; }
+      #mobile-menu.active a:nth-of-type(3) { animation-delay: 0.3s; }
+      
+      @keyframes slideInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      /* Menu backdrop blur effect */
+      #mobile-menu .absolute.inset-0 {
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+      }
+      
+      /* Responsive text sizing */
+      @media (max-width: 640px) {
+        #mobile-menu a {
+          font-size: 2.5rem;
+        }
+      }
+      
+      /* Add subtle glow effect to navigation items */
+      #mobile-menu a:hover {
+        text-shadow: 0 0 20px rgba(255, 193, 7, 0.5);
+      }
+    </style>
   </head>
 
   <body id="root" class="overflow-x-hidden bg-grey text-white">
@@ -187,6 +259,7 @@
                 class="relative z-10 flex h-full w-full items-center justify-center"
               >
                 <button
+                  id="mobile-menu-button"
                   class="bg-white relative flex h-16 w-16 items-center justify-center border-4 border-black text-4xl text-black transition-all duration-300"
                 >
                   <svg
@@ -207,6 +280,73 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Menu - Full Screen Overlay -->
+    <div id="mobile-menu" class="lg-xl:hidden fixed inset-0 w-screen h-screen bg-grey z-[99999] opacity-0 invisible transition-all duration-500 ease-in-out">
+      <!-- Background overlay with blur effect -->
+      <div class="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-sm"></div>
+      
+      <!-- Menu content -->
+      <div class="relative z-10 flex flex-col h-full w-full">
+        <!-- Header with logo and close button -->
+        <div class="flex items-center justify-between p-6 md:p-8">
+          <div class="flex items-center">
+            <img
+              alt="S4DS Logo"
+              loading="lazy"
+              width="50"
+              height="50"
+              decoding="async"
+              class="h-12 w-12 md:h-16 md:w-16"
+              style="color: transparent"
+              src="images/s4ds-white.png"
+            />
+            <h1 class="text-white ml-3 text-2xl md:text-3xl font-bold">S4DS KJSIT</h1>
+          </div>
+          
+          <button id="mobile-menu-close" class="bg-white flex h-14 w-14 md:h-16 md:w-16 items-center justify-center border-4 border-black text-3xl md:text-4xl text-black hover:bg-red-100 transition-colors duration-300">
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+            </svg>
+          </button>
+        </div>
+        
+        <!-- Navigation Links - Centered -->
+        <div class="flex-1 flex flex-col items-center justify-center space-y-12 text-white px-6">
+          <div class="text-center space-y-8">
+            <a href="/Projects" class="block text-4xl md:text-5xl font-black hover:text-yellow transition-all duration-300 transform hover:scale-110">Projects</a>
+            <a href="teams.html" class="block text-4xl md:text-5xl font-black hover:text-yellow transition-all duration-300 transform hover:scale-110">Teams</a>
+            <a href="#knowcode-community" class="block text-4xl md:text-5xl font-black hover:text-yellow transition-all duration-300 transform hover:scale-110">Knowhow</a>
+          </div>
+          
+          <!-- Action Buttons -->
+          <div class="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-8 mt-12">
+            <div class="relative h-auto w-auto">
+              <div style="margin-bottom: -6px; margin-right: -6px" class="absolute bottom-0 right-0 h-full w-full bg-black"></div>
+              <div class="relative z-10 flex h-full w-full items-center justify-center">
+                <button class="bg-orange hover:bg-yellow whitespace-nowrap border-4 border-black px-12 py-6 text-xl font-black transition-all duration-300 transform hover:scale-105">
+                  Sign In
+                </button>
+              </div>
+            </div>
+            
+            <div class="relative h-auto w-auto">
+              <div style="margin-bottom: -6px; margin-right: -6px" class="absolute bottom-0 right-0 h-full w-full bg-black"></div>
+              <div class="relative z-10 flex h-full w-full items-center justify-center">
+                <a href="join.html" class="bg-purple hover:bg-yellow whitespace-nowrap border-4 border-black px-12 py-6 text-xl font-black transition-all duration-300 transform hover:scale-105 text-white">
+                  Join Us
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Footer info -->
+        <div class="text-center p-6 text-white text-sm opacity-70">
+          <p>Society for Data Science - KJSIT</p>
         </div>
       </div>
     </div>
@@ -416,7 +556,8 @@
                       <div
                         class="flex w-full flex-col gap-6 rounded-xl bg-white p-4 text-black lg:flex-row"
                       >
-                        <a href="events.html#SET-Societies-Atrium-Day-2025">
+                      <!-- event link -->
+                        <a href="">
                           <div class="grow space-y-2 md:space-y-4">
                             <div class="flex gap-6">
                               <div
@@ -494,14 +635,15 @@
                       <div
                         class="flex w-full flex-col gap-6 rounded-xl bg-white p-4 text-black lg:flex-row"
                       >
-                        <a href="events.html#2025-Meet-&amp;-Greet-2-2025">
+                      <!-- event link -->
+                        <a href="">
                           <div class="grow space-y-2 md:space-y-4">
                             <div class="flex gap-6">
                               <div
                                 class="h-fit rounded-md border-[3px] border-black px-4 py-2 text-xl bg-yellow"
                               >
-                                <div>JAN</div>
-                                <div>28-30</div>
+                                <div>TBD</div>
+                                <div>-</div>
                               </div>
                               <div class="grow space-y-2 text-2xl">
                                 <h4
@@ -572,14 +714,15 @@
                       <div
                         class="flex w-full flex-col gap-6 rounded-xl bg-white p-4 text-black lg:flex-row"
                       >
-                        <a href="events.html#Clubsland--2025">
+                      <!-- event link -->
+                        <a href="">
                           <div class="grow space-y-2 md:space-y-4">
                             <div class="flex gap-6">
                               <div
                                 class="h-fit rounded-md border-[3px] border-black px-4 py-2 text-xl bg-purple"
                               >
-                                <div>FEB</div>
-                                <div>12-13</div>
+                                <div>TBD</div>
+                                <div>-</div>
                               </div>
                               <div class="grow space-y-2 text-2xl">
                                 <h4
@@ -1273,7 +1416,7 @@
                   </div>
                 </div>
               </div>
-              <!-- <div class="flex flex-col items-center">
+              <div class="flex flex-col items-center">
                 <a class="block" target="_blank" rel="noopener noreferrer">
                   <div class="flex items-center">
                     <div class="relative h-auto w-auto">
@@ -1293,7 +1436,7 @@
                           data-nimg="1"
                           class="h-[150px] w-[150px] bg-white object-contain p-2 md:h-[250px] md:w-[250px]"
                           style="color: transparent"
-                          src="images/pratham.png"
+                          src="images/kt.png"
                         />
                       </div>
                     </div>
@@ -1315,7 +1458,7 @@
                     </div>
                   </div>
                 </div>
-              </div> -->
+              </div>
               <div class="flex flex-col items-center">
                 <a class="block" target="_blank" rel="noopener noreferrer">
                   <div class="flex items-center">
@@ -1860,6 +2003,78 @@
         </div>
       </div>
     </footer>
+
+    <!-- Mobile Menu JavaScript -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        
+        // Open mobile menu - Full screen overlay
+        if (mobileMenuButton) {
+          mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.add('active');
+            document.body.classList.add('menu-open');
+            
+            // Prevent scrolling on the background
+            document.documentElement.style.overflow = 'hidden';
+          });
+        }
+        
+        // Close mobile menu function
+        function closeMobileMenu() {
+          mobileMenu.classList.remove('active');
+          document.body.classList.remove('menu-open');
+          
+          // Re-enable scrolling
+          document.documentElement.style.overflow = '';
+        }
+        
+        // Close button event listener
+        if (mobileMenuClose) {
+          mobileMenuClose.addEventListener('click', closeMobileMenu);
+        }
+        
+        // Close menu when clicking on navigation links
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+          link.addEventListener('click', function(e) {
+            // Add a small delay to show the click animation
+            setTimeout(closeMobileMenu, 150);
+          });
+        });
+        
+        // Close menu when clicking outside menu content (on backdrop)
+        mobileMenu.addEventListener('click', function(e) {
+          // Only close if clicking on the backdrop, not the menu content
+          if (e.target === mobileMenu || e.target.classList.contains('bg-black')) {
+            closeMobileMenu();
+          }
+        });
+        
+        // Close menu on escape key
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+            closeMobileMenu();
+          }
+        });
+        
+        // Handle browser back button to close menu
+        window.addEventListener('popstate', function() {
+          if (mobileMenu.classList.contains('active')) {
+            closeMobileMenu();
+          }
+        });
+        
+        // Prevent menu from opening if screen is resized to desktop size
+        window.addEventListener('resize', function() {
+          if (window.innerWidth >= 1024 && mobileMenu.classList.contains('active')) {
+            closeMobileMenu();
+          }
+        });
+      });
+    </script>
   </body>
 
   <!-- Mirrored from csclub.org.au/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 15:08:24 GMT -->
