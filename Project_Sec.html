@@ -1,0 +1,1539 @@
+<!DOCTYPE html>
+<html lang="en" class="__className_5afde0">
+  <!-- Mirrored from csclub.org.au/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 15:08:07 GMT -->
+  <!-- Added by HTTrack -->
+  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+  <!-- /Added by HTTrack -->
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="preload"
+      as="image"
+      href="images/hero/hero1.jpg"
+      fetchPriority="high"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="images/hero/hero2.jpg"
+      fetchPriority="high"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="images/hero/hero3.jpg"
+      fetchPriority="high"
+    />
+    <link
+      rel="stylesheet"
+      href="_next/static/css/e54f9cb16e55aae3.css"
+      data-precedence="next"
+    />
+    <link
+      rel="preload"
+      as="script"
+      fetchPriority="low"
+      href="_next/static/chunks/webpack-a2a2af71d243c741.js"
+    />
+    <script
+      src="_next/static/chunks/5485aafe-c1e71bf3d5d34f21.js"
+      async=""
+    ></script>
+    <script src="_next/static/chunks/95-af92e7efc12fbd04.js" async=""></script>
+    <script
+      src="_next/static/chunks/main-app-9b0fc99478d22147.js"
+      async=""
+    ></script>
+    <script
+      src="_next/static/chunks/94fe57b7-b9e7845dc341b25f.js"
+      async=""
+    ></script>
+    <script src="_next/static/chunks/353-058a4ae4e893b08c.js" async=""></script>
+    <script src="_next/static/chunks/670-eedb89bf1d5e80e8.js" async=""></script>
+    <script src="_next/static/chunks/217-ce87a271318dfdbd.js" async=""></script>
+    <script src="_next/static/chunks/300-1faac93e753d74ab.js" async=""></script>
+    <script src="_next/static/chunks/683-64d76d8b0c9bc6e5.js" async=""></script>
+    <script src="_next/static/chunks/260-26075c39dee2e3c0.js" async=""></script>
+    <script
+      src="_next/static/chunks/app/layout-c3241c275c23b1ab.js"
+      async=""
+    ></script>
+    <script
+      src="_next/static/chunks/app/(home)/page-eceab9ca4f0d65ab.js"
+      async=""
+    ></script>
+    <link rel="preload" href="../umami.csclub.org.au/script.js" as="script" />
+    <meta name="theme-color" content="#252020" />
+    <title>S4DS KJSIT</title>
+    <meta
+      name="description"
+      content="The S4DS KJSIT is a student-run club for those with an interest in data science or computing in general. Made with love by Reese"
+    />
+    <link rel="icon" href="images/s4ds-white.png" />
+    <meta name="next-size-adjust" />
+    <script
+      src="_next/static/chunks/polyfills-42372ed130431b0a.js"
+      nomodule=""
+    ></script>
+    
+    <!-- Custom Mobile Menu Styles -->
+    <style>
+      /* Full screen mobile menu styles */
+      #mobile-menu {
+        transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+      }
+      
+      /* Show menu when active */
+      #mobile-menu.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      
+      /* Prevent body scroll when menu is open */
+      body.menu-open {
+        overflow: hidden;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+      }
+      
+      /* Enhanced button hover effects */
+      #mobile-menu-button:hover {
+        transform: scale(1.05);
+        background-color: #f3f4f6;
+      }
+      
+      #mobile-menu-close:hover {
+        transform: scale(1.05);
+        background-color: #fecaca;
+      }
+      
+      /* Staggered animation for menu items */
+      #mobile-menu.active a,
+      #mobile-menu.active button {
+        animation: slideInUp 0.6s ease-out forwards;
+      }
+      
+      #mobile-menu.active a:nth-of-type(1) { animation-delay: 0.1s; }
+      #mobile-menu.active a:nth-of-type(2) { animation-delay: 0.2s; }
+      #mobile-menu.active a:nth-of-type(3) { animation-delay: 0.3s; }
+      
+      @keyframes slideInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      /* Menu backdrop blur effect */
+      #mobile-menu .absolute.inset-0 {
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+      }
+      
+      /* Responsive text sizing */
+      @media (max-width: 640px) {
+        #mobile-menu a {
+          font-size: 2.5rem;
+        }
+      }
+      
+      /* Add subtle glow effect to navigation items */
+      #mobile-menu a:hover {
+        text-shadow: 0 0 20px rgba(255, 193, 7, 0.5);
+      }
+    </style>
+  </head>
+
+  <body id="root" class="overflow-x-hidden bg-grey text-white">
+    <header class="hidden lg-xl:block fixed z-[9999] w-full">
+      <div
+        class="absolute -z-20 h-40 w-full transition-all duration-500 undefined"
+      ></div>
+      <div class="mx-auto mt-8 w-responsive">
+        <div
+          class="flex items-center justify-between gap-8 border-4 border-black bg-white px-8 py-4 text-grey"
+        >
+          <div class="flex flex-shrink items-center">
+            <a class="grow flex flex-row items-center" href="index.html">
+              <img
+                alt="Computer Science Club Logo"
+                loading="lazy"
+                width="100"
+                height="100"
+                decoding="async"
+                data-nimg="1"
+                class="h-full w-[3rem] md:w-[2rem] lg:w-[2.5rem]"
+                style="color: transparent"
+                src="images/s4ds-white.png"
+              />
+              <h1
+                class="text-grey ml-2 text-3xl font-bold md:text-xl lg:text-2xl"
+              >
+                S4DS KJSIT
+              </h1>
+            </a>
+          </div>
+          <div class="flex items-center md:gap-4">
+            
+            <a class="block hover:underline" href="index.html">Home</a>
+            <a class="block hover:underline" href="teams.html">Teams</a>
+            
+            
+            
+            <a class="block hover:underline" href="index.html#knowcode-community">Knowhow</a>
+            
+            <!-- <a class="block hover:underline" href="events.html">Events</a>
+          <a class="block hover:underline" href="sponsors.html">Sponsors</a>
+          <a class="block hover:underline" href="open-source.html">Open Source</a>
+          <a class="block hover:underline" href="contact.html">Contact</a> -->
+            <div
+              class="flex gap-4 md:flex-col md:justify-center lg:flex-row lg:items-center"
+            >
+              <div class="flex items-center">
+                <div class="relative h-auto w-full">
+                  <div
+                    style="margin-bottom: -4px; margin-right: -4px"
+                    class="absolute bottom-0 right-0 h-full w-full bg-black"
+                  ></div>
+                  <!-- <div class="relative z-10 flex h-full w-full items-center justify-center">
+                  <button class="undefined undefined text-lg md:text-base bg-orange hover:enabled:bg-yellow whitespace-nowrap border-2 border-black px-16 text-lg flex items-center justify-center py-4 font-bold transition-colors duration-300 disabled:cursor-wait disabled:grayscale md:px-2 md:py-1 md:text-base lg:px-6 lg:py-2">Sign In</button>
+                </div> -->
+                </div>
+              </div>
+              <div class="flex items-center">
+                <div class="relative h-auto w-full">
+                  <div
+                    style="margin-bottom: -4px; margin-right: -4px"
+                    class="absolute bottom-0 right-0 h-full w-full bg-black"
+                  ></div>
+                  <!-- <div class="relative z-10 flex h-full w-full items-center justify-center">
+                  <a href="join.html" class="undefined undefined text-lg md:text-base bg-purple hover:bg-yellow whitespace-nowrap border-2 border-black px-16 text-lg flex items-center justify-center py-4 font-bold transition-colors duration-300 disabled:cursor-wait disabled:grayscale md:px-2 md:py-1 md:text-base lg:px-6 lg:py-2">Join Us</a>
+                </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="relative -right-[0.5rem] -top-[7.5rem] -z-10 h-[8rem] w-responsive border-4 border-black bg-white lg:-top-[6rem] lg:h-[6.5rem] md-lg:-top-[4.75rem] md-lg:h-[5.25rem]"
+        ></div>
+      </div>
+    </header>
+    
+    <div class="lg-xl:hidden fixed z-[9999] w-full transition-all">
+      <div class="absolute -z-20 h-40 w-full transition-all duration-500"></div>
+      <div class="mx-auto mt-8 transition-all w-responsive">
+        <div class="flex">
+          <a class="grow flex flex-row items-center" href="index.html">
+            <img
+              alt="Computer Science Club Logo"
+              loading="lazy"
+              width="100"
+              height="100"
+              decoding="async"
+              data-nimg="1"
+              class="h-full w-[3rem] md:w-[2rem] lg:w-[2.5rem]"
+              style="color: transparent"
+              src="images/s4ds-white.png"
+            />
+            <h1
+              class="text-white ml-2 text-3xl font-bold md:text-xl lg:text-2xl"
+            >
+              S4DS KJSIT
+            </h1>
+          </a>
+          <div class="flex items-center">
+            <div class="relative h-auto w-auto">
+              <div
+                style="margin-bottom: -4px; margin-right: -4px"
+                class="absolute bottom-0 right-0 h-full w-full bg-black"
+              ></div>
+              <div
+                class="relative z-10 flex h-full w-full items-center justify-center"
+              >
+                <button
+                  id="mobile-menu-button"
+                  class="bg-white relative flex h-16 w-16 items-center justify-center border-4 border-black text-4xl text-black transition-all duration-300"
+                >
+                  <svg
+                    stroke="currentColor"
+                    fill="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 512 512"
+                    aria-label="Menu"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M64 384h384v-42.666H64V384zm0-106.666h384v-42.667H64v42.667zM64 128v42.665h384V128H64z"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Menu - Full Screen Overlay -->
+    <div id="mobile-menu" class="lg-xl:hidden fixed inset-0 w-screen h-screen bg-grey z-[99999] opacity-0 invisible transition-all duration-500 ease-in-out">
+      <!-- Background overlay with blur effect -->
+      <div class="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-sm"></div>
+      
+      <!-- Menu content -->
+      <div class="relative z-10 flex flex-col h-full w-full">
+        <!-- Header with logo and close button -->
+        <div class="flex items-center justify-between p-6 md:p-8">
+          <div class="flex items-center">
+            <img
+              alt="S4DS Logo"
+              loading="lazy"
+              width="50"
+              height="50"
+              decoding="async"
+              class="h-12 w-12 md:h-16 md:w-16"
+              style="color: transparent"
+              src="images/s4ds-white.png"
+            />
+            <h1 class="text-white ml-3 text-2xl md:text-3xl font-bold">S4DS KJSIT</h1>
+          </div>
+          
+          <button id="mobile-menu-close" class="bg-white flex h-14 w-14 md:h-16 md:w-16 items-center justify-center border-4 border-black text-3xl md:text-4xl text-black hover:bg-red-100 transition-colors duration-300">
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+            </svg>
+          </button>
+        </div>
+        
+        <!-- Navigation Links - Centered -->
+        <div class="flex-1 flex flex-col items-center justify-center space-y-12 text-white px-6">
+          <div class="text-center space-y-8">
+            <a href="/Projects" class="block text-4xl md:text-5xl font-black hover:text-yellow transition-all duration-300 transform hover:scale-110">Projects</a>
+            <a href="teams.html" class="block text-4xl md:text-5xl font-black hover:text-yellow transition-all duration-300 transform hover:scale-110">Teams</a>
+            <a href="#knowcode-community" class="block text-4xl md:text-5xl font-black hover:text-yellow transition-all duration-300 transform hover:scale-110">Knowhow</a>
+          </div>
+          
+          <!-- Action Buttons -->
+          <div class="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-8 mt-12">
+            <div class="relative h-auto w-auto">
+              <div style="margin-bottom: -6px; margin-right: -6px" class="absolute bottom-0 right-0 h-full w-full bg-black"></div>
+              <div class="relative z-10 flex h-full w-full items-center justify-center">
+                <button class="bg-orange hover:bg-yellow whitespace-nowrap border-4 border-black px-12 py-6 text-xl font-black transition-all duration-300 transform hover:scale-105">
+                  Sign In
+                </button>
+              </div>
+            </div>
+            
+            <div class="relative h-auto w-auto">
+              <div style="margin-bottom: -6px; margin-right: -6px" class="absolute bottom-0 right-0 h-full w-full bg-black"></div>
+              <div class="relative z-10 flex h-full w-full items-center justify-center">
+                <a href="join.html" class="bg-purple hover:bg-yellow whitespace-nowrap border-4 border-black px-12 py-6 text-xl font-black transition-all duration-300 transform hover:scale-105 text-white">
+                  Join Us
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Footer info -->
+        <div class="text-center p-6 text-white text-sm opacity-70">
+          <p>Society for Data Science - KJSIT</p>
+        </div>
+      </div>
+    </div>
+    
+    
+      
+        <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Archivo', sans-serif;
+            }
+            
+            body {
+                background-color: #242020;
+                color: white;
+                overflow-x: hidden;
+                padding: 0;
+            }
+            
+            /* Shared container for consistent left alignment */
+            .site-container {
+                max-width: 75rem; /* ~1200px */
+                margin: 0 auto;
+                padding: 0 1rem; /* responsive gutters */
+            }
+            
+            .container {
+                max-width: 75rem; /* keep in sync with .site-container */
+                margin: 0 auto;
+                position: relative;
+                padding-top: 9rem; /* space for fixed header */
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+            
+            /* Header Styles - Updated to match index.html */
+            /* Desktop Header */
+            .desktop-header {
+                display: none;
+            }
+            
+            @media (min-width: 1024px) {
+                .desktop-header {
+                    display: block;
+                    position: fixed;
+                    top: 20px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    max-width: 1200px;
+                    width: 100%;
+                    z-index: 100;
+                }
+                
+                .desktop-header .header-container {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 2rem;
+                    border: 4px solid black;
+                    background: white;
+                    padding: 1rem 2rem;
+                    color: #242020;
+                }
+                
+                .desktop-header .logo {
+                    display: flex;
+                    align-items: center;
+                }
+                
+                .desktop-header .logo img {
+                    width: 2.5rem;
+                    height: 2.5rem;
+                    margin-right: 0.5rem;
+                }
+                
+                .desktop-header .logo-text {
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    color: #242020;
+                }
+                
+                .desktop-header nav {
+                    display: flex;
+                    gap: 1.5rem;
+                }
+                
+                .desktop-header nav a {
+                    color: #242020;
+                    text-decoration: none;
+                    font-weight: 500;
+                }
+                
+                .desktop-header nav a:hover {
+                    text-decoration: underline;
+                }
+                
+                .desktop-header .header-bg {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background: white;
+                    border: 4px solid black;
+                    top: 8px;
+                    left: 8px;
+                    z-index: -1;
+                }
+            }
+            
+            /* Mobile Header */
+            .mobile-header {
+                display: block;
+                position: fixed;
+                top: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                max-width: 1200px;
+                width: 100%;
+                z-index: 100;
+            }
+            
+            @media (min-width: 1024px) {
+                .mobile-header {
+                    display: none;
+                }
+            }
+            
+            .mobile-header .header-container {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0.5rem 1rem;
+            }
+            
+            .mobile-header .logo {
+                display: flex;
+                align-items: center;
+            }
+            
+            .mobile-header .logo img {
+                width: 3rem;
+                height: 3rem;
+                margin-right: 0.5rem;
+            }
+            
+            .mobile-header .logo-text {
+                font-size: 1.5rem;
+                font-weight: bold;
+                color: white;
+            }
+            
+            .mobile-header #mobile-menu-button {
+                background: white;
+                border: 4px solid black;
+                width: 4rem;
+                height: 4rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.5rem;
+                cursor: pointer;
+            }
+            
+            /* Mobile Menu */
+            #mobile-menu {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.8);
+                z-index: 99999;
+                display: flex;
+                flex-direction: column;
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 0.5s ease, visibility 0.5s ease;
+            }
+            
+            #mobile-menu.active {
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            #mobile-menu .menu-content {
+                background: #242020;
+                width: 100%;
+                height: 100%;
+                padding: 1.5rem;
+                overflow-y: auto;
+                position: relative;
+            }
+            
+            #mobile-menu .menu-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 2rem;
+            }
+            
+            #mobile-menu .menu-logo {
+                display: flex;
+                align-items: center;
+            }
+            
+            #mobile-menu .menu-logo img {
+                width: 3rem;
+                height: 3rem;
+                margin-right: 0.75rem;
+            }
+            
+            #mobile-menu .menu-logo-text {
+                font-size: 1.5rem;
+                font-weight: bold;
+                color: white;
+            }
+            
+            #mobile-menu #mobile-menu-close {
+                background: white;
+                border: 4px solid black;
+                width: 3.5rem;
+                height: 3.5rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.5rem;
+                cursor: pointer;
+            }
+            
+            #mobile-menu .nav-links {
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+                margin: 2rem 0;
+            }
+            
+            #mobile-menu .nav-links a {
+                color: white;
+                text-decoration: none;
+                font-size: 2rem;
+                font-weight: bold;
+            }
+            
+            #mobile-menu .action-buttons {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                margin-top: 2rem;
+            }
+            
+            #mobile-menu .action-button {
+                padding: 1rem 2rem;
+                border: 4px solid black;
+                font-weight: bold;
+                text-align: center;
+                text-decoration: none;
+            }
+            
+            #mobile-menu .signin-button {
+                background: #D26C3B;
+                color: white;
+            }
+            
+            #mobile-menu .join-button {
+                background: #9A69F5;
+                color: white;
+            }
+            
+            /* Hero Section */
+            .hero {
+                text-align: left;
+                margin-bottom: 80px;
+                position: relative;
+            }
+            
+            .hero-main {
+                font-size: 48px;
+                font-weight: 800;
+                margin-bottom: 20px;
+                position: relative;
+                display: inline-block;
+            }
+            
+            .showcasing {
+                margin-right: 10px;
+            }
+            
+            .highlight-wrapper {
+                position: relative;
+                display: inline-block;
+                vertical-align: top;
+            }
+            
+            .brilliance {
+                background: #F3C246;
+                padding: 0 0.75rem;
+                padding-bottom: 0.5rem;
+                padding-top: 0.5rem;
+                color: #242020;
+                position: relative;
+                z-index: 2;
+                border-radius: 0.125rem;
+            }
+            
+            .brilliance-bg {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: #242020;
+                border: 0.125rem solid #DCB03F;
+                top: 0.5rem;
+                left: 0.5rem;
+                z-index: -1;
+                border-radius: 0.125rem;
+            }
+            
+            .hero-sub {
+                font-size: 48px;
+                font-weight: 800;
+                position: relative;
+                display: inline-block;
+                margin-top: 20px;
+            }
+            
+            .the {
+                margin-right: 10px;
+            }
+            
+            .projects-text {
+                background:  #D26C3B;
+                padding: 0 0.75rem;
+                padding-bottom: 0.5rem;
+                padding-top: 0.5rem;
+                color: white;
+                position: relative;
+                z-index: 2;
+                border-radius: 0.125rem;
+            }
+            
+            .projects-underline {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: #242020;
+                border: 0.125rem solid #DC8B3F;
+                top: 0.5rem;
+                left: 0.5rem;
+                z-index: -1;
+                border-radius: 0.125rem;
+            }
+            
+            .that-defines {
+                color: white;
+                margin-left: 15px;
+            }
+            
+            .section-title {
+                display: flex;
+                align-items: center;
+                margin-bottom: 40px;
+            }
+            
+            .tag {
+                width: 160px;
+                height: 47px;
+                background: #9A69F5;
+                margin-right: 20px;
+            }
+            
+            .tag-text {
+                font-size: 32px;
+                font-weight: 800;
+                margin-right: 15px;
+            }
+            
+            .section-main {
+                font-size: 32px;
+                font-weight: 900;
+                color: #444141;
+            }
+            
+            /* Project Grid with Background Elements */
+            .projects-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 40px;
+                margin-bottom: 80px;
+                align-items: stretch;
+            }
+            
+            .project-card-wrapper {
+                position: relative;
+                height: 100%;
+                margin-bottom: 20px;
+            }
+            
+            .project-card-bg {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: #F3F3EC;
+                border: 2px solid #000;
+                top: 8px;
+                left: 8px;
+                z-index: 1;
+                transition: all 0.3s ease;
+            }
+            
+            .project-card {
+                background: white;
+                border: 3px solid black;
+                overflow: hidden;
+                transition: transform 0.3s, box-shadow 0.3s;
+                position: relative;
+                z-index: 2;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                transition: all 0.3s ease;
+            }
+            
+            .project-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            }
+            
+            .project-card-wrapper:hover .project-card {
+                transform: translate(-5px, -5px);
+            }
+            
+            .project-card-wrapper:hover .project-card-bg {
+                transform: translate(5px, 5px);
+            }
+            
+            .project-header {
+                height: 87px;
+                padding: 15px;
+                border-bottom: 3px solid black;
+            }
+            
+            .project-orange {
+                background: #D26C3B;
+            }
+            
+            .project-purple {
+                background: rgb(126 127 231/var(--tw-bg-opacity,1));
+            }
+            
+            .project-yellow {
+                background: #F3C246;
+            }
+            
+            .project-title {
+                color: black;
+                font-size: 16px;
+                font-weight: 800;
+                text-transform: uppercase;
+                line-height: 1.3;
+            }
+            
+            .project-content {
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+            }
+            
+            .project-image {
+                width: 100%;
+                height: 150px;
+                background-color: #ffffff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 15px;
+                border-radius: 4px;
+                overflow: hidden;
+            }
+            
+            .project-image img {
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: cover;
+            }
+            
+            .project-details p {
+                color: black;
+                margin-bottom: 10px;
+                font-size: 16px;
+            }
+            
+            .developer-label, .description-label {
+                font-weight: 800;
+            }
+            
+            .developer-names, .description-text {
+                font-weight: 500;
+            }
+    
+            
+            .publish-link {
+                display: none;
+                margin-top: 10px;
+                color: #408A7E;
+                text-decoration: underline;
+                font-weight: 600;
+                cursor: pointer;
+            }
+            
+            /* Project Link Icon */
+            .project-link-icon {
+                display: flex;
+                justify-content: center;
+                margin-top: 15px;
+                position: absolute;
+                bottom: 20px;
+                right: 20px;
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 0.3s ease, visibility 0.3s ease;
+                z-index: 3;
+            }
+            
+            .project-card-wrapper:hover .project-link-icon {
+                opacity: 1;
+                visibility: visible;
+            }
+            
+            .project-link-icon a {
+                display: inline-block;
+                width: 40px;
+                height: 40px;
+                background: #9A69F5;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+                color: white;
+                font-weight: bold;
+                transition: transform 0.3s ease, background 0.3s ease;
+            }
+            
+            .project-link-icon a:hover {
+                transform: scale(1.1);
+                background: #7d4fd3;
+            }
+            
+            /* Specific colors for each project type */
+            .project-card:nth-child(1) .project-link-icon a,
+            .project-card:nth-child(4) .project-link-icon a {
+                background-color: #D26C3B; /* Orange */
+            }
+            
+            .project-card:nth-child(2) .project-link-icon a,
+            .project-card:nth-child(6) .project-link-icon a {
+                background-color: #9A69F5; /* Purple */
+            }
+            
+            .project-card:nth-child(3) .project-link-icon a,
+            .project-card:nth-child(5) .project-link-icon a {
+                background-color: #F3C246; /* Yellow */
+                color: #242020; /* Darker text for better contrast on yellow */
+            }
+            
+            /* Footer - Updated to match index.html */
+            footer {
+                background: #242020;
+                border-top: none;
+                margin-top: 80px;
+                padding: 3rem 0;
+                color: white;
+            }
+            
+            .footer-container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 0 20px;
+            }
+            
+            .footer-grid {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                gap: 2rem;
+            }
+            
+            @media (min-width: 768px) {
+                .footer-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+            
+            @media (min-width: 1024px) {
+                .footer-grid {
+                    grid-template-columns: repeat(4, 1fr);
+                }
+            }
+            
+            .footer-section h3 {
+                font-size: 1.25rem;
+                font-weight: bold;
+                margin-bottom: 1rem;
+                display: inline-block;
+                background: #F3C246;
+                color: #242020;
+                padding: 0.5rem 1rem;
+            }
+            
+            .footer-section p, .footer-section li {
+                margin-bottom: 0.5rem;
+                font-size: 0.875rem;
+            }
+            
+            .footer-section ul {
+                list-style: none;
+            }
+            
+            .footer-section a {
+                color: white;
+                text-decoration: none;
+            }
+            
+            .footer-section a:hover {
+                color: #F3C246;
+            }
+            
+            .social-buttons {
+                display: flex;
+                gap: 1rem;
+                margin-top: 1rem;
+            }
+            
+            .social-button {
+                padding: 0.5rem 1rem;
+                border: 2px solid black;
+                font-weight: bold;
+                text-decoration: none;
+            }
+            
+            .linkedin-button {
+                background: #F3C246;
+                color: #242020;
+            }
+            
+            .instagram-button {
+                background: #9A69F5;
+                color: white;
+            }
+            
+            .footer-bottom {
+                margin-top: 3rem;
+                padding-top: 1.5rem;
+                border-top: 2px solid white;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+            
+            @media (min-width: 768px) {
+                .footer-bottom {
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
+            }
+            
+            .copyright {
+                background: #F3C246;
+                color: #242020;
+                padding: 0.5rem 1rem;
+                font-weight: bold;
+            }
+            
+            .footer-links {
+                display: flex;
+                gap: 1rem;
+            }
+            
+            .footer-links a {
+                color: white;
+                text-decoration: none;
+                font-size: 0.875rem;
+            }
+            
+            .footer-links a:hover {
+                color: #F3C246;
+            }
+            
+            /* Responsive Design */
+            @media (max-width: 768px) {
+                .container {
+                    padding-top: 7.5rem; /* Adjusted for mobile header */
+                }
+                
+                .hero-main, .hero-sub {
+                    font-size: 36px;
+                }
+                
+                .projects-grid {
+                    grid-template-columns: 1fr;
+                }
+                
+                .section-title {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+                
+                .tag {
+                    margin-bottom: 15px;
+                }
+                
+                .project-card-bg {
+                    display: none;
+                }
+            }
+    
+            /* Add extra space for the icon on hover */
+            .project-card-wrapper:hover .project-details {
+                padding-bottom: 30px; /* Adjust as needed for your icon size */
+                transition: padding-bottom 0.3s;
+            }
+        </style>
+            
+    
+    
+        <div class="mx-auto min-h-screen w-responsive pb-6 pt-32 md:pt-40">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="hero-main">
+                    <span class="showcasing">SHOWCASING</span>
+                    <span class="highlight-wrapper">
+                        <span class="brilliance">BRILLIANCE</span>
+                        <span class="brilliance-bg"></span>
+                    </span>
+                </div>
+                
+                <div class="hero-sub">
+                    <span class="the">THE</span>
+                    <span class="highlight-wrapper">
+                        <span class="projects-text">PROJECTS</span>
+                        <span class="projects-underline"></span>
+                    </span>
+                    <span class="that-defines">  THAT DEFINES US!</span>
+                </div>
+            </section>
+            
+            <!-- New Projects Section -->
+            <div class="section-title">
+                <img src="./images/project_sec/Polygon 1.svg" alt="Polygon" class="tag" style="background:#242020;width: 47px; height: 47px; margin-right: 20px;">
+                <div class="tag-text">On-Going</div>
+                <div class="section-main"><div style="width: 100%; height: 100%;background-color: rgb(126 127 231/var(--tw-bg-opacity,1)); color: #242020; font-size: 32px; font-family: Archivo; font-weight: 900; word-wrap: break-word;padding: 10px;">Projects</div></div>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card-wrapper">
+                    <div class="project-card-bg"></div>
+                    <div class="project-card">
+                        <div class="project-header project-orange">
+                            <div class="project-title">PROJECT ON LLM MODEL DEVELOPMENT FOR COMPETITIVE EXAMINATION</div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-image">
+                                <img src="./images/project_sec/pic1.png" alt="Project Image">
+                            </div>
+                            <div class="project-details">
+                                <p>
+                                    <span class="developer-label">Developers:</span>
+                                    <span class="developer-names">Vatshal Mehta, Himakshi Arora, Khushi Gupta.</span>
+                                </p>
+                                <p>
+                                    <span class="description-label">Description:</span>
+                                    <span class="description-text">This project develops a multilingual, syllabus-based LLM that generates exam-type questions and answers with native-language explanations.</span>
+                                </p>
+                                <div class="project-link-icon">
+                                    <a href="#" title="View Project" style="background-color: #D26C3B;">🔗</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card-wrapper">
+                    <div class="project-card-bg"></div>
+                    <div class="project-card">
+                        <div class="project-header project-purple">
+                            <div class="project-title">PROJECT ON LLM MODEL DEVELOPMENT FOR EDUCATIONAL COURSES INFORMATION</div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-image">
+                                <img src="./images/project_sec/pic2.png" alt="Project Image">
+                            </div>
+                            <div class="project-details">
+                                <p>
+                                    <span class="developer-label">Developers:</span>
+                                    <span class="developer-names">Kajal Rathod, Sakshi Dhuri, Riya Birnale.</span>
+                                </p>
+                                <p>
+                                    <span class="description-label">Description:</span>
+                                    <span class="description-text">An LLM-powered advisory system that suggests courses, colleges, and bridge programs with filters like location, fees, and eligibility.</span>
+                                </p>
+                                <div class="project-link-icon">
+                                    <a href="#" title="View Project" style="background-color: rgb(126 127 231/var(--tw-bg-opacity,1));">🔗</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card-wrapper">
+                    <div class="project-card-bg"></div>
+                    <div class="project-card">
+                        <div class="project-header project-yellow">
+                            <div class="project-title">PROJECT ON LLM MODEL DEVELOPMENT FOR DIAGNOSTICS CENTERS AND HOSPITALS</div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-image">
+                                <img src="./images/project_sec/pic3.png" alt="Project Image">
+                            </div>
+                            <div class="project-details">
+                                <p>
+                                    <span class="developer-label">Developers:</span>
+                                    <span class="developer-names">Smit Karelia, Molisha Jain, Sayali Jadhav, Vrundha Parekh, Harish Jalani</span>
+                                </p>
+                                <p>
+                                    <span class="description-label">Description:</span>
+                                    <span class="description-text">An AI assistant that gives quick hospital details, diagnostic info, and personalized health scheme recommendations with multilingual support.</span>
+                                </p>
+                                <div class="project-link-icon">
+                                    <a href="#" title="View Project" style="background-color: #F3C246;">🔗</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Past Projects Section -->
+            <div class="section-title">
+                <img src="./images/project_sec/Polygon 1.svg" alt="Polygon" class="tag" style="background:#242020;width: 47px; height: 47px; margin-right: 20px;">
+                <div class="tag-text">Completed</div>
+                <div class="section-main"><div style="width: 100%; height: 100%;background-color: rgb(126 127 231/var(--tw-bg-opacity,1)); color:#242020; font-size: 32px; font-family: Archivo; font-weight: 900; word-wrap: break-word;padding: 10px;">Projects</div></div>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Past Project 1 -->
+                <div class="project-card-wrapper">
+                    <div class="project-card-bg"></div>
+                    <div class="project-card">
+                        <div class="project-header project-yellow">
+                            <div class="project-title">DEVELOPMENT OF AN AI-POWERED QUESTION BANK FOR JEE AND UPSC EXAMINATIONS</div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-image">
+                                <img src="./images/project_sec/pic4.png" alt="Project Image" style="border-radius: 100px;">
+                            </div>
+                            <div class="project-details">
+                                <p>
+                                        <span class="developer-label">Developers:</span>
+                                        <span class="developer-names">Heer Panchal, Kinjal Panchal, Jhalak Dedhia, Adrita Banerjee, Aniruddh Sengupta</span>
+                                </p>
+                                <p>
+                                        <span class="description-label">Description:</span>
+                                        <span class="description-text">This system will help aspirants save time, practice efficiently, and focus on areas of improvement, making preparation smarter, personalized, and more effective compared to conventional methods.</span>
+                                </p>
+                                <div class="project-link-icon">
+                                    <a href="#" title="View Project" style="background-color: #F3C246;">🔗</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Past Project 2 -->
+                <div class="project-card-wrapper">
+                    <div class="project-card-bg"></div>
+                    <div class="project-card">
+                        <div class="project-header project-orange">
+                            <div class="project-title">LEVERAGING LATENT DIFFUSION MODELS FOR DERMATOGLYPHICS DATA ANALYSIS</div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-image">
+                                <img src="./images/project_sec/pic5.png" alt="Project Image">
+                            </div>
+                            <div class="project-details">
+                                <p>
+                                        <span class="developer-label">Developers:</span>
+                                        <span class="developer-names">Prasad D. Devkar, Aastha Bhatt, Mahiman Dave</span>
+                                </p>
+                                <p>
+                                        <span class="description-label">Description:</span>
+                                        <span class="description-text">Fingerprint extraction and analysis from hospital forms using SAM + TDA. Minutiae and persistence barcodes enable similarity matching, improving biometric identification for healthcare data.</span>
+                                </p>
+                                <div class="project-link-icon">
+                                    <a href="#" title="View Project" style="background-color: #D26C3B;">🔗</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Past Project 3 -->
+                <div class="project-card-wrapper">
+                    <div class="project-card-bg"></div>
+                    <div class="project-card">
+                        <div class="project-header project-purple">
+                            <div class="project-title">AUTOMATED ANSWER SHEET EVALUATION AND RANKING SYSTEM</div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-image">
+                                <img src="./images/project_sec/pic6.png" alt="Project Image" style="width: 220px;height: 220px;">
+                            </div>
+                            <div class="project-details">
+                                <p>
+                                        <span class="developer-label">Developers:</span>
+                                        <span class="developer-names">Ashika Jain, Bhargavi Joshi, Sravan Kotta, Namitha Prakash, Aryan Ilake, Shreyas Konidala</span>
+                                </p>
+                                <p>
+                                        <span class="description-label">Description:</span>
+                                        <span class="description-text">Automated answer-sheet evaluation and ranking using Gemini 1.5 Pro for OCR and scoring. Provides consistent, objective results while reducing human error and bias.</span>
+                                </p>
+                                <div class="project-link-icon">
+                                    <a href="#" title="View Project" style="background-color: rgb(126 127 231/var(--tw-bg-opacity,1));">🔗</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+       
+    
+        <!-- Mobile Menu JavaScript -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const mobileMenuButton = document.getElementById('mobile-menu-button');
+                const mobileMenu = document.getElementById('mobile-menu');
+                const mobileMenuClose = document.getElementById('mobile-menu-close');
+                
+                // Open mobile menu
+                if (mobileMenuButton) {
+                    mobileMenuButton.addEventListener('click', function() {
+                        mobileMenu.classList.add('active');
+                        document.body.style.overflow = 'hidden';
+                    });
+                }
+                
+                // Close mobile menu function
+                function closeMobileMenu() {
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+                
+                // Close button event listener
+                if (mobileMenuClose) {
+                    mobileMenuClose.addEventListener('click', closeMobileMenu);
+                }
+                
+                // Close menu when clicking on navigation links
+                const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+                mobileMenuLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        setTimeout(closeMobileMenu, 150);
+                    });
+                });
+                
+                // Close menu when clicking outside menu content
+                mobileMenu.addEventListener('click', function(e) {
+                    if (e.target === mobileMenu) {
+                        closeMobileMenu();
+                    }
+                });
+                
+                // Close menu on escape key
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+                        closeMobileMenu();
+                    }
+                });
+            });
+        </script>
+    
+
+
+    
+
+    <footer class="bg-grey mt-16">
+      <div class="mx-auto w-responsive py-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- About Section -->
+          <div class="space-y-4">
+            <div class="flex items-center">
+              <div class="relative h-auto w-auto">
+                <div
+                  style="margin-bottom: -4px; margin-right: -4px"
+                  class="absolute bottom-0 right-0 h-full w-full border-yellow border-2"
+                ></div>
+                <div class="relative z-10 flex h-full w-full items-center justify-center">
+                  <div class="w-fit bg-yellow px-3 py-2">
+                    <h3 class="text-xl font-black text-grey">About S4DS</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="text-white text-sm">
+              Society for Data Science at K.J. Somaiya Institute of Technology - 
+              Building the future through data science, AI, and innovation.
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="space-y-4">
+            <div class="flex items-center">
+              <div class="relative h-auto w-auto">
+                <div
+                  style="margin-bottom: -4px; margin-right: -4px"
+                  class="absolute bottom-0 right-0 h-full w-full border-purple border-2"
+                ></div>
+                <div class="relative z-10 flex h-full w-full items-center justify-center">
+                  <div class="w-fit bg-purple px-3 py-2">
+                    <h3 class="text-xl font-black text-white">Quick Links</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <ul class="space-y-2 text-white text-sm">
+              <li><a href="about.html" class="hover:text-yellow transition-colors">About Us</a></li>
+              <li><a href="events.html" class="hover:text-yellow transition-colors">Events</a></li>
+              <li><a href="#" class="hover:text-yellow transition-colors">Membership</a></li>
+              <li><a href="contact.html" class="hover:text-yellow transition-colors">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Events -->
+          <div class="space-y-4">
+            <div class="flex items-center">
+              <div class="relative h-auto w-auto">
+                <div
+                  style="margin-bottom: -4px; margin-right: -4px"
+                  class="absolute bottom-0 right-0 h-full w-full border-orange border-2"
+                ></div>
+                <div class="relative z-10 flex h-full w-full items-center justify-center">
+                  <div class="w-fit bg-orange px-3 py-2">
+                    <h3 class="text-xl font-black text-white">Upcoming</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <ul class="space-y-2 text-white text-sm">
+              <li>Development to Deployment</li>
+              <li>Knowcode 3.0 Hackathon</li>
+              <li>Tech Time Trace</li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="space-y-4">
+            <div class="flex items-center">
+              <div class="relative h-auto w-auto">
+                <div
+                  style="margin-bottom: -4px; margin-right: -4px"
+                  class="absolute bottom-0 right-0 h-full w-full border-white border-2"
+                ></div>
+                <div class="relative z-10 flex h-full w-full items-center justify-center">
+                  <div class="w-fit bg-white px-3 py-2">
+                    <h3 class="text-xl font-black text-grey">Connect</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="space-y-2 text-white text-sm">
+              <p>K.J. Somaiya Institute of Technology</p>
+              <p>Mumbai, Maharashtra</p>
+              <div class="flex space-x-4 mt-4">
+                <a href="https://www.linkedin.com/company/s4ds-kjsit-studentschapter/" class="bg-yellow px-3 py-2 text-grey font-bold border-2 border-black hover:bg-white transition-colors">
+                  LinkedIn
+                </a>
+                <a href="https://www.instagram.com/kjsit.s4ds/" class="bg-purple px-3 py-2 text-white font-bold border-2 border-black hover:bg-white hover:text-grey transition-colors">
+                  Instagram
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Section -->
+        <div class="mt-12 pt-8 border-t-2 border-white">
+          <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <div class="flex items-center">
+              <div class="relative h-auto w-auto">
+                <div
+                  style="margin-bottom: -4px; margin-right: -4px"
+                  class="absolute bottom-0 right-0 h-full w-full border-yellow border-2"
+                ></div>
+                <div class="relative z-10 flex h-full w-full items-center justify-center">
+                  <div class="w-fit bg-yellow px-4 py-2">
+                    <p class="text-grey font-black">© 2025 S4DS KJSIT. All rights reserved.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center space-x-4">
+              <a href="#" class="text-white hover:text-yellow transition-colors text-sm">Privacy Policy</a>
+              <a href="#" class="text-white hover:text-yellow transition-colors text-sm">Terms of Service</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Mobile Menu JavaScript -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        
+        // Open mobile menu - Full screen overlay
+        if (mobileMenuButton) {
+          mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.add('active');
+            document.body.classList.add('menu-open');
+            
+            // Prevent scrolling on the background
+            document.documentElement.style.overflow = 'hidden';
+          });
+        }
+        
+        // Close mobile menu function
+        function closeMobileMenu() {
+          mobileMenu.classList.remove('active');
+          document.body.classList.remove('menu-open');
+          
+          // Re-enable scrolling
+          document.documentElement.style.overflow = '';
+        }
+        
+        // Close button event listener
+        if (mobileMenuClose) {
+          mobileMenuClose.addEventListener('click', closeMobileMenu);
+        }
+        
+        // Close menu when clicking on navigation links
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+          link.addEventListener('click', function(e) {
+            // Add a small delay to show the click animation
+            setTimeout(closeMobileMenu, 150);
+          });
+        });
+        
+        // Close menu when clicking outside menu content (on backdrop)
+        mobileMenu.addEventListener('click', function(e) {
+          // Only close if clicking on the backdrop, not the menu content
+          if (e.target === mobileMenu || e.target.classList.contains('bg-black')) {
+            closeMobileMenu();
+          }
+        });
+        
+        // Close menu on escape key
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+            closeMobileMenu();
+          }
+        });
+        
+        // Handle browser back button to close menu
+        window.addEventListener('popstate', function() {
+          if (mobileMenu.classList.contains('active')) {
+            closeMobileMenu();
+          }
+        });
+        
+        // Prevent menu from opening if screen is resized to desktop size
+        window.addEventListener('resize', function() {
+          if (window.innerWidth >= 1024 && mobileMenu.classList.contains('active')) {
+            closeMobileMenu();
+          }
+        });
+      });
+    </script>
+  </body>
+
+  <!-- Mirrored from csclub.org.au/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 06 Aug 2025 15:08:24 GMT -->
+</html>
