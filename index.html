@@ -31,6 +31,8 @@
       href="_next/static/css/e54f9cb16e55aae3.css"
       data-precedence="next"
     />
+    <!-- Card shuffle animation styles -->
+    <link rel="stylesheet" href="styles/card-animation.css" />
     <link
       rel="preload"
       as="script"
@@ -158,6 +160,8 @@
       ></div>
       <div class="mx-auto mt-8 w-responsive">
         <div
+
+    
           class="flex items-center justify-between gap-8 border-4 border-black bg-white px-8 py-4 text-grey"
         >
           <div class="flex flex-shrink items-center">
@@ -418,60 +422,140 @@
                 <div class="flex items-center">
                   <div class="relative h-auto w-auto">
                     <div
-                      style="margin-bottom: -8px; margin-right: -8px"
-                      class="absolute bottom-0 right-0 h-full w-full bg-purple"
-                    ></div>
-                    <div
                       class="relative z-10 flex h-full w-full items-center justify-center"
                     >
-                      <div class="relative h-full w-full bg-white">
-                        <img
-                          alt="Hero Image 1"
-                          fetchPriority="high"
-                          width="2132"
-                          height="1600"
-                          decoding="async"
-                          data-nimg="1"
-                          class="hidden"
-                          style="color: transparent"
-                          src="images/hero/hero1.jpg"
-                        />
-                        <img
-                          alt="Hero Image 2"
-                          fetchPriority="high"
-                          width="2132"
-                          height="1600"
-                          decoding="async"
-                          data-nimg="1"
-                          class="hidden"
-                          style="color: transparent"
-                          src="images/hero/hero2.jpg"
-                        />
-                        <img
-                          alt="Hero Image 3"
-                          fetchPriority="high"
-                          width="2132"
-                          height="1600"
-                          decoding="async"
-                          data-nimg="1"
-                          class="hidden"
-                          style="color: transparent"
-                          src="images/hero/hero3.jpg"
-                        />
-                        <div
-                          class="transition-opacity duration-500 ease-in-out opacity-100"
-                        >
-                          <img
-                            alt="Hero Image 1"
-                            loading="lazy"
-                            width="2132"
-                            height="1600"
-                            decoding="async"
-                            data-nimg="1"
-                            class="h-full w-full object-cover"
-                            style="color: transparent"
-                            src="images/hero/hero1.jpg"
-                          />
+                      <div class="relative w-full">
+                        <!-- Card stack container -->
+                        <div id="hero-card-stack" class="hero-card-stack relative z-10">
+                            <!-- Hero card shuffle: lightweight JS, builds stack from images/hero/hero1..7.jpg and loops -->
+                            <script>
+                              (function () {
+                                var container = document.getElementById('hero-card-stack');
+                                if (!container) return;
+
+                              // Explicit list based on images present in images/hero
+                              var sourceList = [
+                                'images/hero/hero1.jpg',
+                                'images/hero/hero2.jpg',
+                                'images/hero/hero3.JPG',
+                                'images/hero/hero4.jpg',
+                                'images/hero/hero5.jpg',
+                                'images/hero/hero6.jpg',
+                                'images/hero/hero7.jpg'
+                              ];
+                              var totalCards = 7;
+                              var candidates = sourceList.slice();
+                              function preload(src){
+                                return new Promise(function(resolve){
+                                  var img = new Image();
+                                  img.onload = function(){ resolve(src); };
+                                  img.onerror = function(){ resolve(null); };
+                                  img.src = src;
+                                });
+                              }
+
+                                // Basic sizing fallback (ensures visible even if external CSS fails)
+                                function sizeContainer() {
+                                  var w = container.clientWidth || container.parentElement.clientWidth || 0;
+                                  if (w) {
+                                    var h = Math.max(220, Math.min(560, w * 0.75)); // 4:3 ratio within bounds
+                                    container.style.minHeight = h + 'px';
+                                  }
+                                }
+                                sizeContainer();
+                                window.addEventListener('resize', sizeContainer);
+
+                              Promise.all(candidates.map(preload)).then(function(found){
+                                var available = found.filter(Boolean);
+                                if (available.length === 0) {
+                                  available = ['images/hero/hero1.jpg'];
+                                }
+                                // Repeat available images to fill 7 cards so there are no blanks
+                                var sources = [];
+                                for (var i = 0; i < totalCards; i++) {
+                                  sources.push(available[i % available.length]);
+                                }
+
+                                // Build cards
+                                container.innerHTML = '';
+                                sources.forEach(function (src) {
+                                  var card = document.createElement('div');
+                                  card.className = 'card';
+                                  // inline base to guarantee visibility if CSS not loaded
+                                  card.style.position = 'absolute';
+                                  card.style.left = '0';
+                                  card.style.top = '0';
+                                  card.style.right = '0';
+                                  card.style.bottom = '0';
+                                  card.style.border = '4px solid #000';
+                                  card.style.borderRadius = '0';
+                                  card.style.background = '#111';
+
+                                  var img = document.createElement('img');
+                                  img.alt = 'Hero card';
+                                  img.loading = 'lazy';
+                                  img.decoding = 'async';
+                                  img.src = src;
+                                  // if an image fails, fall back to the first available
+                                  img.onerror = function(){ if (available[0]) this.src = available[0]; };
+                                  card.appendChild(img);
+
+                                  container.appendChild(card);
+                                });
+
+                                var spacingX = 14, spacingY = 12, scaleStep = 0.035;
+
+                                function layout(skipEl) {
+                                  var cards = Array.prototype.slice.call(container.children);
+                                  var offset = 0;
+                                  cards.forEach(function (card) {
+                                    if (card === skipEl) return; // keep exiting card's transform
+                                    var tx = offset * spacingX;
+                                    var ty = offset * spacingY;
+                                    var sc = 1 - offset * scaleStep;
+                                    card.style.setProperty('--tx', tx + 'px');
+                                    card.style.setProperty('--ty', ty + 'px');
+                                    card.style.setProperty('--sc', sc);
+                                    card.style.transform = 'translate(' + tx + 'px, ' + ty + 'px) scale(' + sc + ')';
+                                    card.style.zIndex = String(100 - offset);
+                                    card.style.filter = 'saturate(' + (1 - offset * 0.1) + ') brightness(' + (1 - offset * 0.05) + ')';
+                                    offset++;
+                                  });
+                                }
+
+                                layout();
+
+                                var intervalMs = 3000; // slightly slower for smoother feel
+                                setInterval(function () {
+                                  var first = container.firstElementChild;
+                                  if (!first) return;
+                                  // Move others forward
+                                  layout(first);
+
+                                  // Smoothly slide the top card to the back position instead of flying away
+                                  var cardCount = container.children.length;
+                                  var backOffset = cardCount - 1;
+                                  var txBack = backOffset * spacingX;
+                                  var tyBack = backOffset * spacingY;
+                                  var scBack = 1 - backOffset * scaleStep;
+                                  // place underneath while moving so it doesn't cover others
+                                  first.style.zIndex = '0';
+                                  first.style.setProperty('--tx', txBack + 'px');
+                                  first.style.setProperty('--ty', tyBack + 'px');
+                                  first.style.setProperty('--sc', scBack);
+                                  first.style.transform = 'translate(' + txBack + 'px, ' + tyBack + 'px) scale(' + scBack + ')';
+
+                                  first.addEventListener('transitionend', function handler(e){
+                                    if (e.propertyName !== 'transform') return; // only once for transform
+                                    first.removeEventListener('transitionend', handler);
+                                    container.appendChild(first); // move to back
+                                    first.style.zIndex = '';
+                                    layout(); // reflow stack to exact back values via function
+                                  }, { once: true });
+                                }, intervalMs);
+                              });
+                              })();
+                            </script>
                         </div>
                       </div>
                     </div>
