@@ -84,13 +84,23 @@
     <style>
       /* Full screen mobile menu styles */
       #mobile-menu {
-        transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+                    visibility 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
       }
       
       /* Show menu when active */
       #mobile-menu.active {
-        opacity: 1;
-        visibility: visible;
+        opacity: 1 !important;
+        visibility: visible !important;
       }
       
       /* Prevent body scroll when menu is open */
@@ -99,56 +109,122 @@
         position: fixed;
         width: 100%;
         height: 100%;
+        touch-action: none;
       }
       
       /* Enhanced button hover effects */
+      #mobile-menu-button {
+        transition: all 0.3s ease;
+      }
+      
       #mobile-menu-button:hover {
         transform: scale(1.05);
         background-color: #f3f4f6;
       }
       
+      #mobile-menu-close {
+        transition: all 0.3s ease;
+      }
+      
       #mobile-menu-close:hover {
-        transform: scale(1.05);
+        transform: rotate(90deg) scale(1.1);
         background-color: #fecaca;
       }
       
-      /* Staggered animation for menu items */
-      #mobile-menu.active a,
-      #mobile-menu.active button {
-        animation: slideInUp 0.6s ease-out forwards;
-      }
-      
-      #mobile-menu.active a:nth-of-type(1) { animation-delay: 0.1s; }
-      #mobile-menu.active a:nth-of-type(2) { animation-delay: 0.2s; }
-      #mobile-menu.active a:nth-of-type(3) { animation-delay: 0.3s; }
-      
-      @keyframes slideInUp {
-        from {
-          opacity: 0;
-          transform: translateY(30px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-      
-      /* Menu backdrop blur effect */
+      /* Backdrop animation */
       #mobile-menu .absolute.inset-0 {
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out;
+        backdrop-filter: blur(0px);
+        -webkit-backdrop-filter: blur(0px);
+      }
+      
+      #mobile-menu.active .absolute.inset-0 {
+        opacity: 1;
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
       }
       
+      /* Menu content fade in */
+      #mobile-menu > div:not(.absolute) {
+        opacity: 0;
+        transform: scale(0.95);
+        transition: opacity 0.4s ease-out 0.1s, transform 0.4s ease-out 0.1s;
+      }
+      
+      #mobile-menu.active > div:not(.absolute) {
+        opacity: 1;
+        transform: scale(1);
+      }
+      
+      /* Staggered animation for menu items */
+      #mobile-menu .text-center.space-y-8 a {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+      }
+      
+      #mobile-menu.active .text-center.space-y-8 a {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      
+      #mobile-menu.active .text-center.space-y-8 a:nth-child(1) { 
+        transition-delay: 0.2s; 
+      }
+      #mobile-menu.active .text-center.space-y-8 a:nth-child(2) { 
+        transition-delay: 0.3s; 
+      }
+      #mobile-menu.active .text-center.space-y-8 a:nth-child(3) { 
+        transition-delay: 0.4s; 
+      }
+      
+      /* Button animations */
+      #mobile-menu .flex.flex-col.md\\:flex-row {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+      }
+      
+      #mobile-menu.active .flex.flex-col.md\\:flex-row {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: 0.5s;
+      }
+      
+      /* Header animation */
+      #mobile-menu .flex.items-center.justify-between {
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+      }
+      
+      #mobile-menu.active .flex.items-center.justify-between {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: 0.15s;
+      }
+      
       /* Responsive text sizing */
       @media (max-width: 640px) {
-        #mobile-menu a {
+        #mobile-menu .text-center.space-y-8 a {
           font-size: 2.5rem;
+          line-height: 1.2;
         }
       }
       
       /* Add subtle glow effect to navigation items */
       #mobile-menu a:hover {
         text-shadow: 0 0 20px rgba(255, 193, 7, 0.5);
+      }
+      
+      /* Smooth hamburger icon animation */
+      #mobile-menu-button svg {
+        transition: transform 0.3s ease;
+      }
+      
+      #mobile-menu-button:active svg {
+        transform: scale(0.9);
       }
     </style>
   </head>
@@ -289,12 +365,12 @@
     </div>
 
     <!-- Mobile Navigation Menu - Full Screen Overlay -->
-    <div id="mobile-menu" class="lg-xl:hidden fixed inset-0 w-screen h-screen bg-grey z-[99999] opacity-0 invisible transition-all duration-500 ease-in-out">
+    <div id="mobile-menu" class="lg-xl:hidden bg-grey z-[99999]">
       <!-- Background overlay with blur effect -->
-      <div class="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-sm"></div>
+      <div class="absolute inset-0 bg-black bg-opacity-60"></div>
       
       <!-- Menu content -->
-      <div class="relative z-10 flex flex-col h-full w-full">
+      <div class="relative z-10 flex flex-col h-full w-full min-h-screen">
         <!-- Header with logo and close button -->
         <div class="flex items-center justify-between p-6 md:p-8">
           <div class="flex items-center">
@@ -321,13 +397,13 @@
         <!-- Navigation Links - Centered -->
         <div class="flex-1 flex flex-col items-center justify-center space-y-12 text-white px-6">
           <div class="text-center space-y-8">
-            <a href="/Projects" class="block text-4xl md:text-5xl font-black hover:text-yellow transition-all duration-300 transform hover:scale-110">Projects</a>
+            <a href="/Project_Sec.html" class="block text-4xl md:text-5xl font-black hover:text-yellow transition-all duration-300 transform hover:scale-110">Projects</a>
             <a href="teams.html" class="block text-4xl md:text-5xl font-black hover:text-yellow transition-all duration-300 transform hover:scale-110">Teams</a>
             <a href="#knowcode-community" class="block text-4xl md:text-5xl font-black hover:text-yellow transition-all duration-300 transform hover:scale-110">Knowhow</a>
           </div>
           
           <!-- Action Buttons -->
-          <div class="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-8 mt-12">
+          <!-- <div class="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-8 mt-12">
             <div class="relative h-auto w-auto">
               <div style="margin-bottom: -6px; margin-right: -6px" class="absolute bottom-0 right-0 h-full w-full bg-black"></div>
               <div class="relative z-10 flex h-full w-full items-center justify-center">
@@ -345,7 +421,7 @@
                 </a>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
         
         <!-- Footer info -->
@@ -2211,69 +2287,115 @@
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
         const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const body = document.body;
+        const html = document.documentElement;
+        
+        let scrollPosition = 0;
         
         // Open mobile menu - Full screen overlay
         if (mobileMenuButton) {
-          mobileMenuButton.addEventListener('click', function() {
+          mobileMenuButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            // Store current scroll position
+            scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+            
+            // Add active class to menu
             mobileMenu.classList.add('active');
-            document.body.classList.add('menu-open');
+            body.classList.add('menu-open');
             
             // Prevent scrolling on the background
-            document.documentElement.style.overflow = 'hidden';
+            html.style.overflow = 'hidden';
+            body.style.overflow = 'hidden';
+            body.style.position = 'fixed';
+            body.style.top = `-${scrollPosition}px`;
+            body.style.width = '100%';
+            
+            console.log('Mobile menu opened');
           });
         }
         
         // Close mobile menu function
         function closeMobileMenu() {
+          // Remove active class from menu
           mobileMenu.classList.remove('active');
-          document.body.classList.remove('menu-open');
           
-          // Re-enable scrolling
-          document.documentElement.style.overflow = '';
+          // Wait for animation to complete before removing body classes
+          setTimeout(function() {
+            body.classList.remove('menu-open');
+            
+            // Re-enable scrolling
+            html.style.overflow = '';
+            body.style.overflow = '';
+            body.style.position = '';
+            body.style.top = '';
+            body.style.width = '';
+            
+            // Restore scroll position
+            window.scrollTo(0, scrollPosition);
+          }, 400); // Match this with CSS transition duration
+          
+          console.log('Mobile menu closed');
         }
         
         // Close button event listener
         if (mobileMenuClose) {
-          mobileMenuClose.addEventListener('click', closeMobileMenu);
+          mobileMenuClose.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            closeMobileMenu();
+          });
         }
         
         // Close menu when clicking on navigation links
-        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-        mobileMenuLinks.forEach(link => {
-          link.addEventListener('click', function(e) {
-            // Add a small delay to show the click animation
-            setTimeout(closeMobileMenu, 150);
+        if (mobileMenu) {
+          const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+          mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+              // Add a small delay to show the click animation
+              setTimeout(closeMobileMenu, 200);
+            });
           });
-        });
+        }
         
-        // Close menu when clicking outside menu content (on backdrop)
-        mobileMenu.addEventListener('click', function(e) {
-          // Only close if clicking on the backdrop, not the menu content
-          if (e.target === mobileMenu || e.target.classList.contains('bg-black')) {
-            closeMobileMenu();
+        // Close menu when clicking on backdrop
+        if (mobileMenu) {
+          const backdrop = mobileMenu.querySelector('.absolute.inset-0');
+          if (backdrop) {
+            backdrop.addEventListener('click', function(e) {
+              e.stopPropagation();
+              closeMobileMenu();
+            });
           }
-        });
+        }
         
         // Close menu on escape key
         document.addEventListener('keydown', function(e) {
-          if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+          if (e.key === 'Escape' && mobileMenu && mobileMenu.classList.contains('active')) {
             closeMobileMenu();
           }
         });
         
-        // Handle browser back button to close menu
-        window.addEventListener('popstate', function() {
-          if (mobileMenu.classList.contains('active')) {
-            closeMobileMenu();
-          }
-        });
-        
-        // Prevent menu from opening if screen is resized to desktop size
+        // Prevent menu from staying open if screen is resized to desktop size
+        let resizeTimer;
         window.addEventListener('resize', function() {
-          if (window.innerWidth >= 1024 && mobileMenu.classList.contains('active')) {
-            closeMobileMenu();
-          }
+          clearTimeout(resizeTimer);
+          resizeTimer = setTimeout(function() {
+            if (window.innerWidth >= 1024 && mobileMenu && mobileMenu.classList.contains('active')) {
+              closeMobileMenu();
+            }
+          }, 250);
         });
+        
+        // Prevent page scroll when touching the menu content
+        if (mobileMenu) {
+          mobileMenu.addEventListener('touchmove', function(e) {
+            if (e.target === mobileMenu) {
+              e.preventDefault();
+            }
+          }, { passive: false });
+        }
       });
     </script>
   </body>
