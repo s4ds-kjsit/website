@@ -31,6 +31,8 @@
       href="_next/static/css/e54f9cb16e55aae3.css"
       data-precedence="next"
     />
+    <!-- Card shuffle animation styles -->
+    <link rel="stylesheet" href="styles/card-animation.css" />
     <link
       rel="preload"
       as="script"
@@ -158,6 +160,8 @@
       ></div>
       <div class="mx-auto mt-8 w-responsive">
         <div
+
+    
           class="flex items-center justify-between gap-8 border-4 border-black bg-white px-8 py-4 text-grey"
         >
           <div class="flex flex-shrink items-center">
@@ -418,60 +422,140 @@
                 <div class="flex items-center">
                   <div class="relative h-auto w-auto">
                     <div
-                      style="margin-bottom: -8px; margin-right: -8px"
-                      class="absolute bottom-0 right-0 h-full w-full bg-purple"
-                    ></div>
-                    <div
                       class="relative z-10 flex h-full w-full items-center justify-center"
                     >
-                      <div class="relative h-full w-full bg-white">
-                        <img
-                          alt="Hero Image 1"
-                          fetchPriority="high"
-                          width="2132"
-                          height="1600"
-                          decoding="async"
-                          data-nimg="1"
-                          class="hidden"
-                          style="color: transparent"
-                          src="images/hero/hero1.jpg"
-                        />
-                        <img
-                          alt="Hero Image 2"
-                          fetchPriority="high"
-                          width="2132"
-                          height="1600"
-                          decoding="async"
-                          data-nimg="1"
-                          class="hidden"
-                          style="color: transparent"
-                          src="images/hero/hero2.jpg"
-                        />
-                        <img
-                          alt="Hero Image 3"
-                          fetchPriority="high"
-                          width="2132"
-                          height="1600"
-                          decoding="async"
-                          data-nimg="1"
-                          class="hidden"
-                          style="color: transparent"
-                          src="images/hero/hero3.jpg"
-                        />
-                        <div
-                          class="transition-opacity duration-500 ease-in-out opacity-100"
-                        >
-                          <img
-                            alt="Hero Image 1"
-                            loading="lazy"
-                            width="2132"
-                            height="1600"
-                            decoding="async"
-                            data-nimg="1"
-                            class="h-full w-full object-cover"
-                            style="color: transparent"
-                            src="images/hero/hero1.jpg"
-                          />
+                      <div class="relative w-full">
+                        <!-- Card stack container -->
+                        <div id="hero-card-stack" class="hero-card-stack relative z-10">
+                            <!-- Hero card shuffle: lightweight JS, builds stack from images/hero/hero1..7.jpg and loops -->
+                            <script>
+                              (function () {
+                                var container = document.getElementById('hero-card-stack');
+                                if (!container) return;
+
+                              // Explicit list based on images present in images/hero
+                              var sourceList = [
+                                'images/hero/hero1.jpg',
+                                'images/hero/hero2.jpg',
+                                'images/hero/hero3.JPG',
+                                'images/hero/hero4.jpg',
+                                'images/hero/hero5.jpg',
+                                'images/hero/hero6.jpg',
+                                'images/hero/hero7.jpg'
+                              ];
+                              var totalCards = 7;
+                              var candidates = sourceList.slice();
+                              function preload(src){
+                                return new Promise(function(resolve){
+                                  var img = new Image();
+                                  img.onload = function(){ resolve(src); };
+                                  img.onerror = function(){ resolve(null); };
+                                  img.src = src;
+                                });
+                              }
+
+                                // Basic sizing fallback (ensures visible even if external CSS fails)
+                                function sizeContainer() {
+                                  var w = container.clientWidth || container.parentElement.clientWidth || 0;
+                                  if (w) {
+                                    var h = Math.max(220, Math.min(560, w * 0.75)); // 4:3 ratio within bounds
+                                    container.style.minHeight = h + 'px';
+                                  }
+                                }
+                                sizeContainer();
+                                window.addEventListener('resize', sizeContainer);
+
+                              Promise.all(candidates.map(preload)).then(function(found){
+                                var available = found.filter(Boolean);
+                                if (available.length === 0) {
+                                  available = ['images/hero/hero1.jpg'];
+                                }
+                                // Repeat available images to fill 7 cards so there are no blanks
+                                var sources = [];
+                                for (var i = 0; i < totalCards; i++) {
+                                  sources.push(available[i % available.length]);
+                                }
+
+                                // Build cards
+                                container.innerHTML = '';
+                                sources.forEach(function (src) {
+                                  var card = document.createElement('div');
+                                  card.className = 'card';
+                                  // inline base to guarantee visibility if CSS not loaded
+                                  card.style.position = 'absolute';
+                                  card.style.left = '0';
+                                  card.style.top = '0';
+                                  card.style.right = '0';
+                                  card.style.bottom = '0';
+                                  card.style.border = '4px solid #000';
+                                  card.style.borderRadius = '0';
+                                  card.style.background = '#111';
+
+                                  var img = document.createElement('img');
+                                  img.alt = 'Hero card';
+                                  img.loading = 'lazy';
+                                  img.decoding = 'async';
+                                  img.src = src;
+                                  // if an image fails, fall back to the first available
+                                  img.onerror = function(){ if (available[0]) this.src = available[0]; };
+                                  card.appendChild(img);
+
+                                  container.appendChild(card);
+                                });
+
+                                var spacingX = 14, spacingY = 12, scaleStep = 0.035;
+
+                                function layout(skipEl) {
+                                  var cards = Array.prototype.slice.call(container.children);
+                                  var offset = 0;
+                                  cards.forEach(function (card) {
+                                    if (card === skipEl) return; // keep exiting card's transform
+                                    var tx = offset * spacingX;
+                                    var ty = offset * spacingY;
+                                    var sc = 1 - offset * scaleStep;
+                                    card.style.setProperty('--tx', tx + 'px');
+                                    card.style.setProperty('--ty', ty + 'px');
+                                    card.style.setProperty('--sc', sc);
+                                    card.style.transform = 'translate(' + tx + 'px, ' + ty + 'px) scale(' + sc + ')';
+                                    card.style.zIndex = String(100 - offset);
+                                    card.style.filter = 'saturate(' + (1 - offset * 0.1) + ') brightness(' + (1 - offset * 0.05) + ')';
+                                    offset++;
+                                  });
+                                }
+
+                                layout();
+
+                                var intervalMs = 3000; // slightly slower for smoother feel
+                                setInterval(function () {
+                                  var first = container.firstElementChild;
+                                  if (!first) return;
+                                  // Move others forward
+                                  layout(first);
+
+                                  // Smoothly slide the top card to the back position instead of flying away
+                                  var cardCount = container.children.length;
+                                  var backOffset = cardCount - 1;
+                                  var txBack = backOffset * spacingX;
+                                  var tyBack = backOffset * spacingY;
+                                  var scBack = 1 - backOffset * scaleStep;
+                                  // place underneath while moving so it doesn't cover others
+                                  first.style.zIndex = '0';
+                                  first.style.setProperty('--tx', txBack + 'px');
+                                  first.style.setProperty('--ty', tyBack + 'px');
+                                  first.style.setProperty('--sc', scBack);
+                                  first.style.transform = 'translate(' + txBack + 'px, ' + tyBack + 'px) scale(' + scBack + ')';
+
+                                  first.addEventListener('transitionend', function handler(e){
+                                    if (e.propertyName !== 'transform') return; // only once for transform
+                                    first.removeEventListener('transitionend', handler);
+                                    container.appendChild(first); // move to back
+                                    first.style.zIndex = '';
+                                    layout(); // reflow stack to exact back values via function
+                                  }, { once: true });
+                                }, intervalMs);
+                              });
+                              })();
+                            </script>
                         </div>
                       </div>
                     </div>
@@ -544,7 +628,7 @@
                 <h3>Upcoming Events</h3>
               </div>
               <div class="mt-4 space-y-6">
-                <div class="flex items-center">
+                <!-- <div class="flex items-center">
                   <div class="relative h-auto w-full">
                     <div
                       style="margin-bottom: -8px; margin-right: -8px"
@@ -556,7 +640,7 @@
                       <div
                         class="flex w-full flex-col gap-6 rounded-xl bg-white p-4 text-black lg:flex-row"
                       >
-                      <!-- event link -->
+                      
                         <a href="">
                           <div class="grow space-y-2 md:space-y-4">
                             <div class="flex gap-6">
@@ -622,7 +706,7 @@
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> -->
                 <div class="flex items-center">
                   <div class="relative h-auto w-full">
                     <div
@@ -642,8 +726,8 @@
                               <div
                                 class="h-fit rounded-md border-[3px] border-black px-4 py-2 text-xl bg-yellow"
                               >
-                                <div>TBD</div>
-                                <div>-</div>
+                                <div>JAN</div>
+                                <div>24-26</div>
                               </div>
                               <div class="grow space-y-2 text-2xl">
                                 <h4
@@ -926,6 +1010,132 @@
             </div>
           </div>
         </section>
+        
+  <section id="past-events" class="relative mt-16 md:mt-20 lg:mt-24">
+          <div class="absolute" style="left:0;right:0;top:-60px;bottom:-220px;background:#252020;pointer-events:none;"></div>
+          <div
+            class="relative z-10 mt-8 flex flex-row items-center text-2xl font-black md:text-4xl lg:mt-12 lg:text-5xl"
+          >
+            <img
+              alt="Yellow Triangle"
+              loading="lazy"
+              width="30"
+              height="30"
+              decoding="async"
+              data-nimg="1"
+              class="mr-4"
+              style="color: transparent"
+              src="images/yellow-triangle.svg"
+            />
+            <div>
+              <div class="flex flex-col smr:flex-row">
+                <div class="flex items-center">
+                  <div class="relative h-auto w-auto">
+                    <div
+                      style="margin-bottom: -6px; margin-right: -6px; border-color: #f97316"
+                      class="absolute bottom-0 right-0 h-full w-full border-2"
+                    ></div>
+                    <div
+                      class="relative z-10 flex h-full w-full items-center justify-center"
+                    >
+                      <div class="w-fit px-2" style="background-color:#f97316">
+                        <h2>Past Events</h2>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <style>
+            @media (max-width: 767px) {
+              #past-events .timeline-horizontal { display: none !important; }
+              #past-events .timeline-mask { display: none !important; }
+              #past-events .timeline-vertical {
+                position: absolute; left: 60px; top: 0; bottom: 0;
+                width: 4px; background: rgba(255,255,255,0.6);
+                display: block;
+              }
+              #past-events .pe-item { position: relative; padding-left: 120px; }
+              #past-events .pe-item .date-box { position: absolute; left: 60px; top: 0; transform: translateX(-50%); }
+            }
+            @media (min-width: 768px) {
+              #past-events .timeline-vertical { display: none; }
+            }
+          </style>
+
+          <div class="relative z-10" style="margin-top: 3rem;">
+            <div class="timeline-horizontal" style="position:absolute;left:0;right:0;top:36px;height:4px;background:rgba(255,255,255,0.6);"></div>
+            <div class="timeline-mask" style="position:absolute;left:0;right:0;top:36px;height:4px;pointer-events:none; background: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 80%, #252020 80%, #252020 100%);"></div>
+            
+            <div class="timeline-vertical"></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <!-- Item 1 -->
+              <div class="space-y-3 pe-item">
+                <div class="relative date-box" style="z-index:1;">
+                  <div class="relative rounded-md border-[3px] border-black text-white font-black px-3 py-2 text-center" style="width:70px; display:inline-block; background-color:#9A69F5;">
+                    <div class="text-sm">OCT</div>
+                    <div class="text-2xl leading-tight">04</div>
+                    <span style="position:absolute;top:-8px;left:10px;width:12px;height:12px;background:#ffffff;border:3px solid #000;border-radius:2px;"></span>
+                    <span style="position:absolute;top:-8px;right:10px;width:12px;height:12px;background:#ffffff;border:3px solid #000;border-radius:2px;"></span>
+                  </div>
+                </div>
+                <h4 class="text-2xl font-black">KNOWBUILD 25’</h4>
+                <p class="text-sm leading-5">
+                  <span class="font-bold"></span> 8 Hours Intra College Mini Hackathon for 1st to 3rd year.
+                </p>
+              </div>
+
+              <!-- Item 2 -->
+              <div class="space-y-3 pe-item">
+                <div class="relative date-box" style="z-index:1;">
+                  <div class="relative rounded-md border-[3px] border-black text-white font-black px-3 py-2 text-center" style="width:70px; display:inline-block; background-color:#9A69F5;">
+                    <div class="text-sm">NOV</div>
+                    <div class="text-2xl leading-tight">22</div>
+                    <span style="position:absolute;top:-8px;left:10px;width:12px;height:12px;background:#ffffff;border:3px solid #000;border-radius:2px;"></span>
+                    <span style="position:absolute;top:-8px;right:10px;width:12px;height:12px;background:#ffffff;border:3px solid #000;border-radius:2px;"></span>
+                  </div>
+                </div>
+                <h4 class="text-2xl font-black">Dev to Deploy</h4>
+                <p class="text-sm leading-5">
+                  <span class="font-bold"></span> 2 Days DevOps Workshop with a Hands on Project
+                </p>
+              </div>
+
+              <!-- Item 3 -->
+              <!-- <div class="space-y-3 pe-item">
+                <div class="relative date-box" style="z-index:1;">
+                  <div class="relative rounded-md border-[3px] border-black text-white font-black px-3 py-2 text-center" style="width:70px; display:inline-block; background-color:#9A69F5;">
+                    <div class="text-sm">NOV</div>
+                    <div class="text-2xl leading-tight">22</div>
+                    <span style="position:absolute;top:-8px;left:10px;width:12px;height:12px;background:#ffffff;border:3px solid #000;border-radius:2px;"></span>
+                    <span style="position:absolute;top:-8px;right:10px;width:12px;height:12px;background:#ffffff;border:3px solid #000;border-radius:2px;"></span>
+                  </div>
+                </div>
+                <h4 class="text-2xl font-black">KNOWBUILD 25’</h4>
+                <p class="text-sm leading-5">
+                  <span class="font-bold">Developers:</span> Heer Panchal, Kinjal Panchal, Jhalak Dedhia, Adrita banerjee, Aniruddh Sengupta
+                </p>
+              </div> -->
+
+              <!-- Item 4 -->
+              <!-- <div class="space-y-3 pe-item">
+                <div class="relative date-box" style="z-index:1;">
+                  <div class="relative rounded-md border-[3px] border-black text-white font-black px-3 py-2 text-center" style="width:70px; display:inline-block; background-color:#9A69F5;">
+                    <div class="text-sm">NOV</div>
+                    <div class="text-2xl leading-tight">22</div>
+                    <span style="position:absolute;top:-8px;left:10px;width:12px;height:12px;background:#ffffff;border:3px solid #000;border-radius:2px;"></span>
+                    <span style="position:absolute;top:-8px;right:10px;width:12px;height:12px;background:#ffffff;border:3px solid #000;border-radius:2px;"></span>
+                  </div>
+                </div>
+                <h4 class="text-2xl font-black">KNOWBUILD 25’</h4>
+                <p class="text-sm leading-5">
+                  <span class="font-bold">Developers:</span> Heer Panchal, Kinjal Panchal, Jhalak Dedhia, Adrita banerjee, Aniruddh Sengupta
+                </p>
+              </div> -->
+            </div>
+          </div>
+        </section>
 
         <section>
           <div
@@ -943,9 +1153,8 @@
               src="images/yellow-triangle.svg"
             />
             <div>
-              <!-- <h3>The</h3> -->
+            
               <div class="flex flex-col smr:flex-row">
-                <!-- <h3 class="mb-2 mr-2 md:mb-0">Industry's</h3> -->
                 <div class="flex items-center">
                   <div class="relative h-auto w-auto">
                     <div
@@ -1886,25 +2095,14 @@
     <footer class="bg-grey border-t-4 border-white mt-16">
       <div class="mx-auto w-responsive py-12">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <!-- About Section -->
-          <div class="space-y-4">
-            <div class="flex items-center">
-              <div class="relative h-auto w-auto">
-                <div
-                  style="margin-bottom: -4px; margin-right: -4px"
-                  class="absolute bottom-0 right-0 h-full w-full border-yellow border-2"
-                ></div>
-                <div class="relative z-10 flex h-full w-full items-center justify-center">
-                  <div class="w-fit bg-yellow px-3 py-2">
-                    <h3 class="text-xl font-black text-grey">About S4DS</h3>
-                  </div>
-                </div>
+          
+          <div class="space-y-4 flex items-center justify-center">
+            <div class="relative h-auto w-auto">
+              <div style="margin-bottom: -2px; margin-right: -4px" class="absolute bottom-0 right-0 h-full w-full"></div>
+              <div class="relative z-10 flex h-full w-full items-center justify-center">
+                <img src="images/s4ds-white-1.png" alt="S4DS Logo" class="w-41 h-40" />
               </div>
             </div>
-            <p class="text-white text-sm">
-              Society for Data Science at K.J. Somaiya Institute of Technology - 
-              Building the future through data science, AI, and innovation.
-            </p>
           </div>
 
           <!-- Quick Links -->
@@ -1946,9 +2144,9 @@
               </div>
             </div>
             <ul class="space-y-2 text-white text-sm">
-              <li>Development to Deployment</li>
+
               <li>Knowcode 3.0 Hackathon</li>
-              <li>Tech Time Trace</li>
+              <li>Flutter Workshop</li>
             </ul>
           </div>
 

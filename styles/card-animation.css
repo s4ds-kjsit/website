@@ -1,0 +1,58 @@
+
+
+.hero-card-stack {
+	position: relative;
+	width: 100%;
+	aspect-ratio: 4 / 3; 
+	min-height: clamp(220px, 38vw, 520px); 
+	overflow: visible;
+
+
+	--offset-x: 14px;   
+	--offset-y: 12px;   
+	--scale-step: 0.035; 
+}
+
+.hero-card-stack .card {
+	position: absolute;
+	inset: 0;
+	
+	background-size: cover;
+	background-position: center;
+	background-color: #111;
+	border: 2px solid #000; 
+	border-radius: 0; 
+
+	box-shadow: 0 10px 28px rgba(0, 0, 0, 0.30), 0 2px 6px rgba(0, 0, 0, 0.20);
+	transition: transform 750ms cubic-bezier(.22,.61,.36,1),
+							opacity 500ms ease,
+							box-shadow 600ms ease,
+							filter 600ms ease;
+	will-change: transform;
+	backface-visibility: hidden;
+
+	
+	--tx: 0px;
+	--ty: 0px;
+	--sc: 1;
+}
+
+
+.hero-card-stack .card > img {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+
+@media (max-width: 768px) {
+	.hero-card-stack {
+		--offset-x: 10px;
+		--offset-y: 8px;
+		--scale-step: 0.03;
+	}
+}
+
